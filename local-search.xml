@@ -71,11 +71,11 @@
   
   
   <entry>
-    <title>Computer Network lecture notes lecture-1</title>
-    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
-    <url>/2023/10/02/notes-com-network-lecture-1/</url>
+    <title>Operating System lecture notes lecture-1</title>
+    <link href="/2023/10/02/notes-os-lecture-1/"/>
+    <url>/2023/10/02/notes-os-lecture-1/</url>
     
-    <content type="html"><![CDATA[<h1 id="计算机网络第一次课程笔记"><a href="#计算机网络第一次课程笔记" class="headerlink" title="计算机网络第一次课程笔记"></a>计算机网络第一次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="操作系统第一次课程笔记"><a href="#操作系统第一次课程笔记" class="headerlink" title="操作系统第一次课程笔记"></a>操作系统第一次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -89,7 +89,34 @@
       
       <tag>Lecture Notes</tag>
       
-      <tag>Computer Network</tag>
+      <tag>Operating System</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Operating System lecture notes lecture-2</title>
+    <link href="/2023/10/02/notes-os-lecture-2/"/>
+    <url>/2023/10/02/notes-os-lecture-2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="操作系统第二次课程笔记"><a href="#操作系统第二次课程笔记" class="headerlink" title="操作系统第二次课程笔记"></a>操作系统第二次课程笔记</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Lecture Notes</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Lecture Notes</tag>
+      
+      <tag>Operating System</tag>
       
     </tags>
     
@@ -125,25 +152,27 @@
   
   
   <entry>
-    <title>Operating System lecture notes lecture-2</title>
-    <link href="/2023/10/02/notes-os-lecture-2/"/>
-    <url>/2023/10/02/notes-os-lecture-2/</url>
+    <title>AlexNet paper reading note</title>
+    <link href="/2023/10/02/paper-reading-alexnet/"/>
+    <url>/2023/10/02/paper-reading-alexnet/</url>
     
-    <content type="html"><![CDATA[<h1 id="操作系统第二次课程笔记"><a href="#操作系统第二次课程笔记" class="headerlink" title="操作系统第二次课程笔记"></a>操作系统第二次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
-      <category>Lecture Notes</category>
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Lecture Notes</tag>
+      <tag>Paper reading</tag>
       
-      <tag>Operating System</tag>
+      <tag>AlexNet</tag>
       
     </tags>
     
@@ -239,40 +268,11 @@
   
   
   <entry>
-    <title>AlexNet paper reading note</title>
-    <link href="/2023/10/02/paper-reading-alexnet/"/>
-    <url>/2023/10/02/paper-reading-alexnet/</url>
+    <title>Computer Network lecture notes lecture-1</title>
+    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
+    <url>/2023/10/02/notes-com-network-lecture-1/</url>
     
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>AlexNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Operating System lecture notes lecture-1</title>
-    <link href="/2023/10/02/notes-os-lecture-1/"/>
-    <url>/2023/10/02/notes-os-lecture-1/</url>
-    
-    <content type="html"><![CDATA[<h1 id="操作系统第一次课程笔记"><a href="#操作系统第一次课程笔记" class="headerlink" title="操作系统第一次课程笔记"></a>操作系统第一次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="计算机网络第一次课程笔记"><a href="#计算机网络第一次课程笔记" class="headerlink" title="计算机网络第一次课程笔记"></a>计算机网络第一次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -286,65 +286,7 @@
       
       <tag>Lecture Notes</tag>
       
-      <tag>Operating System</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>GAN paper reading note</title>
-    <link href="/2023/10/02/paper-reading-gan/"/>
-    <url>/2023/10/02/paper-reading-gan/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>GAN</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>MAE paper reading note</title>
-    <link href="/2023/10/02/paper-reading-mae/"/>
-    <url>/2023/10/02/paper-reading-mae/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>MAE</tag>
+      <tag>Computer Network</tag>
       
     </tags>
     
@@ -374,122 +316,6 @@
       <tag>Paper reading</tag>
       
       <tag>DALL-E2</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Latent diffusion model paper reading note</title>
-    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
-    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Stable diffusion</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>NeRF paper reading note</title>
-    <link href="/2023/10/02/paper-reading-nerf/"/>
-    <url>/2023/10/02/paper-reading-nerf/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>3D Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>NeRF</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>ResNet paper reading note</title>
-    <link href="/2023/10/02/paper-reading-resnet/"/>
-    <url>/2023/10/02/paper-reading-resnet/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>ResNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Transformer paper reading note</title>
-    <link href="/2023/10/02/paper-reading-transformer/"/>
-    <url>/2023/10/02/paper-reading-transformer/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Natural Language Processing</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Transformer</tag>
       
     </tags>
     
@@ -556,9 +382,9 @@
   
   
   <entry>
-    <title>ViT paper reading note</title>
-    <link href="/2023/10/02/paper-reading-vit/"/>
-    <url>/2023/10/02/paper-reading-vit/</url>
+    <title>MAE paper reading note</title>
+    <link href="/2023/10/02/paper-reading-mae/"/>
+    <url>/2023/10/02/paper-reading-mae/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -576,7 +402,123 @@
       
       <tag>Paper reading</tag>
       
-      <tag>ViT</tag>
+      <tag>MAE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GAN paper reading note</title>
+    <link href="/2023/10/02/paper-reading-gan/"/>
+    <url>/2023/10/02/paper-reading-gan/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>GAN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ResNet paper reading note</title>
+    <link href="/2023/10/02/paper-reading-resnet/"/>
+    <url>/2023/10/02/paper-reading-resnet/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>ResNet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>NeRF paper reading note</title>
+    <link href="/2023/10/02/paper-reading-nerf/"/>
+    <url>/2023/10/02/paper-reading-nerf/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>3D Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>NeRF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Latent diffusion model paper reading note</title>
+    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
+    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>Stable diffusion</tag>
       
     </tags>
     
@@ -614,6 +556,35 @@
   
   
   <entry>
+    <title>Transformer paper reading note</title>
+    <link href="/2023/10/02/paper-reading-transformer/"/>
+    <url>/2023/10/02/paper-reading-transformer/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Natural Language Processing</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>Transformer</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Python learning notes</title>
     <link href="/2023/10/02/progamming-python/"/>
     <url>/2023/10/02/progamming-python/</url>
@@ -643,27 +614,27 @@
   
   
   <entry>
-    <title>CMake learning notes</title>
-    <link href="/2023/10/02/tools-cmake/"/>
-    <url>/2023/10/02/tools-cmake/</url>
+    <title>ViT paper reading note</title>
+    <link href="/2023/10/02/paper-reading-vit/"/>
+    <url>/2023/10/02/paper-reading-vit/</url>
     
     <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
-      <category>Tools</category>
+      <category>Paper reading</category>
       
-      <category>CMake</category>
+      <category>Computer Vision</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Tools</tag>
+      <tag>Paper reading</tag>
       
-      <tag>CMake</tag>
+      <tag>ViT</tag>
       
     </tags>
     
@@ -672,9 +643,9 @@
   
   
   <entry>
-    <title>Linux learning notes</title>
-    <link href="/2023/10/02/tools-shell-linux/"/>
-    <url>/2023/10/02/tools-shell-linux/</url>
+    <title>Docker learning notes</title>
+    <link href="/2023/10/02/tools-docker/"/>
+    <url>/2023/10/02/tools-docker/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -683,7 +654,7 @@
       
       <category>Tools</category>
       
-      <category>Linux</category>
+      <category>Docker</category>
       
     </categories>
     
@@ -692,7 +663,7 @@
       
       <tag>Tools</tag>
       
-      <tag>Linux</tag>
+      <tag>Docker</tag>
       
     </tags>
     
@@ -730,9 +701,9 @@
   
   
   <entry>
-    <title>Docker learning notes</title>
-    <link href="/2023/10/02/tools-docker/"/>
-    <url>/2023/10/02/tools-docker/</url>
+    <title>Linux learning notes</title>
+    <link href="/2023/10/02/tools-shell-linux/"/>
+    <url>/2023/10/02/tools-shell-linux/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -741,7 +712,7 @@
       
       <category>Tools</category>
       
-      <category>Docker</category>
+      <category>Linux</category>
       
     </categories>
     
@@ -750,7 +721,36 @@
       
       <tag>Tools</tag>
       
-      <tag>Docker</tag>
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CMake learning notes</title>
+    <link href="/2023/10/02/tools-cmake/"/>
+    <url>/2023/10/02/tools-cmake/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>CMake</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>CMake</tag>
       
     </tags>
     
