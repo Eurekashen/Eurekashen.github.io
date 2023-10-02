@@ -232,7 +232,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-dalle2/" target="_self">
         <div>
-          DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：   ![Screensh
+          DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分
         </div>
       </a>
 
@@ -364,15 +364,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/paper-reading-gan/" target="_self">
-          GAN
+        <a href="/2023/10/02/paper-reading-mae/" target="_self">
+          MAE
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-gan/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-mae/" target="_self">
         <div>
-          理论部分，关于概率论的推导部分没有细看，主要在讲证明目标函数的选择是正确的以及优化目标函数。注意理解一下琴声-香浓散度、KL散度 GAN模型的训练过程非常的有意思，使用的是没有标号的数据——也就是说属于无监督学习。但是GAN的目标函数是使用的有label的，其label就是数据是真实的还是模型生成出来的。这推动了之后的弱监督学习和半监督学习的发展。  GAN模型是一个framework  生成模型
+          文章的题目就说了MAE是一个scalable（可扩展）的视觉学习器。 MAE就是一个BERT的CV版本，BERT是mask掉词语的token、而MAE是把一部分的图片mask掉。所谓的autoencoder中的auto的意思是“自”，而不是“自动”的意思——也就是输入的x和输出的y是一个东西，通过encoder-decoder架构自监督的训练。  asymmetric encoder-decode
         </div>
       </a>
 
@@ -401,7 +401,7 @@
   
     <span>></span>
     
-  <a href="/categories/Paper-reading/Generative-Model/" class="category-chain-item">Generative Model</a>
+  <a href="/categories/Paper-reading/Computer-Vision/" class="category-chain-item">Computer Vision</a>
   
   
 
@@ -420,7 +420,7 @@
             
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
-              <a href="/tags/GAN/">#GAN</a>
+              <a href="/tags/MAE/">#MAE</a>
             
           </div>
         
@@ -491,76 +491,6 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/GNN/">#GNN</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-mae/" target="_self">
-          MAE
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-mae/" target="_self">
-        <div>
-          文章的题目就说了MAE是一个scalable（可扩展）的视觉学习器。 MAE就是一个BERT的CV版本，BERT是mask掉词语的token、而MAE是把一部分的图片mask掉。所谓的autoencoder中的auto的意思是“自”，而不是“自动”的意思——也就是输入的x和输出的y是一个东西，通过encoder-decoder架构自监督的训练。  asymmetric encoder-decode
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Computer-Vision/" class="category-chain-item">Computer Vision</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/MAE/">#MAE</a>
             
           </div>
         
@@ -652,7 +582,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-resnet/" target="_self">
         <div>
-          赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接： ![img](./sreenshortcut/Screenshot 2023-08-17 at 20.06.36.
+          赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：    上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接
         </div>
       </a>
 
@@ -701,76 +631,6 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/ResNet/">#ResNet</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-transformer/" target="_self">
-          Transformer
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-transformer/" target="_self">
-        <div>
-          2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Natural-Language-Processing/" class="category-chain-item">Natural Language Processing</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/Transformer/">#Transformer</a>
             
           </div>
         
@@ -854,6 +714,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/10/02/paper-reading-transformer/" target="_self">
+          Transformer
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-transformer/" target="_self">
+        <div>
+          2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Paper-reading/Natural-Language-Processing/" class="category-chain-item">Natural Language Processing</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Paper-reading/">#Paper reading</a>
+            
+              <a href="/tags/Transformer/">#Transformer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/10/02/paper-reading-vit/" target="_self">
           ViT
         </a>
@@ -911,6 +841,76 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/ViT/">#ViT</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/10/02/progamming-java/" target="_self">
+          Java
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/progamming-java/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Programming/" class="category-chain-item">Programming</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Programming/Java/" class="category-chain-item">Java</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Programming/">#Programming</a>
+            
+              <a href="/tags/Java/">#Java</a>
             
           </div>
         
