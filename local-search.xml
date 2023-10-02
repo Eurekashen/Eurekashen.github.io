@@ -120,6 +120,35 @@
   
   
   <entry>
+    <title>AlexNet</title>
+    <link href="/2023/10/02/paper-reading-alexnet/"/>
+    <url>/2023/10/02/paper-reading-alexnet/</url>
+    
+    <content type="html"><![CDATA[<p>作为深度学习的奠基之作</p><p>在ImageNet这个数据集上进行测试拿到了第一名（2012）</p><p>使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务</p><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTcwZGZhZjdmZTE5YWVmYzA4ZDNlNjJjZGFjOWIyMzdfVW1mMXVHQzlNd1VaU1RhckFlQXU5cEdORGl0Ull5YmRfVG9rZW46V0lLcGJBNU5qb2tURFZ4d2lORGNFUzdvbjZlXzE2OTYyMjcxMzY6MTY5NjIzMDczNl9WNA" alt="img"></p><p>图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的</p><p>在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快</p><p>Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操作是有重叠的</p><ul><li>减少过拟合<ul><li>数据增强：把图片进行裁剪和旋转、使用PCA对图片的RGB通道做出变化。</li><li>Dropout：对于全连接层的输出用0.5的概率设为0（本来意图是认为这样相当于训练了很多个不一样的模型，但是后来发现这相当于正则化）</li></ul></li><li>测试结果非常好，并且隐藏层的输出向量在语义空间中有非常好的表示，这个向量相似的图片确实是在像素空间中相似的图片。</li><li>使用一个均值为0、方差是0.01正态分布来初始化每一层的权重。</li><li>模型可以直接在raw RGB图片上进行操作而不用提前抽取想SIFT特征，推动了之后计算机视觉和深度学习的发展。并且不需要提前使用无标记数据来预热网络。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>AlexNet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Lecture 1</title>
     <link href="/2023/10/02/notes-os-lecture-1/"/>
     <url>/2023/10/02/notes-os-lecture-1/</url>
@@ -170,35 +199,6 @@
       <tag>Lecture Notes</tag>
       
       <tag>Operating System</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>AlexNet</title>
-    <link href="/2023/10/02/paper-reading-alexnet/"/>
-    <url>/2023/10/02/paper-reading-alexnet/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>AlexNet</tag>
       
     </tags>
     
@@ -323,9 +323,9 @@
   
   
   <entry>
-    <title>GAN</title>
-    <link href="/2023/10/02/paper-reading-gan/"/>
-    <url>/2023/10/02/paper-reading-gan/</url>
+    <title>DDPM</title>
+    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
+    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -343,7 +343,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>GAN</tag>
+      <tag>DDPM</tag>
       
     </tags>
     
@@ -410,9 +410,9 @@
   
   
   <entry>
-    <title>DDPM</title>
-    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
-    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
+    <title>NeRF</title>
+    <link href="/2023/10/02/paper-reading-nerf/"/>
+    <url>/2023/10/02/paper-reading-nerf/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -421,7 +421,7 @@
       
       <category>Paper reading</category>
       
-      <category>Generative Model</category>
+      <category>3D Vision</category>
       
     </categories>
     
@@ -430,36 +430,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>DDPM</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Latent diffusion model</title>
-    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
-    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Stable diffusion</tag>
+      <tag>NeRF</tag>
       
     </tags>
     
@@ -497,9 +468,9 @@
   
   
   <entry>
-    <title>NeRF</title>
-    <link href="/2023/10/02/paper-reading-nerf/"/>
-    <url>/2023/10/02/paper-reading-nerf/</url>
+    <title>Latent diffusion model</title>
+    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
+    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -508,7 +479,7 @@
       
       <category>Paper reading</category>
       
-      <category>3D Vision</category>
+      <category>Generative Model</category>
       
     </categories>
     
@@ -517,7 +488,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>NeRF</tag>
+      <tag>Stable diffusion</tag>
       
     </tags>
     
@@ -584,6 +555,35 @@
   
   
   <entry>
+    <title>GAN</title>
+    <link href="/2023/10/02/paper-reading-gan/"/>
+    <url>/2023/10/02/paper-reading-gan/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>GAN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java</title>
     <link href="/2023/10/02/progamming-java/"/>
     <url>/2023/10/02/progamming-java/</url>
@@ -605,64 +605,6 @@
       <tag>Programming</tag>
       
       <tag>Java</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Python</title>
-    <link href="/2023/10/02/progamming-python/"/>
-    <url>/2023/10/02/progamming-python/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Programming</category>
-      
-      <category>Python</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Programming</tag>
-      
-      <tag>Python</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>CMake</title>
-    <link href="/2023/10/02/tools-cmake/"/>
-    <url>/2023/10/02/tools-cmake/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Tools</category>
-      
-      <category>CMake</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Tools</tag>
-      
-      <tag>CMake</tag>
       
     </tags>
     
@@ -729,35 +671,6 @@
   
   
   <entry>
-    <title>Linux</title>
-    <link href="/2023/10/02/tools-shell-linux/"/>
-    <url>/2023/10/02/tools-shell-linux/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Tools</category>
-      
-      <category>Linux</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Tools</tag>
-      
-      <tag>Linux</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Git</title>
     <link href="/2023/10/02/tools-git/"/>
     <url>/2023/10/02/tools-git/</url>
@@ -779,6 +692,93 @@
       <tag>Tools</tag>
       
       <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CMake</title>
+    <link href="/2023/10/02/tools-cmake/"/>
+    <url>/2023/10/02/tools-cmake/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>CMake</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>CMake</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python</title>
+    <link href="/2023/10/02/progamming-python/"/>
+    <url>/2023/10/02/progamming-python/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Programming</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Programming</tag>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux</title>
+    <link href="/2023/10/02/tools-shell-linux/"/>
+    <url>/2023/10/02/tools-shell-linux/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>Linux</tag>
       
     </tags>
     

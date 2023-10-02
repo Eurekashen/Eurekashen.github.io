@@ -16,17 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="作为深度学习的奠基之作 在ImageNet这个数据集上进行测试拿到了第一名（2012） 使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务  图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的 在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快 Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操">
+<meta property="og:type" content="article">
 <meta property="og:title" content="AlexNet">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-alexnet/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="作为深度学习的奠基之作 在ImageNet这个数据集上进行测试拿到了第一名（2012） 使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务  图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的 在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快 Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTcwZGZhZjdmZTE5YWVmYzA4ZDNlNjJjZGFjOWIyMzdfVW1mMXVHQzlNd1VaU1RhckFlQXU5cEdORGl0Ull5YmRfVG9rZW46V0lLcGJBNU5qb2tURFZ4d2lORGNFUzdvbjZlXzE2OTYyMjcxMzY6MTY5NjIzMDczNl9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T05:37:30.477Z">
+<meta property="article:modified_time" content="2023-10-02T06:12:54.861Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="AlexNet">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTcwZGZhZjdmZTE5YWVmYzA4ZDNlNjJjZGFjOWIyMzdfVW1mMXVHQzlNd1VaU1RhckFlQXU5cEdORGl0Ull5YmRfVG9rZW46V0lLcGJBNU5qb2tURFZ4d2lORGNFUzdvbjZlXzE2OTYyMjcxMzY6MTY5NjIzMDczNl9WNA">
   
   
   
@@ -219,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          467 字
         
       </span>
     
@@ -230,7 +234,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -272,7 +276,24 @@
             
               <div class="markdown-body">
                 
-                
+                <p>作为深度学习的奠基之作</p>
+<p>在ImageNet这个数据集上进行测试拿到了第一名（2012）</p>
+<p>使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务</p>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTcwZGZhZjdmZTE5YWVmYzA4ZDNlNjJjZGFjOWIyMzdfVW1mMXVHQzlNd1VaU1RhckFlQXU5cEdORGl0Ull5YmRfVG9rZW46V0lLcGJBNU5qb2tURFZ4d2lORGNFUzdvbjZlXzE2OTYyMjcxMzY6MTY5NjIzMDczNl9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的</p>
+<p>在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快</p>
+<p>Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操作是有重叠的</p>
+<ul>
+<li>减少过拟合<ul>
+<li>数据增强：把图片进行裁剪和旋转、使用PCA对图片的RGB通道做出变化。</li>
+<li>Dropout：对于全连接层的输出用0.5的概率设为0（本来意图是认为这样相当于训练了很多个不一样的模型，但是后来发现这相当于正则化）</li>
+</ul>
+</li>
+<li>测试结果非常好，并且隐藏层的输出向量在语义空间中有非常好的表示，这个向量相似的图片确实是在像素空间中相似的图片。</li>
+<li>使用一个均值为0、方差是0.01正态分布来初始化每一层的权重。</li>
+<li>模型可以直接在raw RGB图片上进行操作而不用提前抽取想SIFT特征，推动了之后计算机视觉和深度学习的发展。并且不需要提前使用无标记数据来预热网络。</li>
+</ul>
+
                 
               </div>
             
@@ -371,7 +392,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/notes-os-lecture-2/" title="Lecture 2">
+                      <a href="/2023/10/02/notes-com-network-lecture-2/" title="Lecture 2">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Lecture 2</span>
                         <span class="visible-mobile">上一篇</span>
@@ -381,8 +402,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-bert/" title="BERT">
-                        <span class="hidden-mobile">BERT</span>
+                      <a href="/2023/10/02/notes-os-lecture-1/" title="Lecture 1">
+                        <span class="hidden-mobile">Lecture 1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
