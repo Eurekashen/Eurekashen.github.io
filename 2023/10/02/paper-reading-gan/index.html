@@ -23,15 +23,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="理论部分，关于概率论的推导部分没有细看，主要在讲证明目标函数的选择是正确的以及优化目标函数。注意理解一下琴声-香浓散度、KL散度 GAN模型的训练过程非常的有意思，使用的是没有标号的数据——也就是说属于无监督学习。但是GAN的目标函数是使用的有label的，其label就是数据是真实的还是模型生成出来的。这推动了之后的弱监督学习和半监督学习的发展。  GAN模型是一个framework  生成模型">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzQ0MTI1OTk0YTg1YzY2Y2Y1MTA0YWI3NWEzYzczYWFfVmozNERrbndNdGlDamFoeWFqRGdxNGFzQzlhMFpDOFVfVG9rZW46WHo0Y2JMZG5zb1h0dkV4Y0VlNWNWNW9ObmhoXzE2OTYyMjc0MDE6MTY5NjIzMTAwMV9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MWRkYjAyODcyMmE5NmY0ZjQzZmFhNmMxMGE3MDVmYWNfVjBkMTlmOU1lYzZkaW1pcGtQZFBiZFR2cFR0d1hza3dfVG9rZW46SG0xaGJjNzBLb0F4YlR4UlhvUmNsT2ozbk5UXzE2OTYyMjc0MDE6MTY5NjIzMTAwMV9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:59:28.927Z">
+<meta property="article:modified_time" content="2023-10-02T09:58:53.732Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="GAN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzQ0MTI1OTk0YTg1YzY2Y2Y1MTA0YWI3NWEzYzczYWFfVmozNERrbndNdGlDamFoeWFqRGdxNGFzQzlhMFpDOFVfVG9rZW46WHo0Y2JMZG5zb1h0dkV4Y0VlNWNWNW9ObmhoXzE2OTYyMjc0MDE6MTY5NjIzMTAwMV9WNA">
   
   
   
@@ -226,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.2k 字
         
       </span>
     
@@ -237,7 +234,7 @@
         
         
         
-          17 分钟
+          19 分钟
         
       </span>
     
@@ -317,7 +314,7 @@
 <li>训练过程：
 <ul>
 <li>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzQ0MTI1OTk0YTg1YzY2Y2Y1MTA0YWI3NWEzYzczYWFfVmozNERrbndNdGlDamFoeWFqRGdxNGFzQzlhMFpDOFVfVG9rZW46WHo0Y2JMZG5zb1h0dkV4Y0VlNWNWNW9ObmhoXzE2OTYyMjc0MDE6MTY5NjIzMTAwMV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![Screenshot 2023-08-19 at 14.08.46](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-19 at 14.08.46.png)</p>
 </li>
 <li>
 <p>黑色虚线代表真实数据，绿线代表生成器数据、蓝线代表辨别器数据。x代表真实数据空间，z表示噪声的空间。</p>
@@ -326,7 +323,7 @@
 </li>
 <li>具体算法如下：</li>
 </ul>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MWRkYjAyODcyMmE5NmY0ZjQzZmFhNmMxMGE3MDVmYWNfVjBkMTlmOU1lYzZkaW1pcGtQZFBiZFR2cFR0d1hza3dfVG9rZW46SG0xaGJjNzBLb0F4YlR4UlhvUmNsT2ozbk5UXzE2OTYyMjc0MDE6MTY5NjIzMTAwMV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![Screenshot 2023-08-19 at 14.11.06](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-19 at 14.11.06.png)</p>
 <p>一次迭代先更新辨别器再更新生成器。在这里k是一个超参数，让D、G的更新在进度上是差不多的，两者才有对抗的空间，模型才能够训练起来。 重要的是判断模型的收敛，GAN的收敛是非常不稳定：一边不动一边抖动，两方都在抖动这算不算收敛难以界定。</p>
 <ul>
 <li>优点和缺点：
@@ -463,9 +460,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-gnn/" title="GNN">
+                      <a href="/2023/10/02/paper-reading-ddpm_ddim/" title="DDPM">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GNN</span>
+                        <span class="hidden-mobile">DDPM</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -473,8 +470,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-mae/" title="MAE">
-                        <span class="hidden-mobile">MAE</span>
+                      <a href="/2023/10/02/paper-reading-gnn/" title="GNN">
+                        <span class="hidden-mobile">GNN</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

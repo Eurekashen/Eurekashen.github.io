@@ -16,23 +16,21 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。      突破了categ">
+    <meta name="description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。  ![Screenshot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CLIP">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-clip/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。      突破了categ">
+<meta property="og:description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。  ![Screenshot">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWFkZGFjNTFkYTIxNzJlZjAyZWE3MGIyY2ZiMWYxNzFfVlNBRFBramZ2enZlc3VXTEJESEpFNlVpelRJVlV4TnpfVG9rZW46VWxBaGJRMXdOb2NPOW94dEtTSGNHcWtobnliXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzkzNGMyZGU5ZjQ4ODE4MzY0YzBiNGFmMzA3NGY0MTZfTnZPVkoxMTZ6eFhzTDFOb3htQjA2UnlDM3VvRnFWZ2FfVG9rZW46WksxWWJIcUVBbzlselN4N2toMGM0Z21EbkFoXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NkYjA0OTlkZGVmMWFlNGQ5YzZhZjliNzA2NGFjZGRfM3FIOVlvVEJlcFBIOHJhMjJ0eml2c3JrV3FVSkRXWUxfVG9rZW46UGh4Y2JIVG5Tb1I4STF4SGZUcWNVcHZBbmtjXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
+<meta property="og:image" content="http://example.com/Users/shenshuaike/Desktop/sreenshortcut/Screenshot%202023-08-17%20at%2022.30.02.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:41:57.041Z">
+<meta property="article:modified_time" content="2023-10-02T09:54:40.411Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="CLIP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWFkZGFjNTFkYTIxNzJlZjAyZWE3MGIyY2ZiMWYxNzFfVlNBRFBramZ2enZlc3VXTEJESEpFNlVpelRJVlV4TnpfVG9rZW46VWxBaGJRMXdOb2NPOW94dEtTSGNHcWtobnliXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
+<meta name="twitter:image" content="http://example.com/Users/shenshuaike/Desktop/sreenshortcut/Screenshot%202023-08-17%20at%2022.30.02.png">
   
   
   
@@ -227,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1.4k 字
         
       </span>
     
@@ -238,7 +236,7 @@
         
         
         
-          11 分钟
+          12 分钟
         
       </span>
     
@@ -285,13 +283,13 @@
 <li>
 <p>训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。</p>
 <ul>
-<li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWFkZGFjNTFkYTIxNzJlZjAyZWE3MGIyY2ZiMWYxNzFfVlNBRFBramZ2enZlc3VXTEJESEpFNlVpelRJVlV4TnpfVG9rZW46VWxBaGJRMXdOb2NPOW94dEtTSGNHcWtobnliXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
+<li>![Screenshot 2023-08-17 at 22.21.43](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 22.21.43.png)</li>
 </ul>
 </li>
 <li>
 <p>突破了category目录的限制，像之前的模型都是在类似于ImageNet（1000类）这样有明确数量的类别的数据集上训练的，如果出现一个不在给定目录里面的样本就抓瞎了。而CLIP结合NLP的prompt很好解决了这样的问题。不需要明确的softmax分类头。上图中使用一个句子作为prompt是为了避免使用单词的歧异性（在论文中给出了多种prompt engineering的方法）。下面的这张图就能很好的说明CLIP zero shot的能力。</p>
 <ul>
-<li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzkzNGMyZGU5ZjQ4ODE4MzY0YzBiNGFmMzA3NGY0MTZfTnZPVkoxMTZ6eFhzTDFOb3htQjA2UnlDM3VvRnFWZ2FfVG9rZW46WksxWWJIcUVBbzlselN4N2toMGM0Z21EbkFoXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
+<li>![Screenshot 2023-08-17 at 22.42.47](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 22.42.47.png)</li>
 </ul>
 </li>
 <li>
@@ -307,7 +305,7 @@
 <p>out-of-distribution的问题，CLIP在MNIST数据集上的效果甚至不如线性回归。因为MNIST是一个人工合成的数据集，而CLIP是在自然的图片进行训练的。所以总的来说CLIP和其他DL模型一样脆弱。</p>
 </li>
 </ul>
-<img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NkYjA0OTlkZGVmMWFlNGQ5YzZhZjliNzA2NGFjZGRfM3FIOVlvVEJlcFBIOHJhMjJ0eml2c3JrV3FVSkRXWUxfVG9rZW46UGh4Y2JIVG5Tb1I4STF4SGZUcWNVcHZBbmtjXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" />
+<img src="/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 22.30.02.png" srcset="/img/loading.gif" lazyload alt="Screenshot 2023-08-17 at 22.30.02" style="zoom:50%;" />
 <ul>
 <li>可以非常方便的迁移到目标检测、图像生成、语义分割等任务。</li>
 <li>Fine tune和linear probe的区别：
@@ -428,8 +426,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-dalle2/" title="DALL-E 2">
-                        <span class="hidden-mobile">DALL-E 2</span>
+                      <a href="/2023/10/02/paper-reading-controlnet/" title="ControlNet">
+                        <span class="hidden-mobile">ControlNet</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

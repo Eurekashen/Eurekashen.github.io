@@ -16,24 +16,22 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分">
+    <meta name="description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：   ![Screensh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DALL-E 2">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-dalle2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分">
+<meta property="og:description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：   ![Screensh">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM4MTllYTg0Yzg4ZGYwMTUzOGNhMmJmMTQwMDA0YjZfSmNwMkhFbnJpMkV3NUt2VkhuWmRaUDVsNnl5c016a0JfVG9rZW46TDFiWmJwWEgyb3ZLRXN4YVhjeGNoUlZlbmpiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmY2YjdkMmNhZGYxMjE1YzRiYzU5Yzg2ZWNmYTExNGFfZmhHdUhFMzZkR3dkTTYzdFBRZ1dHWkRTMU1oTTU4OXRfVG9rZW46Rnl6b2JOa3dUbzVzakp4U0xobGNrUUI3bkdiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY4NDUwNGRkODkwYjRlZTUzOWJiOTQxN2JjZDEwOTZfcmdEVGkzM3o0NTdFcXFjNldkaVBjdFJ4RndRUlI5YVBfVG9rZW46UEJ6OWJ1dnk2b2RwTnV4VUloWWNNOTVNblYwXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
+<meta property="og:image" content="http://example.com/Users/shenshuaike/Desktop/sreenshortcut/Screenshot%202023-08-21%20at%2017.29.16.png">
+<meta property="og:image" content="http://example.com/Users/shenshuaike/Desktop/sreenshortcut/Screenshot%202023-08-21%20at%2017.26.15.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T07:10:06.501Z">
+<meta property="article:modified_time" content="2023-10-02T09:57:01.361Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="DALL-E2">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
+<meta name="twitter:image" content="http://example.com/Users/shenshuaike/Desktop/sreenshortcut/Screenshot%202023-08-21%20at%2017.29.16.png">
   
   
   
@@ -228,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.5k 字
         
       </span>
     
@@ -239,7 +237,7 @@
         
         
         
-          11 分钟
+          13 分钟
         
       </span>
     
@@ -293,7 +291,7 @@
 <p>模型架构：</p>
 <ul>
 <li>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![Screenshot 2023-08-21 at 16.55.46](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-21 at 16.55.46.png)</p>
 </li>
 <li>
 <p>图片的上半部分就是一个CLIP模型，下半部分是一个“两阶段”的生成</p>
@@ -322,16 +320,15 @@
 </ul>
 </li>
 <li>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM4MTllYTg0Yzg4ZGYwMTUzOGNhMmJmMTQwMDA0YjZfSmNwMkhFbnJpMkV3NUt2VkhuWmRaUDVsNnl5c016a0JfVG9rZW46TDFiWmJwWEgyb3ZLRXN4YVhjeGNoUlZlbmpiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<img src="/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-21 at 17.29.16.png" srcset="/img/loading.gif" lazyload alt="Screenshot 2023-08-21 at 17.29.16" style="zoom:50%;" />
 </li>
-<li></li>
 <li>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmY2YjdkMmNhZGYxMjE1YzRiYzU5Yzg2ZWNmYTExNGFfZmhHdUhFMzZkR3dkTTYzdFBRZ1dHWkRTMU1oTTU4OXRfVG9rZW46Rnl6b2JOa3dUbzVzakp4U0xobGNrUUI3bkdiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<img src="/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-21 at 17.26.15.png" srcset="/img/loading.gif" lazyload alt="Screenshot 2023-08-21 at 17.26.15" style="zoom:50%;" />
 </li>
 <li>
 <p>还有的问题就是在生成一些带文字的图片的时候图片中的文字全是错的，这大概是由于分词文本编码的问题，模型识别的都是词根。还有人发现了很多有趣的现象——模型有一种自己的语言（见讲解视频最后）</p>
 <ul>
-<li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY4NDUwNGRkODkwYjRlZTUzOWJiOTQxN2JjZDEwOTZfcmdEVGkzM3o0NTdFcXFjNldkaVBjdFJ4RndRUlI5YVBfVG9rZW46UEJ6OWJ1dnk2b2RwTnV4VUloWWNNOTVNblYwXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
+<li>![Screenshot 2023-08-21 at 17.30.00](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-21 at 17.30.00.png)</li>
 </ul>
 </li>
 </ul>
@@ -446,9 +443,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-clip/" title="CLIP">
+                      <a href="/2023/10/02/paper-reading-controlnet/" title="ControlNet">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CLIP</span>
+                        <span class="hidden-mobile">ControlNet</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

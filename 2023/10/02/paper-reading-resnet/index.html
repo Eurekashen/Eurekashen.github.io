@@ -16,24 +16,19 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：  上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接结构">
+    <meta name="description" content="赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接： ![img](&#x2F;Users&#x2F;shenshuaike&#x2F;Desktop&#x2F;sreenshortcut&#x2F;Screensho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ResNet">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-resnet/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：  上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接结构">
+<meta property="og:description" content="赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接： ![img](&#x2F;Users&#x2F;shenshuaike&#x2F;Desktop&#x2F;sreenshortcut&#x2F;Screensho">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Y2YTJjZmJlZjMwNDY1YWZiMmIxMjg1NzE3M2E3ZmVfOXdmQXJ1WXVXY0VHVXo3cHBzRTRHUmZRN0RCM3BPZExfVG9rZW46SnV6b2JzOGNUb0FRSUR4cThTM2N5M3lEbkZoXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTY2ZmFiNTVmZGQxNGVhM2IzMGZjN2ViMGRmMDFjM2RfN28wV2tUQk95QVV1dDFTeEdJa0FaWmtiM1F3UHBGNGpfVG9rZW46SEZia2JudU5Tb1ZscDd4WjZlSGNpRXVNbnhmXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZiMWQ0OWU0ZDk3ZDE4YjBjZjgyNDU3YmQ0ZjgyYmZfcFJVTFN4dlFJTDhmbTc1emlhYWhBTWZhaEUyMG9QZFhfVG9rZW46UzdwQmJ4N0xXb1VPZGh4bnNnaWNWRERabldlXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA">
-<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NjAxNzYwZDhiMDhlNDkyYmIwZWMzZGYwMTkyYzcwYmVfRHdsYlFaOFJSS0hHc3VvQ0JvSzZNSjhDMThVS1VYM21fVG9rZW46S3RjOWJXZ04xb3UxVFB4Mml6eWN6ZHM1bmZnXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:37:28.317Z">
+<meta property="article:modified_time" content="2023-10-02T10:06:23.597Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="ResNet">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Y2YTJjZmJlZjMwNDY1YWZiMmIxMjg1NzE3M2E3ZmVfOXdmQXJ1WXVXY0VHVXo3cHBzRTRHUmZRN0RCM3BPZExfVG9rZW46SnV6b2JzOGNUb0FRSUR4cThTM2N5M3lEbkZoXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA">
   
   
   
@@ -228,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          549 字
+          881 字
         
       </span>
     
@@ -239,7 +234,7 @@
         
         
         
-          5 分钟
+          8 分钟
         
       </span>
     
@@ -287,10 +282,10 @@
 <li>让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。</li>
 </ul>
 <p>引入了残差连接：</p>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Y2YTJjZmJlZjMwNDY1YWZiMmIxMjg1NzE3M2E3ZmVfOXdmQXJ1WXVXY0VHVXo3cHBzRTRHUmZRN0RCM3BPZExfVG9rZW46SnV6b2JzOGNUb0FRSUR4cThTM2N5M3lEbkZoXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![img](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 20.06.36.png)</p>
 <p>上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。</p>
 <p>如果没有这样的连接结构是一个plane的网络的话，当网络变的越来越深的时候结果反而会变差。理论上来说非常深的网络结果不会变差因为最后几层学习到的输出如果是0的话就和浅层是一样的。但是在实际中SGD随机梯度下降没有办法做到，深层网络学习到的东西是错误的。</p>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=MTY2ZmFiNTVmZGQxNGVhM2IzMGZjN2ViMGRmMDFjM2RfN28wV2tUQk95QVV1dDFTeEdJa0FaWmtiM1F3UHBGNGpfVG9rZW46SEZia2JudU5Tb1ZscDd4WjZlSGNpRXVNbnhmXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![img](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 20.13.42.png)</p>
 <p>当网络层数深的时候就训练不动了</p>
 <p>注意收敛不代表模型训练好的，是要收敛到理想的位置</p>
 <p>加了残差连接之后能够训练动的原因是梯度保持的好（MuLi），因为如果不加由于求导的链式法则当梯度越来越小很容易会梯度消失。加了之后多了一个浅层网络梯度的加法项，使得梯度可以更新。</p>
@@ -301,7 +296,7 @@
 <p>通过使用1<em>1的卷积增加了通道降低了图片的大小，使得下面👇两种计算方式的理论复杂度是相似的（但是实际上1</em>1的实现卷积效率比较低）</p>
 </li>
 <li>
-<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZiMWQ0OWU0ZDk3ZDE4YjBjZjgyNDU3YmQ0ZjgyYmZfcFJVTFN4dlFJTDhmbTc1emlhYWhBTWZhaEUyMG9QZFhfVG9rZW46UzdwQmJ4N0xXb1VPZGh4bnNnaWNWRERabldlXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![img](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 20.07.04.png)</p>
 </li>
 <li>
 <p>这样就使得训练深层网络不会有爆炸的计算复杂度</p>
@@ -310,7 +305,7 @@
 </li>
 <li>不同的ResNet网络模型
 <ul>
-<li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NjAxNzYwZDhiMDhlNDkyYmIwZWMzZGYwMTkyYzcwYmVfRHdsYlFaOFJSS0hHc3VvQ0JvSzZNSjhDMThVS1VYM21fVG9rZW46S3RjOWJXZ04xb3UxVFB4Mml6eWN6ZHM1bmZnXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
+<li>![img](/Users/shenshuaike/Desktop/sreenshortcut/Screenshot 2023-08-17 at 20.06.52.png)</li>
 </ul>
 </li>
 </ul>
@@ -413,9 +408,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-nerf/" title="NeRF">
+                      <a href="/2023/10/02/paper-reading-stable_diffusion/" title="Latent diffusion model">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">NeRF</span>
+                        <span class="hidden-mobile">Latent diffusion model</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -423,8 +418,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-stable_diffusion/" title="Latent diffusion model">
-                        <span class="hidden-mobile">Latent diffusion model</span>
+                      <a href="/2023/10/02/paper-reading-transformer/" title="Transformer">
+                        <span class="hidden-mobile">Transformer</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
