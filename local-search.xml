@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
-    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
+    <title>Lecture 1</title>
+    <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
+    <url>/2023/10/02/notes-com-arch-lecture-1/</url>
     
-    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机体系结构第一次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -33,11 +33,11 @@
   
   
   <entry>
-    <title>Lecture 1</title>
-    <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
-    <url>/2023/10/02/notes-com-arch-lecture-1/</url>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
+    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
     
-    <content type="html"><![CDATA[<h1>计算机体系结构第一次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -120,6 +120,35 @@
   
   
   <entry>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-os-lecture-2/"/>
+    <url>/2023/10/02/notes-os-lecture-2/</url>
+    
+    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Lecture Notes</category>
+      
+      <category>Operating System</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Lecture Notes</tag>
+      
+      <tag>Operating System</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Lecture 1</title>
     <link href="/2023/10/02/notes-os-lecture-1/"/>
     <url>/2023/10/02/notes-os-lecture-1/</url>
@@ -153,7 +182,7 @@
     <link href="/2023/10/02/paper-reading-alexnet/"/>
     <url>/2023/10/02/paper-reading-alexnet/</url>
     
-    <content type="html"><![CDATA[<p>作为深度学习的奠基之作</p><p>在ImageNet这个数据集上进行测试拿到了第一名（2012）</p><p>使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务</p><img src="./sreenshortcut/Screenshot 2023-08-17 at 15.42.18.png" style="zoom:100%;" /><p>图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的</p><p>在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快</p><p>Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操作是有重叠的</p><ul><li>减少过拟合<ul><li>数据增强：把图片进行裁剪和旋转、使用PCA对图片的RGB通道做出变化。</li><li>Dropout：对于全连接层的输出用0.5的概率设为0（本来意图是认为这样相当于训练了很多个不一样的模型，但是后来发现这相当于正则化）</li></ul></li><li>测试结果非常好，并且隐藏层的输出向量在语义空间中有非常好的表示，这个向量相似的图片确实是在像素空间中相似的图片。</li><li>使用一个均值为0、方差是0.01正态分布来初始化每一层的权重。</li><li>模型可以直接在raw RGB图片上进行操作而不用提前抽取想SIFT特征，推动了之后计算机视觉和深度学习的发展。并且不需要提前使用无标记数据来预热网络。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>作为深度学习的奠基之作</p><p>在ImageNet这个数据集上进行测试拿到了第一名（2012）</p><p>使用GPU进行训练，训练这样的深层神经网络在当时是一个开销非常大的任务</p><img src="/sreenshortcut/Screenshot 2023-08-17 at 15.42.18.png" style="zoom:100%;" /><p>图片所示是网络的总体架构，上下两个通路是为了在两个GPU上训练设计的</p><p>在当时使用了ReLU激活函数，在当时的条件下ReLU的收敛更快</p><p>Overlapping Pooling，一般来说pooling操作是不重叠的，但是在这里pooling操作是有重叠的</p><ul><li>减少过拟合<ul><li>数据增强：把图片进行裁剪和旋转、使用PCA对图片的RGB通道做出变化。</li><li>Dropout：对于全连接层的输出用0.5的概率设为0（本来意图是认为这样相当于训练了很多个不一样的模型，但是后来发现这相当于正则化）</li></ul></li><li>测试结果非常好，并且隐藏层的输出向量在语义空间中有非常好的表示，这个向量相似的图片确实是在像素空间中相似的图片。</li><li>使用一个均值为0、方差是0.01正态分布来初始化每一层的权重。</li><li>模型可以直接在raw RGB图片上进行操作而不用提前抽取想SIFT特征，推动了之后计算机视觉和深度学习的发展。并且不需要提前使用无标记数据来预热网络。</li></ul>]]></content>
     
     
     <categories>
@@ -228,35 +257,6 @@
       <tag>Paper reading</tag>
       
       <tag>CLIP</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-os-lecture-2/"/>
-    <url>/2023/10/02/notes-os-lecture-2/</url>
-    
-    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>Lecture Notes</category>
-      
-      <category>Operating System</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Lecture Notes</tag>
-      
-      <tag>Operating System</tag>
       
     </tags>
     
@@ -352,18 +352,18 @@
   
   
   <entry>
-    <title>MAE</title>
-    <link href="/2023/10/02/paper-reading-mae/"/>
-    <url>/2023/10/02/paper-reading-mae/</url>
+    <title>GAN</title>
+    <link href="/2023/10/02/paper-reading-gan/"/>
+    <url>/2023/10/02/paper-reading-gan/</url>
     
-    <content type="html"><![CDATA[<p>文章的题目就说了MAE是一个scalable（可扩展）的视觉学习器。 MAE就是一个BERT的CV版本，BERT是mask掉词语的token、而MAE是把一部分的图片mask掉。所谓的autoencoder中的auto的意思是“自”，而不是“自动”的意思——也就是输入的x和输出的y是一个东西，通过encoder-decoder架构自监督的训练。</p><ul><li>asymmetric encoder-decoder architecture：非对称的编码器-解码器架构；随机的mask掉一部分patch，边卖钱只会看到没有被mask的patch，这样也可以节约计算资源、降低计算开销。和AE、DAE一样，MAE学习的也是一个中间的在latent space的bottleneck表征，而不是一个概率模型，所以不能够用来做生成。模型迁移到下游任务的表现非常好，而且相对来说训练速度比较快（寻来拿ViT-Huge）</li><li>Motivation：<ul><li>有标号的数据非常的稀缺，训练的时候也容易过拟合</li><li>在NLP领域自监督训练训练已经非常的成熟了，像之前说的GPT、BERT。之前也有人想要把BERT迁移到CV领域上来，但是效果并不好——分析为什么不好：首先第一点在过去的CV领域卷积神经网络大行其道，卷积操作不好实现所谓的mask和位置编码（因为卷积的窗口滑动本身是一个连续的过程），但是在ViT出现之后这就不是问题了；信息的密度差异，文本数据的信息密度远低于图像数据，文本只能够mask少部分，但是图片却可以mask掉75%。文本数据还有大量的语义信息（上下文），而图片的信息是非常局部的（从相邻的一些patch就可以补全mask的patch）——为了解决这个问题，把mask的比例设置的非常高；</li><li>deocder的设计，MAE重建的是原始像素，原始像素的语义层级是比较低的，BERT重建的是单词—语义层级是比较高的。BERT最后只是一个MLP、MAE的decoder可能就需要一个网络。</li></ul></li></ul><img src="./sreenshortcut/image (1).png"><p>MAE根据非常少的patch也可以重建的大差不差。</p><ul><li>Related：其实MAE可以看作是一个DAE的特殊情况——DAE是给图片加噪声，噪声大到一定程度的时候就相当于把patch mask掉了。相关的工作有iGPT、BEiT等。</li><li>随机采样mask：采样一部分，把剩下的mask掉。</li><li>MAE encoder&amp;deocder：encoder是一个ViT，但是只把没有mask的patch当作输入。deocder的输入是全部的patch。被mask的token是一个共享的、可学习的向量。都加入了位置编码，decoder则是另一种形式的Transformer block.MAE的decoder仅仅在预训练的时候起作用，迁移到下游任务微调的时候只有encoder起作用。</li><li>像素的重建：重构最后的像素，输出一个长的向量，最后reshape一下。使用MSE作为损失函数。只在被mask掉的块上面做损失函数，没有被盖掉的因为输入的时候已经看到了像素信息就不做损失函数了。</li><li>Masking Ratio：</li></ul><center>  - <img src="./sreenshortcut/image (2).png"></center><ul><li>可以看到linear probing对于比例是更加敏感的，mask的比例恰当的时候学习到的信息更多</li><li>一些实验结果：<ul><li>训练1000个epoch acc也是在变大的，过拟合也不是非常的严重。一般就训练200epoch就会出现过拟合现象</li></ul></li></ul><center><img src="./sreenshortcut/image (3).png"></center><ul><li>关于微调：下面这张图是在进行不同程度的微调的结果，底部的层的参数和任务的相关度没有非常的高，上面的层和任务的相关度更高，可以多调一调。靠近底部的层相对来说提取的特征是低级特征（较为具体的特征，和具体任务相关性不是非常高的特征）、而靠近输出的层提取的是比较抽象和高级的特征（和具体的任务的相关性会更加的高）。</li></ul><center><img src="./sreenshortcut/image (4).png"></center><ul><li>是重构原始的像素还是重构dVAE的token。两者的差距非常的少，但是直接重构像素的办法更加的直观、更加的方便。所以选择直接重构原始像素。</li></ul><center><img src="./sreenshortcut/image (5).png"></center><ul><li>迁移到下游任务上的结果</li></ul><!-- <div style="display: flex; flex-direction: row;"> --><center><img src="./sreenshortcut/image (6).png" alt="img" style="zoom:85%;" /><img src="./sreenshortcut/image (7).png" alt="image (7)" style="zoom:95%;" /></center><!-- </div> -->]]></content>
+    <content type="html"><![CDATA[<p>理论部分，关于概率论的推导部分没有细看，主要在讲证明目标函数的选择是正确的以及优化目标函数。注意理解一下琴声-香浓散度、KL散度</p><p>GAN模型的训练过程非常的有意思，使用的是没有标号的数据——也就是说属于无监督学习。但是GAN的目标函数是使用的有label的，其label就是数据是真实的还是模型生成出来的。这推动了之后的弱监督学习和半监督学习的发展。</p><ul><li>GAN模型是一个framework<ul><li>生成模型G、辨别模型D，生成模型的任务就是让辨别模型犯错，让辨别模型无法分辨生成出来的图片和真实的图片</li><li>在D、G都是一个MLP的情况下可以通过一个反向传播来更新权重而不需要使用马尔可夫链，计算过程相对的简单。</li><li>在这个框架下生成模型和辨别模型都是MLP，输入是高斯分布的随机噪声。这种情况下，只需要通过反向传播而不需要计算马尔可夫链，D、G是同时进行训练的。</li></ul></li><li>深度学习和GAN：<ul><li>深度神经网络属于深度学习，深度学习内涵是使用一个模型、函数去拟合数据的概率分布。</li><li>在辨别模型上有非常大的进展</li><li>但是深度学习在生成模型上的进展不足，这是因为深度学习要最大化去似然函数，这带来了很多计算上的困难。</li></ul></li><li>GAN的形象描述：像造假者和警察，两个人会不断的对抗；造假造的越来越真，警察辨别假的的能力也越来越强；到最后的结果就是造假的人造出来的东西和真的没有区别。警察分不出来真的和假的。对应GAN中的生成模型和辨别模型。</li><li>两种途径：<ul><li>计算出来真正的分布是什么样的。（计算量大，更加难以计算）</li><li>用一个函数来去拟合，不管真正分布是什么样的。在这里使用的是一个MLP（理论上MLP可以拟合任何函数）</li></ul></li><li>目标函数<ul><li><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mi>i</mi><msub><mi>n</mi><mi>G</mi></msub><mi>m</mi><mi>a</mi><msub><mi>x</mi><mi>D</mi></msub><mi>V</mi><mo stretchy="false">(</mo><mi>D</mi><mo separator="true">,</mo><mi>G</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>E</mi><mrow><mi>x</mi><mo>∼</mo><mi>p</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>D</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>+</mo><msub><mi>E</mi><mrow><mi>z</mi><mo>∼</mo><mi>p</mi><mi>z</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>D</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">min_Gmax_DV(D, G) = E_{x∼pdata(x)}[log D(x)] + E_{z∼pz(z)}[log(1 − D(G(z)))]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">mi</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">ma</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">G</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">∼</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mrel mtight">∼</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)))]</span></span></span></span></span></p></li><li><p>这是博弈论中经典的双人min-max游戏。</p></li></ul></li><li>训练过程：<ul><li><img src="./sreenshortcut/Screenshot 2023-08-19 at 14.08.46.png"></li><li><p>黑色虚线代表真实数据，绿线代表生成器数据、蓝线代表辨别器数据。x代表真实数据空间，z表示噪声的空间。</p></li></ul></li><li>具体算法如下：</li></ul><img src="./sreenshortcut/Screenshot 2023-08-19 at 14.11.06.png"><p>一次迭代先更新辨别器再更新生成器。在这里k是一个超参数，让D、G的更新在进度上是差不多的，两者才有对抗的空间，模型才能够训练起来。 重要的是判断模型的收敛，GAN的收敛是非常不稳定：一边不动一边抖动，两方都在抖动这算不算收敛难以界定。</p><ul><li>优点和缺点：<ul><li>难以收敛，训练过程非常的不平滑。必须平衡D、G，才能够生成出来比较好的结果。</li><li>端到端学习，从图片到图片，没有中间的过程。</li><li>不需要大量的标注数据</li></ul></li></ul><p>补充知识：</p><ul><li><p>KL散度：</p><ul><li><blockquote><p>KL（Kullback-Leibler）散度，也称为相对熵（Relative Entropy），是一种用于衡量两个概率分布之间差异的度量方式。它用来量化从一个概率分布（真实分布）到另一个概率分布（近似分布或模型分布）的信息丢失程度，或者说是从一个分布中获得真实分布所需的额外信息量。</p><p>给定两个离散概率分布 $$P(x)$$ 和 $$Q(x)$$，KL散度定义为：</p><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mi>x</mi></munder><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_{KL}(P \parallel Q) = \sum_x P(x) \log \frac{P(x)}{Q(x)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.677em;vertical-align:-1.25em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p><p>对于连续分布，KL散度定义为：</p><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">D_{KL}(P \parallel Q) = \int P(x) \log \frac{P(x)}{Q(x)} \, dx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span></p><p>值得注意的是，KL散度并不是对称的，即 $$D_{KL}(P \parallel Q) \neq D_{KL}(Q \parallel P)$$。这意味着在实际应用中，选择哪个分布作为“真实分布”和“近似分布”会影响KL散度的值。</p><p>KL散度有以下几个重要性质：</p><ol><li>非负性： $$D_{KL}(P \parallel Q) \geq 0$$，当且仅当 $$P(x) = Q(x)$$ 时取等号。</li><li>非对称性： $$D_{KL}(P \parallel Q) \neq D_{KL}(Q \parallel P)$$。</li><li>不满足三角不等式：一般情况下， $$D_{KL}(P \parallel R) \nleq D_{KL}(P \parallel Q) + D_{KL}(Q \parallel R)$$。</li></ol><p>在机器学习中，KL散度常用于测量模型分布与真实数据分布之间的差异，例如在生成模型中用于衡量生成的样本分布与真实数据分布之间的差异。最小化KL散度或者等价地最大化KL散度的负值（KL散度的对偶形式），在许多情况下可以用来优化模型参数，使模型分布逼近真实数据分布。</p></blockquote></li></ul></li></ul>]]></content>
     
     
     <categories>
       
       <category>Paper reading</category>
       
-      <category>Computer Vision</category>
+      <category>Generative Model</category>
       
     </categories>
     
@@ -372,7 +372,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>MAE</tag>
+      <tag>GAN</tag>
       
     </tags>
     
@@ -402,6 +402,35 @@
       <tag>Paper reading</tag>
       
       <tag>GNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MAE</title>
+    <link href="/2023/10/02/paper-reading-mae/"/>
+    <url>/2023/10/02/paper-reading-mae/</url>
+    
+    <content type="html"><![CDATA[<p>文章的题目就说了MAE是一个scalable（可扩展）的视觉学习器。 MAE就是一个BERT的CV版本，BERT是mask掉词语的token、而MAE是把一部分的图片mask掉。所谓的autoencoder中的auto的意思是“自”，而不是“自动”的意思——也就是输入的x和输出的y是一个东西，通过encoder-decoder架构自监督的训练。</p><ul><li>asymmetric encoder-decoder architecture：非对称的编码器-解码器架构；随机的mask掉一部分patch，边卖钱只会看到没有被mask的patch，这样也可以节约计算资源、降低计算开销。和AE、DAE一样，MAE学习的也是一个中间的在latent space的bottleneck表征，而不是一个概率模型，所以不能够用来做生成。模型迁移到下游任务的表现非常好，而且相对来说训练速度比较快（寻来拿ViT-Huge）</li><li>Motivation：<ul><li>有标号的数据非常的稀缺，训练的时候也容易过拟合</li><li>在NLP领域自监督训练训练已经非常的成熟了，像之前说的GPT、BERT。之前也有人想要把BERT迁移到CV领域上来，但是效果并不好——分析为什么不好：首先第一点在过去的CV领域卷积神经网络大行其道，卷积操作不好实现所谓的mask和位置编码（因为卷积的窗口滑动本身是一个连续的过程），但是在ViT出现之后这就不是问题了；信息的密度差异，文本数据的信息密度远低于图像数据，文本只能够mask少部分，但是图片却可以mask掉75%。文本数据还有大量的语义信息（上下文），而图片的信息是非常局部的（从相邻的一些patch就可以补全mask的patch）——为了解决这个问题，把mask的比例设置的非常高；</li><li>deocder的设计，MAE重建的是原始像素，原始像素的语义层级是比较低的，BERT重建的是单词—语义层级是比较高的。BERT最后只是一个MLP、MAE的decoder可能就需要一个网络。</li></ul></li></ul><img src="./sreenshortcut/image (1).png"><p>MAE根据非常少的patch也可以重建的大差不差。</p><ul><li>Related：其实MAE可以看作是一个DAE的特殊情况——DAE是给图片加噪声，噪声大到一定程度的时候就相当于把patch mask掉了。相关的工作有iGPT、BEiT等。</li><li>随机采样mask：采样一部分，把剩下的mask掉。</li><li>MAE encoder&amp;deocder：encoder是一个ViT，但是只把没有mask的patch当作输入。deocder的输入是全部的patch。被mask的token是一个共享的、可学习的向量。都加入了位置编码，decoder则是另一种形式的Transformer block.MAE的decoder仅仅在预训练的时候起作用，迁移到下游任务微调的时候只有encoder起作用。</li><li>像素的重建：重构最后的像素，输出一个长的向量，最后reshape一下。使用MSE作为损失函数。只在被mask掉的块上面做损失函数，没有被盖掉的因为输入的时候已经看到了像素信息就不做损失函数了。</li><li>Masking Ratio：</li></ul><center>  - <img src="./sreenshortcut/image (2).png"></center><ul><li>可以看到linear probing对于比例是更加敏感的，mask的比例恰当的时候学习到的信息更多</li><li>一些实验结果：<ul><li>训练1000个epoch acc也是在变大的，过拟合也不是非常的严重。一般就训练200epoch就会出现过拟合现象</li></ul></li></ul><center><img src="./sreenshortcut/image (3).png"></center><ul><li>关于微调：下面这张图是在进行不同程度的微调的结果，底部的层的参数和任务的相关度没有非常的高，上面的层和任务的相关度更高，可以多调一调。靠近底部的层相对来说提取的特征是低级特征（较为具体的特征，和具体任务相关性不是非常高的特征）、而靠近输出的层提取的是比较抽象和高级的特征（和具体的任务的相关性会更加的高）。</li></ul><center><img src="./sreenshortcut/image (4).png"></center><ul><li>是重构原始的像素还是重构dVAE的token。两者的差距非常的少，但是直接重构像素的办法更加的直观、更加的方便。所以选择直接重构原始像素。</li></ul><center><img src="./sreenshortcut/image (5).png"></center><ul><li>迁移到下游任务上的结果</li></ul><!-- <div style="display: flex; flex-direction: row;"> --><center><img src="./sreenshortcut/image (6).png" alt="img" style="zoom:85%;" /><img src="./sreenshortcut/image (7).png" alt="image (7)" style="zoom:95%;" /></center><!-- </div> -->]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>MAE</tag>
       
     </tags>
     
@@ -468,35 +497,6 @@
   
   
   <entry>
-    <title>Latent diffusion model</title>
-    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
-    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>DDPM最开始的实现是没有使用传统的注意力机制的，就是使用的一个U-Net；在后续的版本中引入了attention机制</p></blockquote><ul><li>总结：原来的Diffusion Models都是直接在像素空间进行的操作，这会消耗大量的计算资源，计算复杂度非常的高。stable diffusion是在latent空间上进行的操作，可以在有限的资源上训练出来。stable diffusion使用了交叉注意力机制，可以condition控制diffusion的生成；可以用在补全、生成、超分等多种任务上。</li><li>GAN的结果多样性不如diffusion model，并且会有训练不稳定和模式坍塌（只会生成几个单一图片，没有多样性可言）的问题。DM属于likelihood-based models（似然模型），不会有上面的问题，并且可以通过充分利用共享的参数来拟合复杂的分布，而不需要像自回归AR模型一样有大量的参数</li><li>DMs会倾向于在模型感知不到的细节上消耗太多的计算资源，尽管使用了一些downsampling的措施，但是在RGB的像素空间上评估和计算梯度也是非常消耗计算资源的。<ul><li>所以想到把模型放到低维度的latent空间上训练</li><li>分成两个阶段</li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Stable diffusion</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Transformer</title>
     <link href="/2023/10/02/paper-reading-transformer/"/>
     <url>/2023/10/02/paper-reading-transformer/</url>
@@ -518,6 +518,35 @@
       <tag>Paper reading</tag>
       
       <tag>Transformer</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Latent diffusion model</title>
+    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
+    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>DDPM最开始的实现是没有使用传统的注意力机制的，就是使用的一个U-Net；在后续的版本中引入了attention机制</p></blockquote><ul><li>总结：原来的Diffusion Models都是直接在像素空间进行的操作，这会消耗大量的计算资源，计算复杂度非常的高。stable diffusion是在latent空间上进行的操作，可以在有限的资源上训练出来。stable diffusion使用了交叉注意力机制，可以condition控制diffusion的生成；可以用在补全、生成、超分等多种任务上。</li><li>GAN的结果多样性不如diffusion model，并且会有训练不稳定和模式坍塌（只会生成几个单一图片，没有多样性可言）的问题。DM属于likelihood-based models（似然模型），不会有上面的问题，并且可以通过充分利用共享的参数来拟合复杂的分布，而不需要像自回归AR模型一样有大量的参数</li><li>DMs会倾向于在模型感知不到的细节上消耗太多的计算资源，尽管使用了一些downsampling的措施，但是在RGB的像素空间上评估和计算梯度也是非常消耗计算资源的。<ul><li>所以想到把模型放到低维度的latent空间上训练</li><li>分成两个阶段</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>Stable diffusion</tag>
       
     </tags>
     
@@ -584,35 +613,6 @@
   
   
   <entry>
-    <title>GAN</title>
-    <link href="/2023/10/02/paper-reading-gan/"/>
-    <url>/2023/10/02/paper-reading-gan/</url>
-    
-    <content type="html"><![CDATA[<p>理论部分，关于概率论的推导部分没有细看，主要在讲证明目标函数的选择是正确的以及优化目标函数。注意理解一下琴声-香浓散度、KL散度</p><p>GAN模型的训练过程非常的有意思，使用的是没有标号的数据——也就是说属于无监督学习。但是GAN的目标函数是使用的有label的，其label就是数据是真实的还是模型生成出来的。这推动了之后的弱监督学习和半监督学习的发展。</p><ul><li>GAN模型是一个framework<ul><li>生成模型G、辨别模型D，生成模型的任务就是让辨别模型犯错，让辨别模型无法分辨生成出来的图片和真实的图片</li><li>在D、G都是一个MLP的情况下可以通过一个反向传播来更新权重而不需要使用马尔可夫链，计算过程相对的简单。</li><li>在这个框架下生成模型和辨别模型都是MLP，输入是高斯分布的随机噪声。这种情况下，只需要通过反向传播而不需要计算马尔可夫链，D、G是同时进行训练的。</li></ul></li><li>深度学习和GAN：<ul><li>深度神经网络属于深度学习，深度学习内涵是使用一个模型、函数去拟合数据的概率分布。</li><li>在辨别模型上有非常大的进展</li><li>但是深度学习在生成模型上的进展不足，这是因为深度学习要最大化去似然函数，这带来了很多计算上的困难。</li></ul></li><li>GAN的形象描述：像造假者和警察，两个人会不断的对抗；造假造的越来越真，警察辨别假的的能力也越来越强；到最后的结果就是造假的人造出来的东西和真的没有区别。警察分不出来真的和假的。对应GAN中的生成模型和辨别模型。</li><li>两种途径：<ul><li>计算出来真正的分布是什么样的。（计算量大，更加难以计算）</li><li>用一个函数来去拟合，不管真正分布是什么样的。在这里使用的是一个MLP（理论上MLP可以拟合任何函数）</li></ul></li><li>目标函数<ul><li><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mi>i</mi><msub><mi>n</mi><mi>G</mi></msub><mi>m</mi><mi>a</mi><msub><mi>x</mi><mi>D</mi></msub><mi>V</mi><mo stretchy="false">(</mo><mi>D</mi><mo separator="true">,</mo><mi>G</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>E</mi><mrow><mi>x</mi><mo>∼</mo><mi>p</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>D</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>+</mo><msub><mi>E</mi><mrow><mi>z</mi><mo>∼</mo><mi>p</mi><mi>z</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>D</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">min_Gmax_DV(D, G) = E_{x∼pdata(x)}[log D(x)] + E_{z∼pz(z)}[log(1 − D(G(z)))]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">mi</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">ma</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">G</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">∼</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mrel mtight">∼</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)))]</span></span></span></span></span></p></li><li><p>这是博弈论中经典的双人min-max游戏。</p></li></ul></li><li>训练过程：<ul><li><img src="./sreenshortcut/Screenshot 2023-08-19 at 14.08.46.png"></li><li><p>黑色虚线代表真实数据，绿线代表生成器数据、蓝线代表辨别器数据。x代表真实数据空间，z表示噪声的空间。</p></li></ul></li><li>具体算法如下：</li></ul><img src="./sreenshortcut/Screenshot 2023-08-19 at 14.11.06.png"><p>一次迭代先更新辨别器再更新生成器。在这里k是一个超参数，让D、G的更新在进度上是差不多的，两者才有对抗的空间，模型才能够训练起来。 重要的是判断模型的收敛，GAN的收敛是非常不稳定：一边不动一边抖动，两方都在抖动这算不算收敛难以界定。</p><ul><li>优点和缺点：<ul><li>难以收敛，训练过程非常的不平滑。必须平衡D、G，才能够生成出来比较好的结果。</li><li>端到端学习，从图片到图片，没有中间的过程。</li><li>不需要大量的标注数据</li></ul></li></ul><p>补充知识：</p><ul><li><p>KL散度：</p><ul><li><blockquote><p>KL（Kullback-Leibler）散度，也称为相对熵（Relative Entropy），是一种用于衡量两个概率分布之间差异的度量方式。它用来量化从一个概率分布（真实分布）到另一个概率分布（近似分布或模型分布）的信息丢失程度，或者说是从一个分布中获得真实分布所需的额外信息量。</p><p>给定两个离散概率分布 $$P(x)$$ 和 $$Q(x)$$，KL散度定义为：</p><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mi>x</mi></munder><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_{KL}(P \parallel Q) = \sum_x P(x) \log \frac{P(x)}{Q(x)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.677em;vertical-align:-1.25em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p><p>对于连续分布，KL散度定义为：</p><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">D_{KL}(P \parallel Q) = \int P(x) \log \frac{P(x)}{Q(x)} \, dx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span></p><p>值得注意的是，KL散度并不是对称的，即 $$D_{KL}(P \parallel Q) \neq D_{KL}(Q \parallel P)$$。这意味着在实际应用中，选择哪个分布作为“真实分布”和“近似分布”会影响KL散度的值。</p><p>KL散度有以下几个重要性质：</p><ol><li>非负性： $$D_{KL}(P \parallel Q) \geq 0$$，当且仅当 $$P(x) = Q(x)$$ 时取等号。</li><li>非对称性： $$D_{KL}(P \parallel Q) \neq D_{KL}(Q \parallel P)$$。</li><li>不满足三角不等式：一般情况下， $$D_{KL}(P \parallel R) \nleq D_{KL}(P \parallel Q) + D_{KL}(Q \parallel R)$$。</li></ol><p>在机器学习中，KL散度常用于测量模型分布与真实数据分布之间的差异，例如在生成模型中用于衡量生成的样本分布与真实数据分布之间的差异。最小化KL散度或者等价地最大化KL散度的负值（KL散度的对偶形式），在许多情况下可以用来优化模型参数，使模型分布逼近真实数据分布。</p></blockquote></li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>GAN</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Python</title>
     <link href="/2023/10/02/progamming-python/"/>
     <url>/2023/10/02/progamming-python/</url>
@@ -642,35 +642,6 @@
   
   
   <entry>
-    <title>CMake</title>
-    <link href="/2023/10/02/tools-cmake/"/>
-    <url>/2023/10/02/tools-cmake/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Tools</category>
-      
-      <category>CMake</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Tools</tag>
-      
-      <tag>CMake</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Conda</title>
     <link href="/2023/10/02/tools-conda/"/>
     <url>/2023/10/02/tools-conda/</url>
@@ -692,6 +663,35 @@
       <tag>Tools</tag>
       
       <tag>Conda</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CMake</title>
+    <link href="/2023/10/02/tools-cmake/"/>
+    <url>/2023/10/02/tools-cmake/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>CMake</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>CMake</tag>
       
     </tags>
     
