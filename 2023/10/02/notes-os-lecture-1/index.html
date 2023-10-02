@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/02/pPL643Q.png">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/02/pPL6qEV.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T09:40:01.666Z">
+<meta property="article:modified_time" content="2023-10-02T13:34:03.515Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Lecture Notes">
 <meta property="article:tag" content="Operating System">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          972 字
+          1.2k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          9 分钟
+          11 分钟
         
       </span>
     
@@ -298,21 +298,21 @@
 <h1>OS Definition</h1>
 <ul>
 <li>
-<p>OS is a <strong>==resource allocator==</strong></p>
+<p>OS is a <mark><strong>resource allocator</strong></mark></p>
 <ul>
 <li>*Manages all resources；*管理所有的硬件资源-lab1会接触到定时器timer</li>
 <li>*Decides between conflicting requests for efficient and fair resource use；*当资源出现冲突的是时候决定怎么样的分配是最高效的、最公平的。</li>
 </ul>
 </li>
 <li>
-<p>OS is a ==<strong>control program</strong>==</p>
+<p>OS is a <mark><strong>control program</strong></mark></p>
 <ul>
 <li><em>Controls execution of programs to prevent errors and improper use of the computer</em>；当程序出现错误的时候handle这些错误，典型的问题就是C语言对0地址访问之后程序报错退出，不会把整个系统弄崩掉。</li>
 </ul>
 </li>
 </ul>
 <h2 id="kernel">kernel</h2>
-<p>==<strong>内核</strong>==：操作系统中一直在运行的、最早启动、最先被赋予进程ID的程序就是kernel</p>
+<p><mark><strong>内核</strong></mark>：操作系统中一直在运行的、最早启动、最先被赋予进程ID的程序就是kernel</p>
 <blockquote>
 <p>Everything else is either a system program (ships with the operating system) or an application program</p>
 </blockquote>
@@ -322,13 +322,19 @@
 <li>启动引导程序<strong>bootstrap program</strong>：
 <ul>
 <li>当系统加电启动的时候用来把操作系统的内核加载到内存中去并且开始执行</li>
-<li>一般来说放到主板上面的ROM&amp;EPROM中</li>
+<li>一般来说放到主板上面的ROM&amp;EPROM中，这就是所谓的固件firmware，是烧录在ROM的</li>
+<li><em>对于现代处理器来说，很重要的是建立虚地址</em></li>
 </ul>
 </li>
 </ul>
 <h1>Computer System Organization</h1>
 <p><img src="https://z1.ax1x.com/2023/10/02/pPL6qEV.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>冯诺依曼架构是围绕<strong>内存</strong>展开的，所有设备通过bus和内存建立链接</p>
+<blockquote>
+<p>I/O devices and the CPU can execute concurrently.</p>
+</blockquote>
+<p>CPU和IO设备是可以并发的运行的</p>
+<p>一个device会被对应的device controller管理，有自己Local buffer，CPU控制local buffer和main memory之间的数据交互。I/O is from the device to local buffer of controller.I/O是从device</p>
 
                 
               </div>
