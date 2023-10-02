@@ -16,13 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="Conda 从已有的conda环境clone出一个新的conda环境 1conda create --name new_env --clone source_env  environment.yaml的使用，创建环境和导出现有的环境 12conda env create -f environment.yamlconda env export &gt; environment.yaml">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Conda">
 <meta property="og:url" content="http://example.com/2023/10/02/tools-conda/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Conda 从已有的conda环境clone出一个新的conda环境 1conda create --name new_env --clone source_env  environment.yaml的使用，创建环境和导出现有的环境 12conda env create -f environment.yamlconda env export &gt; environment.yaml">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T05:39:03.644Z">
+<meta property="article:modified_time" content="2023-10-02T06:23:22.291Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Tools">
 <meta property="article:tag" content="Conda">
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          175 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -272,7 +274,14 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="Conda"><a href="#Conda" class="headerlink" title="Conda"></a>Conda</h1><ul>
+<li><p>从已有的conda环境clone出一个新的conda环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create --name new_env --<span class="hljs-built_in">clone</span> source_env<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>environment.yaml的使用，创建环境和导出现有的环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> create -f environment.yaml<br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> &gt; environment.yaml<br></code></pre></td></tr></table></figure></li>
+</ul>
+
                 
               </div>
             

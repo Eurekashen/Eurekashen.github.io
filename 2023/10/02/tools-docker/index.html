@@ -16,17 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="Docker模拟完全相同的本地开发环境 和虚拟机的思想非常相似，但是不会像虚拟机一样去模拟底层的硬件，更加的轻量。只是为每一个程序提供隔离的运行环境，不会相互影响。这些环境就是“容器”  Dockerfile 一个自动化脚本，用来创建下面说的镜像。  Image 镜像，相当于虚拟机的快照snapshot。里面包含了我们要部署的应用程序和关联的所有依赖。  Container 通过镜像我们可以创建多">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Docker">
 <meta property="og:url" content="http://example.com/2023/10/02/tools-docker/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Docker模拟完全相同的本地开发环境 和虚拟机的思想非常相似，但是不会像虚拟机一样去模拟底层的硬件，更加的轻量。只是为每一个程序提供隔离的运行环境，不会相互影响。这些环境就是“容器”  Dockerfile 一个自动化脚本，用来创建下面说的镜像。  Image 镜像，相当于虚拟机的快照snapshot。里面包含了我们要部署的应用程序和关联的所有依赖。  Container 通过镜像我们可以创建多">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzM3NjFhODlkYjA5OWM4ZWQwMWYzZGUzNzBlYzA3MjJfZTlKUUViZFpEc3g4YjdTWkkzNVNMZTdmaWxMcmxITm9fVG9rZW46SGdLNWJlMjFvb2lpMEd4U29HOWNZQmswbnJoXzE2OTYyMjc5OTU6MTY5NjIzMTU5NV9WNA">
+<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NDUxYmI1NTdlNGQxM2I0ZGZjYTI1MzA1NTQ5NmNhNjFfR3IzYVk1eEEwVnFBRWVIYUtlYUJNazBBemhGZXdmUmNfVG9rZW46Sno0OWIzV1V0b2I2d3R4RTQwaWNsUkZEbjlnXzE2OTYyMjgwMzk6MTY5NjIzMTYzOV9WNA">
+<meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQyYTAzYTFjYzE3ZGYyYmY0ZDJjNGYxNDg0NmZhN2VfZGVUYWdUYnpqeDhnQXBvMllwMzJCaVRZNjBjUnZDVUNfVG9rZW46VGRUZWJZOWRNbzVjNmt4V3NuWWNEWWJ5bjBnXzE2OTYyMjgwNDY6MTY5NjIzMTY0Nl9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T05:39:06.747Z">
+<meta property="article:modified_time" content="2023-10-02T06:30:28.297Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Tools">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzM3NjFhODlkYjA5OWM4ZWQwMWYzZGUzNzBlYzA3MjJfZTlKUUViZFpEc3g4YjdTWkkzNVNMZTdmaWxMcmxITm9fVG9rZW46SGdLNWJlMjFvb2lpMEd4U29HOWNZQmswbnJoXzE2OTYyMjc5OTU6MTY5NjIzMTU5NV9WNA">
   
   
   
@@ -219,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.1k 字
         
       </span>
     
@@ -230,7 +236,7 @@
         
         
         
-          1 分钟
+          10 分钟
         
       </span>
     
@@ -272,7 +278,70 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><p>模拟完全相同的本地开发环境</p>
+<p>和虚拟机的思想非常相似，但是不会像虚拟机一样去模拟底层的硬件，更加的轻量。只是为每一个程序提供隔离的运行环境，不会相互影响。这些环境就是“容器”</p>
+<ul>
+<li><p>Dockerfile</p>
+<p>一个自动化脚本，用来创建下面说的镜像。</p>
+</li>
+<li><p>Image</p>
+<p>镜像，相当于虚拟机的快照snapshot。里面包含了我们要部署的应用程序和关联的所有依赖。</p>
+</li>
+<li><p>Container</p>
+<p>通过镜像我们可以创建多个不同的Container，这些Container之间相互独立不影响，可以在容器中配置不同的工具软件。</p>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzM3NjFhODlkYjA5OWM4ZWQwMWYzZGUzNzBlYzA3MjJfZTlKUUViZFpEc3g4YjdTWkkzNVNMZTdmaWxMcmxITm9fVG9rZW46SGdLNWJlMjFvb2lpMEd4U29HOWNZQmswbnJoXzE2OTYyMjc5OTU6MTY5NjIzMTU5NV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h2 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h2><ul>
+<li><p>Dockerfile</p>
+<p>From命令指定基础镜像</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs docker"><span class="hljs-keyword">From</span> python:<span class="hljs-number">3.8</span>-slim-buster<br></code></pre></td></tr></table></figure>
+
+<p>WORKDIR指定之后的工作操作路径</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs docker"><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br></code></pre></td></tr></table></figure>
+
+<p>COPY将程序拷贝到镜像中</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs docker"><span class="hljs-keyword">COPY</span><span class="language-bash"> &lt;<span class="hljs-built_in">source</span>&gt; &lt;des&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>RUN命令允许在创建镜像的时候执行所有的shell命令</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs docker"><span class="hljs-keyword">RUN</span><span class="language-bash"> pip install -r requirment.txt</span><br></code></pre></td></tr></table></figure>
+
+<p>CMD是在创建容器的时候操作的，而RUN是在创建镜像的时候执行的。</p>
+</li>
+<li><p>创建镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t image_name /path/to/dockerfile<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>启动容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -p 80:5000 -d iamge_name<br></code></pre></td></tr></table></figure>
+
+<p>-p参数是用来做端口映射用的，后面是容器的端口，前面是本地主机上的端口。-d是在后台运行的意思，这样输出就不会在终端输出。</p>
+</li>
+<li><p>其他指令（都可以在docker desktop中操作）</p>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NDUxYmI1NTdlNGQxM2I0ZGZjYTI1MzA1NTQ5NmNhNjFfR3IzYVk1eEEwVnFBRWVIYUtlYUJNazBBemhGZXdmUmNfVG9rZW46Sno0OWIzV1V0b2I2d3R4RTQwaWNsUkZEbjlnXzE2OTYyMjgwMzk6MTY5NjIzMTYzOV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>删除一个容器的时候里面的修改和数据会一同销毁，如果想要保留。可以使用数据卷volume功能（相当于本地主机和不同容器之间的共享文件夹）</p>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQyYTAzYTFjYzE3ZGYyYmY0ZDJjNGYxNDg0NmZhN2VfZGVUYWdUYnpqeDhnQXBvMllwMzJCaVRZNjBjUnZDVUNfVG9rZW46VGRUZWJZOWRNbzVjNmt4V3NuWWNEWWJ5bjBnXzE2OTYyMjgwNDY6MTY5NjIzMTY0Nl9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker volume create<br></code></pre></td></tr></table></figure>
+
+<p>创建一个数据卷,在启动容器docker run的时候使用-v参数挂载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -dp 80:5000 -v my-finance-data:/etc/finance my-finance<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>多个容器的共同协作：dokcer-compose.yml文件</p>
+<ul>
+<li>使用services定义多个容器，可以指定环境变量和数据卷</li>
+<li>使用docker compose up运行所有的容器</li>
+<li>使用docker compose down来停止并且删除所有的容器，但是数据卷需要手动删除，除非加上-volumes参数</li>
+</ul>
+</li>
+<li><p>Docker和Kubernetes的区别和联系</p>
+<ul>
+<li>不是同一个层面的东西，Kubernetes取代的是docker的容器引擎的部分</li>
+<li>Docker的所有容器都是在一台计算机上运行的，当工程体量大到一定程度的时候一台计算机就显得力不从心。</li>
+<li>Kubernetes做的就是把一个程序分发到一个集群上去运行，并且进行自动化的管理和维护升级。</li>
+</ul>
+</li>
+</ul>
+
                 
               </div>
             
