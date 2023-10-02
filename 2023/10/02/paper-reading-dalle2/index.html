@@ -16,19 +16,19 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 $$64\times 64$$的图片，然后通过训练的模型上采样不断的提高分辨率到 $$1024\times 1024$$   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分就是一个CLIP模型，下半部分是一个“两">
+    <meta name="description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DALL-E 2">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-dalle2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 $$64\times 64$$的图片，然后通过训练的模型上采样不断的提高分辨率到 $$1024\times 1024$$   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分就是一个CLIP模型，下半部分是一个“两">
+<meta property="og:description" content="DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。   层级式：模型是先生成一张 64×6464\times 6464×64的图片，然后通过训练的模型上采样不断的提高分辨率到 1024×10241024\times 10241024×1024   生成出来的图片又逼真又多样。   模型架构：      图片的上半部分">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM4MTllYTg0Yzg4ZGYwMTUzOGNhMmJmMTQwMDA0YjZfSmNwMkhFbnJpMkV3NUt2VkhuWmRaUDVsNnl5c016a0JfVG9rZW46TDFiWmJwWEgyb3ZLRXN4YVhjeGNoUlZlbmpiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmY2YjdkMmNhZGYxMjE1YzRiYzU5Yzg2ZWNmYTExNGFfZmhHdUhFMzZkR3dkTTYzdFBRZ1dHWkRTMU1oTTU4OXRfVG9rZW46Rnl6b2JOa3dUbzVzakp4U0xobGNrUUI3bkdiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY4NDUwNGRkODkwYjRlZTUzOWJiOTQxN2JjZDEwOTZfcmdEVGkzM3o0NTdFcXFjNldkaVBjdFJ4RndRUlI5YVBfVG9rZW46UEJ6OWJ1dnk2b2RwTnV4VUloWWNNOTVNblYwXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:59:17.289Z">
+<meta property="article:modified_time" content="2023-10-02T07:10:06.501Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="DALL-E2">
@@ -284,7 +284,7 @@
                 <p>DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。</p>
 <ul>
 <li>
-<p>层级式：模型是先生成一张 $$64\times 64$$的图片，然后通过训练的模型上采样不断的提高分辨率到 $$1024\times 1024$$</p>
+<p>层级式：模型是先生成一张 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>×</mo><mn>64</mn></mrow><annotation encoding="application/x-tex">64\times 64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">64</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">64</span></span></span></span>的图片，然后通过训练的模型上采样不断的提高分辨率到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1024</mn><mo>×</mo><mn>1024</mn></mrow><annotation encoding="application/x-tex">1024\times 1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1024</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1024</span></span></span></span></p>
 </li>
 <li>
 <p>生成出来的图片又逼真又多样。</p>
@@ -446,9 +446,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-gan/" title="GAN">
+                      <a href="/2023/10/02/paper-reading-clip/" title="CLIP">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GAN</span>
+                        <span class="hidden-mobile">CLIP</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -456,8 +456,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-mae/" title="MAE">
-                        <span class="hidden-mobile">MAE</span>
+                      <a href="/2023/10/02/paper-reading-ddpm_ddim/" title="DDPM">
+                        <span class="hidden-mobile">DDPM</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
-    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
+    <title>Lecture 1</title>
+    <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
+    <url>/2023/10/02/notes-com-arch-lecture-1/</url>
     
-    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机体系结构第一次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -33,40 +33,11 @@
   
   
   <entry>
-    <title>Lecture 1</title>
-    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
-    <url>/2023/10/02/notes-com-network-lecture-1/</url>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
+    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
     
-    <content type="html"><![CDATA[<h1>计算机网络第一次课程笔记</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>Lecture Notes</category>
-      
-      <category>Computer Network</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Lecture Notes</tag>
-      
-      <tag>Computer Network</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Lecture 1</title>
-    <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
-    <url>/2023/10/02/notes-com-arch-lecture-1/</url>
-    
-    <content type="html"><![CDATA[<h1>计算机体系结构第一次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -120,18 +91,18 @@
   
   
   <entry>
-    <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-os-lecture-2/"/>
-    <url>/2023/10/02/notes-os-lecture-2/</url>
+    <title>Lecture 1</title>
+    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
+    <url>/2023/10/02/notes-com-network-lecture-1/</url>
     
-    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机网络第一次课程笔记</h1>]]></content>
     
     
     <categories>
       
       <category>Lecture Notes</category>
       
-      <category>Operating System</category>
+      <category>Computer Network</category>
       
     </categories>
     
@@ -140,7 +111,7 @@
       
       <tag>Lecture Notes</tag>
       
-      <tag>Operating System</tag>
+      <tag>Computer Network</tag>
       
     </tags>
     
@@ -178,27 +149,27 @@
   
   
   <entry>
-    <title>BERT</title>
-    <link href="/2023/10/02/paper-reading-bert/"/>
-    <url>/2023/10/02/paper-reading-bert/</url>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-os-lecture-2/"/>
+    <url>/2023/10/02/notes-os-lecture-2/</url>
     
-    <content type="html"><![CDATA[<ul><li>BERT主要有两个重要的创新点:<ul><li>第一个就是微调，预训练不是BERT独创的，但是BERT让这种方法和使用预训练模型在下游任务上进行微调这种方法“出圈”了。</li><li>Bidirectional：GPT的训练方法是单词接龙，也就是说模型只能够看到之前的文本信息。BERT的训练方法是“完形填空”，可以看到上下文的信息。这种双向的信息在很多时候都是合法的，比如说在进行选择题或者是问答的时候，也是会从后向前看完整道题才会进行回答；不只是只看上文的信息。</li></ul></li><li>两种使用预训练模型的策略：<ul><li>feature-based：代表性的工作是ELMo（是基于RNN的模型）</li><li>fine-tuning：基于微调的，在大数据集上进行训练，在下游任务上进行微调。</li></ul></li><li><strong>模型架构：</strong></li></ul><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzJmMDU0NGMyYjVlZGY1YmVjMDcyMzI5NzcxZTI0NzdfMjQxbW5LR2VnTkhWdGhzSnBLQXUwcWNLMnVJanZWeHFfVG9rZW46R0szZ2J4T1ZVb1VTZHd4bUZLNGNCOXFQbnpmXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></p><p>在无标签数据上进行预训练</p><ul><li>BERT只是使用了Transformer的encoder，GPT是使用了decoder；Transformer的训练数据是序列对：Encoder/decoder各有一个输入。但是BERT的输入输出形式不太一样：<ul><li>在BERT中不管是一个句子还是一个句子对（Q&amp;A）都表示成一个token sequence.<ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJhNzY3ODQ2ZjIxMGVhOTZjODUwMmRmOGEwMmJkMzlfamZYaURCWkxlYUJISGtVbkVhNUdTRUJ4V25mS0VwUTlfVG9rZW46QnkxeGJra1Fxb0NWR1Z4c2ZOSWNvcUI1bkVnXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></p></li><li><p>上面的图很好的展示了在BERT中输入的表示，其中有两种特殊的token：一个是表示句子的类别的CLS token；一个是表示两个句子的间隔的SEP token。 位置编码可以使用相对的位置编码即offset，也可以使用绝对的。 Segment Embedding是表示在哪个句子中的Embedding 最后如果要使用在分类任务上的话，分类结果就是把CLS Embedding过一个FC就可以得到分类结果。在每一个token上都添加了可以学习的Embedding向量——上面图中的所有的Embedding都是通过学习得来的。</p></li></ul></li><li>WordPiece：<ul><li>切词的办法，如果这个单词的出现概率不高就把这个单词切开看它的字序列，如果自序列的出现概率高的话只保留自序列（提取词根）</li></ul></li><li>Mask<ul><li>把15%切分后的tokenmask掉，但是只这么做会造成在预训练和微调上的mismatching，因为在微调的时候没有MASK token。为了解决这个问题，我们以80%的概率真的把MASK token遮盖掉；10%换成其他任意不相关的token；10%不变。</li></ul></li><li>BERT预训练的时候前后两个句子不一定是匹配的，也有可能是随机拿来的——50%是真实前后匹配的句子；50%是随便找的。</li></ul></li><li>测试结果<ul><li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NTc1ODMxZGQxZWJhMDIxMWMxNzczMTkyMWIxZmM3N2RfTjdLVzllcFBMTUlHZVhCOUxTT2Q1b093Q1RrWHNxNHBfVG9rZW46Q0lHT2JIdlNqb2Q5cWF4M3ZrTmNmNVJ2bmhmXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
     
     
     <categories>
       
-      <category>Paper reading</category>
+      <category>Lecture Notes</category>
       
-      <category>Natural Language Processing</category>
+      <category>Operating System</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Paper reading</tag>
+      <tag>Lecture Notes</tag>
       
-      <tag>BERT</tag>
+      <tag>Operating System</tag>
       
     </tags>
     
@@ -236,6 +207,35 @@
   
   
   <entry>
+    <title>BERT</title>
+    <link href="/2023/10/02/paper-reading-bert/"/>
+    <url>/2023/10/02/paper-reading-bert/</url>
+    
+    <content type="html"><![CDATA[<ul><li>BERT主要有两个重要的创新点:<ul><li>第一个就是微调，预训练不是BERT独创的，但是BERT让这种方法和使用预训练模型在下游任务上进行微调这种方法“出圈”了。</li><li>Bidirectional：GPT的训练方法是单词接龙，也就是说模型只能够看到之前的文本信息。BERT的训练方法是“完形填空”，可以看到上下文的信息。这种双向的信息在很多时候都是合法的，比如说在进行选择题或者是问答的时候，也是会从后向前看完整道题才会进行回答；不只是只看上文的信息。</li></ul></li><li>两种使用预训练模型的策略：<ul><li>feature-based：代表性的工作是ELMo（是基于RNN的模型）</li><li>fine-tuning：基于微调的，在大数据集上进行训练，在下游任务上进行微调。</li></ul></li><li><strong>模型架构：</strong></li></ul><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzJmMDU0NGMyYjVlZGY1YmVjMDcyMzI5NzcxZTI0NzdfMjQxbW5LR2VnTkhWdGhzSnBLQXUwcWNLMnVJanZWeHFfVG9rZW46R0szZ2J4T1ZVb1VTZHd4bUZLNGNCOXFQbnpmXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></p><p>在无标签数据上进行预训练</p><ul><li>BERT只是使用了Transformer的encoder，GPT是使用了decoder；Transformer的训练数据是序列对：Encoder/decoder各有一个输入。但是BERT的输入输出形式不太一样：<ul><li>在BERT中不管是一个句子还是一个句子对（Q&amp;A）都表示成一个token sequence.<ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJhNzY3ODQ2ZjIxMGVhOTZjODUwMmRmOGEwMmJkMzlfamZYaURCWkxlYUJISGtVbkVhNUdTRUJ4V25mS0VwUTlfVG9rZW46QnkxeGJra1Fxb0NWR1Z4c2ZOSWNvcUI1bkVnXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></p></li><li><p>上面的图很好的展示了在BERT中输入的表示，其中有两种特殊的token：一个是表示句子的类别的CLS token；一个是表示两个句子的间隔的SEP token。 位置编码可以使用相对的位置编码即offset，也可以使用绝对的。 Segment Embedding是表示在哪个句子中的Embedding 最后如果要使用在分类任务上的话，分类结果就是把CLS Embedding过一个FC就可以得到分类结果。在每一个token上都添加了可以学习的Embedding向量——上面图中的所有的Embedding都是通过学习得来的。</p></li></ul></li><li>WordPiece：<ul><li>切词的办法，如果这个单词的出现概率不高就把这个单词切开看它的字序列，如果自序列的出现概率高的话只保留自序列（提取词根）</li></ul></li><li>Mask<ul><li>把15%切分后的tokenmask掉，但是只这么做会造成在预训练和微调上的mismatching，因为在微调的时候没有MASK token。为了解决这个问题，我们以80%的概率真的把MASK token遮盖掉；10%换成其他任意不相关的token；10%不变。</li></ul></li><li>BERT预训练的时候前后两个句子不一定是匹配的，也有可能是随机拿来的——50%是真实前后匹配的句子；50%是随便找的。</li></ul></li><li>测试结果<ul><li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NTc1ODMxZGQxZWJhMDIxMWMxNzczMTkyMWIxZmM3N2RfTjdLVzllcFBMTUlHZVhCOUxTT2Q1b093Q1RrWHNxNHBfVG9rZW46Q0lHT2JIdlNqb2Q5cWF4M3ZrTmNmNVJ2bmhmXzE2OTYyMjczMDU6MTY5NjIzMDkwNV9WNA" alt="img"></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Natural Language Processing</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>BERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CLIP</title>
     <link href="/2023/10/02/paper-reading-clip/"/>
     <url>/2023/10/02/paper-reading-clip/</url>
@@ -265,11 +265,11 @@
   
   
   <entry>
-    <title>ControlNet</title>
-    <link href="/2023/10/02/paper-reading-controlnet/"/>
-    <url>/2023/10/02/paper-reading-controlnet/</url>
+    <title>DALL-E 2</title>
+    <link href="/2023/10/02/paper-reading-dalle2/"/>
+    <url>/2023/10/02/paper-reading-dalle2/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。</p><ul><li><p>层级式：模型是先生成一张 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>×</mo><mn>64</mn></mrow><annotation encoding="application/x-tex">64\times 64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">64</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">64</span></span></span></span>的图片，然后通过训练的模型上采样不断的提高分辨率到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1024</mn><mo>×</mo><mn>1024</mn></mrow><annotation encoding="application/x-tex">1024\times 1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1024</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1024</span></span></span></span></p></li><li><p>生成出来的图片又逼真又多样。</p></li><li><p>模型架构：</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li><p>图片的上半部分就是一个CLIP模型，下半部分是一个“两阶段”的生成</p></li><li><p>prior：先验模型输入的是text embedding结果网络的变化之后变为image embedding。最巧妙的是这里可以使用CLIP模型对于同样的text embedding生成的image embedding作为ground truth来训练。也使用的是一个diffsuion,但是没有使用U-Net而是一个Transformer的decoder，并且也不是像DDPM一样去预测加的噪声（残差），而是直接去预测原来的图片特征（因为这里是一个序列数据）</p></li><li><p>decoder解码器：把image embedding渲染成图片；decoder中没有使用attention机制</p></li><li><p>文章说到这样一种两阶段的方式显示的转化为image embedding使得生成效果更加好，但是是不是这样还是有待商榷的，在这之后谷歌的ImageN就没有使用两阶段的方式。在本文中这两个阶段都是使用的diffusion模型。</p></li></ul></li><li><p>Classification guided diffusion：原来GAN生成的图片更加的逼真，因为GAN的目的就是把D骗过去；Classification guided可以牺牲一部分多样性使得生成的图片更加逼真。 具体实现就是在一个数据集上训练一个classifier（一般是加了噪声的ImageNet数据集），在每一步denoise的时候计算一个梯度，使用这个梯度来指导denoise；Classification guided free这个方法是在推理的时候不需要再计算梯度，在训练的时候需要计算一个带分类器的和一个不带分类器的结果，计算这两个结果之间的差别，不断训练更新逼近这两个结果，训练完成之后就不需要再计算了。</p></li><li><p>问题：</p><ul><li><ul><li>大概是由于CLIP的原因，因为CLIP只是纯纯的去计算图片文本之间的相似程度，并没有理解物体的上下关系。像图中的这个例子就非常明显，只提取出了“红”和“蓝”两种特征，去计算的相似程度。但是模型并不知道上下关系、嵌入关系等。</li><li>从下面的这种重建的例子中也可以看出来。</li></ul></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM4MTllYTg0Yzg4ZGYwMTUzOGNhMmJmMTQwMDA0YjZfSmNwMkhFbnJpMkV3NUt2VkhuWmRaUDVsNnl5c016a0JfVG9rZW46TDFiWmJwWEgyb3ZLRXN4YVhjeGNoUlZlbmpiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmY2YjdkMmNhZGYxMjE1YzRiYzU5Yzg2ZWNmYTExNGFfZmhHdUhFMzZkR3dkTTYzdFBRZ1dHWkRTMU1oTTU4OXRfVG9rZW46Rnl6b2JOa3dUbzVzakp4U0xobGNrUUI3bkdiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li><p>还有的问题就是在生成一些带文字的图片的时候图片中的文字全是错的，这大概是由于分词文本编码的问题，模型识别的都是词根。还有人发现了很多有趣的现象——模型有一种自己的语言（见讲解视频最后）</p><ul><li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY4NDUwNGRkODkwYjRlZTUzOWJiOTQxN2JjZDEwOTZfcmdEVGkzM3o0NTdFcXFjNldkaVBjdFJ4RndRUlI5YVBfVG9rZW46UEJ6OWJ1dnk2b2RwTnV4VUloWWNNOTVNblYwXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></li></ul></li></ul></li><li><p>相关介绍：</p><ul><li>AE：auot-encoder，自监督训练希望重建原来的x</li><li>DAE：加了噪声，之后和AE是一样的</li><li>MAE：加了mask，也是一样的，也说明了图像信息的冗余是非常多的。但是这三种都是得到了一个bottleneck z向量是特征而不是一个分布，所以只能够拿来做分类任务而不能用来采样解决生成任务。</li><li>VAE：变分自解码器，这就是去预测一个分布，从分布中采样一个z出来</li><li>VQVAE</li></ul></li></ul>]]></content>
     
     
     <categories>
@@ -285,7 +285,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>ControlNet</tag>
+      <tag>DALL-E2</tag>
       
     </tags>
     
@@ -323,6 +323,64 @@
   
   
   <entry>
+    <title>ControlNet</title>
+    <link href="/2023/10/02/paper-reading-controlnet/"/>
+    <url>/2023/10/02/paper-reading-controlnet/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>ControlNet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GNN</title>
+    <link href="/2023/10/02/paper-reading-gnn/"/>
+    <url>/2023/10/02/paper-reading-gnn/</url>
+    
+    <content type="html"><![CDATA[<p>博客链接如下：</p><p><a href="https://distill.pub/2021/gnn-intro/">https://distill.pub/2021/gnn-intro/</a></p><p>把图中的vertex、edge和全局信息都编码为embedding向量</p><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=OWNiNTUxZjNhYmFlNzRhYWI1NWFhNzFhZjRiOWJkNjJfWjVwQkpFQmswalh3OTZtNWxMNkJIVzNvbE5uN2dMS0hfVG9rZW46SFd4c2JvTzN3b2xQRTJ4M1kyMGNka1Q1bm9lXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p><p>不同种类的数据都可以表示成为图的形式：图片数据的像素就是图的一个节点、像素之间是相邻的就可以表示为两个节点之间的一条边。 而对于文本数据每一个token就可以看作是一个节点；而相邻的token就可以看作是一条边。</p><ul><li>三种任务：在图上的任务、节点上的、边上的。</li><li>在图数据上使用机器学习的挑战：<ul><li>使用邻接矩阵表示图的话是一个稀疏矩阵，而使用GPU来计算稀疏矩阵的效率非常的低，这一直是一个待解决的问题。</li><li>如果使用邻接矩表示，同一个图有多种矩阵的表示形式，交换任意的行、列对于图是没有影响的，在进行机器学习的时候需要考虑这种不变性。</li><li>所以使用邻接表的形式来存储图数据，使用V、E、G三个向量表示图的特征信息。</li></ul></li><li>GNN：<ul><li><p>下图就是一个简单的GNN网络</p></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWVkYTdlY2RlMGM3NWVjZDJhNzMyYzBiOTViZDM0MTVfRzFza0F6MXV2VDIxOVB6REE3aFlodDgzRnNBUmJ6Y25fVG9rZW46SGc4amJwVTJ1b3g5ZUV4Vk1xeGNqTHpibmlkXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>GNN block实际上就是一个MLP，注意这里是把V、G、U三个向量分别送入的。最后把节点的向量表示送入一个FC层得到分类结果。（注意不管有多少个顶点只有一个全连接层，所有的顶点共享一个FC的参数）</p></li><li><p>Pooling information汇聚操作</p></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NhMjY3OGFiYzZhY2VlMTZiODIwMjY4OTExNDRlY2NfNDRHQVZrMDUzTHlscnVNSjFFUXZxa1FaUzVBcXpaRXdfVG9rZW46QnFIa2JuaUM4b3lrUlZ4a0UyZGNnVE5CblZKXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>如果没有顶点的向量，可以使用和这个顶点连接的所有边的向量聚合来表示这个顶点的特征。</p></li><li><p>上面这样的问题在于我们并没有使用图的结构信息——使用信息传递来解决</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NjIxZGQxZTNmNTcyYWU5OTZhNGMwYTAxNGU1Mjk0MmNfR1VyRGJ1N2tIZ3B0dVlQZnFSdDZSOVJvZmxJR3BhdGxfVG9rZW46WjJzR2JCU3Fwb0NGNUt4YXRPQ2N2aFhGblhnXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>把本身顶点的向量和他的邻居的向量加在一起送入MLP，其实这个思路有点像在矩阵上面做卷积了——可以传递图中节点比较长距离的特征。</p></li></ul></li><li><p>可以在边和顶点之间传递信息：</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmEwMjRiOTk1MmEwNTBhZDdkNjgyYWU0YjlmNTExODJfd3JWejlBWHNmWHhsNlJPVVVscGsyT1ZSZmtZN0o3QWFfVG9rZW46WGV3MWJrdUpQbzd1WWF4UEVMVmNUWTU4blpnXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>如果维度不同的话可以使用投影的操作把维度弄成一样的。</p></li></ul></li><li><p>全局信息U的作用：抽象的“顶点”，和所有的顶点相连、和所有的边相连。</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Njc5NTY3YjdlYmI2MjYzNTFlZWMwOWZjOTQ3MWY3OGJfUHFyZFNuV2ZoTHlBbXkzWHJOUE5XbVFxN1NnZ1l2d3FfVG9rZW46S1ZwSmJUekhub2FPTzd4a216RmNqWUl6bk9nXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>在最后预测的时候可以把周围的相近向量拿过来一起预测——这有点像attention机制。</p></li></ul></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Graph</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>GNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>GAN</title>
     <link href="/2023/10/02/paper-reading-gan/"/>
     <url>/2023/10/02/paper-reading-gan/</url>
@@ -344,35 +402,6 @@
       <tag>Paper reading</tag>
       
       <tag>GAN</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>DALL-E 2</title>
-    <link href="/2023/10/02/paper-reading-dalle2/"/>
-    <url>/2023/10/02/paper-reading-dalle2/</url>
-    
-    <content type="html"><![CDATA[<p>DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。</p><ul><li><p>层级式：模型是先生成一张 $$64\times 64$$的图片，然后通过训练的模型上采样不断的提高分辨率到 $$1024\times 1024$$</p></li><li><p>生成出来的图片又逼真又多样。</p></li><li><p>模型架构：</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYxYTE2MzU0NzQ4MTJlMGY1YzdjYTBiYWU5NTJkYWJfR1ROZmJNN0tGOUoyUXZCalI2cnJZNXk5cTBzZmJzTHpfVG9rZW46SDhwU2JIMEN5b0hnZU94Z2VsT2NKV2VtbkxnXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li><p>图片的上半部分就是一个CLIP模型，下半部分是一个“两阶段”的生成</p></li><li><p>prior：先验模型输入的是text embedding结果网络的变化之后变为image embedding。最巧妙的是这里可以使用CLIP模型对于同样的text embedding生成的image embedding作为ground truth来训练。也使用的是一个diffsuion,但是没有使用U-Net而是一个Transformer的decoder，并且也不是像DDPM一样去预测加的噪声（残差），而是直接去预测原来的图片特征（因为这里是一个序列数据）</p></li><li><p>decoder解码器：把image embedding渲染成图片；decoder中没有使用attention机制</p></li><li><p>文章说到这样一种两阶段的方式显示的转化为image embedding使得生成效果更加好，但是是不是这样还是有待商榷的，在这之后谷歌的ImageN就没有使用两阶段的方式。在本文中这两个阶段都是使用的diffusion模型。</p></li></ul></li><li><p>Classification guided diffusion：原来GAN生成的图片更加的逼真，因为GAN的目的就是把D骗过去；Classification guided可以牺牲一部分多样性使得生成的图片更加逼真。 具体实现就是在一个数据集上训练一个classifier（一般是加了噪声的ImageNet数据集），在每一步denoise的时候计算一个梯度，使用这个梯度来指导denoise；Classification guided free这个方法是在推理的时候不需要再计算梯度，在训练的时候需要计算一个带分类器的和一个不带分类器的结果，计算这两个结果之间的差别，不断训练更新逼近这两个结果，训练完成之后就不需要再计算了。</p></li><li><p>问题：</p><ul><li><ul><li>大概是由于CLIP的原因，因为CLIP只是纯纯的去计算图片文本之间的相似程度，并没有理解物体的上下关系。像图中的这个例子就非常明显，只提取出了“红”和“蓝”两种特征，去计算的相似程度。但是模型并不知道上下关系、嵌入关系等。</li><li>从下面的这种重建的例子中也可以看出来。</li></ul></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM4MTllYTg0Yzg4ZGYwMTUzOGNhMmJmMTQwMDA0YjZfSmNwMkhFbnJpMkV3NUt2VkhuWmRaUDVsNnl5c016a0JfVG9rZW46TDFiWmJwWEgyb3ZLRXN4YVhjeGNoUlZlbmpiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmY2YjdkMmNhZGYxMjE1YzRiYzU5Yzg2ZWNmYTExNGFfZmhHdUhFMzZkR3dkTTYzdFBRZ1dHWkRTMU1oTTU4OXRfVG9rZW46Rnl6b2JOa3dUbzVzakp4U0xobGNrUUI3bkdiXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></p></li><li><p>还有的问题就是在生成一些带文字的图片的时候图片中的文字全是错的，这大概是由于分词文本编码的问题，模型识别的都是词根。还有人发现了很多有趣的现象——模型有一种自己的语言（见讲解视频最后）</p><ul><li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY4NDUwNGRkODkwYjRlZTUzOWJiOTQxN2JjZDEwOTZfcmdEVGkzM3o0NTdFcXFjNldkaVBjdFJ4RndRUlI5YVBfVG9rZW46UEJ6OWJ1dnk2b2RwTnV4VUloWWNNOTVNblYwXzE2OTYyMjczNjg6MTY5NjIzMDk2OF9WNA" alt="img"></li></ul></li></ul></li><li><p>相关介绍：</p><ul><li>AE：auot-encoder，自监督训练希望重建原来的x</li><li>DAE：加了噪声，之后和AE是一样的</li><li>MAE：加了mask，也是一样的，也说明了图像信息的冗余是非常多的。但是这三种都是得到了一个bottleneck z向量是特征而不是一个分布，所以只能够拿来做分类任务而不能用来采样解决生成任务。</li><li>VAE：变分自解码器，这就是去预测一个分布，从分布中采样一个z出来</li><li>VQVAE</li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>DALL-E2</tag>
       
     </tags>
     
@@ -410,6 +439,35 @@
   
   
   <entry>
+    <title>NeRF</title>
+    <link href="/2023/10/02/paper-reading-nerf/"/>
+    <url>/2023/10/02/paper-reading-nerf/</url>
+    
+    <content type="html"><![CDATA[<h2 id="NeRF想要完成的目标：">NeRF想要完成的目标：</h2><ul><li>Novel View Synthesis，翻译成新视角合成工作，给定已知视角下的图片和图片的内外参数合成新视角下的图片。</li><li>NeRF 想做这样一件事——不需要中间三维重建的过程，仅根据位姿内参和图像，直接合成新视角下的图像。为此 NeRF 引入了辐射场的概念。NeRF使用MLP把3D场景表示为一个可学习的、连续的辐射场。</li></ul><h2 id="Positional-Encoding">Positional Encoding</h2><p>深度神经网络倾向于学习低频的参数，但是实际场景中的辐射场基本都是高频的。所以作者提出了Positional Encoding。</p><h2 id="Hierarchical-volume-sampling">Hierarchical volume sampling</h2><p>使用体渲染积分就会遇到以下几个问题，虽然可以离散的近似计算积分，但是面临的问题就是如何采样。采样点过多开销过大，采样点过少近似误差有太大。</p><p>观的一个想法是，最好尽可能的避免在空缺部分以及被遮挡了的部分进行过多的采样，因为这些部分对最好的颜色贡献是很少的，基于这一想法 NeRF 提出分层采样训练的方式</p><blockquote><p>使用两个网络同时进行训练 (后称 coarse 和 fine 网络)， coarse 网络输入的点是通过对光线均匀采样得到的，根据 coarse 网络预测的体密度值，对光线的分布进行估计，然后根据估计出的分布进行第二次重要性采样，然后再把所有的采样点一起输入到 fine 网络进行预测。关于 loss 函数我们同样作为一个开放性的内容，不在此多做讲解了。下面是一个 NeRF 的 Demo 以及我自己训的一个母校的 Demo(由于场景太大，拍摄图像有限，左右两边效果不好)。</p></blockquote><ul><li><p>引用链接</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/380015071">https://zhuanlan.zhihu.com/p/380015071</a></p></blockquote></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>3D Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>NeRF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ResNet</title>
     <link href="/2023/10/02/paper-reading-resnet/"/>
     <url>/2023/10/02/paper-reading-resnet/</url>
@@ -431,6 +489,35 @@
       <tag>Paper reading</tag>
       
       <tag>ResNet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Latent diffusion model</title>
+    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
+    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>DDPM最开始的实现是没有使用传统的注意力机制的，就是使用的一个U-Net；在后续的版本中引入了attention机制</p></blockquote><ul><li>总结：原来的Diffusion Models都是直接在像素空间进行的操作，这会消耗大量的计算资源，计算复杂度非常的高。stable diffusion是在latent空间上进行的操作，可以在有限的资源上训练出来。stable diffusion使用了交叉注意力机制，可以condition控制diffusion的生成；可以用在补全、生成、超分等多种任务上。</li><li>GAN的结果多样性不如diffusion model，并且会有训练不稳定和模式坍塌（只会生成几个单一图片，没有多样性可言）的问题。DM属于likelihood-based models（似然模型），不会有上面的问题，并且可以通过充分利用共享的参数来拟合复杂的分布，而不需要像自回归AR模型一样有大量的参数</li><li>DMs会倾向于在模型感知不到的细节上消耗太多的计算资源，尽管使用了一些downsampling的措施，但是在RGB的像素空间上评估和计算梯度也是非常消耗计算资源的。<ul><li>所以想到把模型放到低维度的latent空间上训练</li><li>分成两个阶段</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>Stable diffusion</tag>
       
     </tags>
     
@@ -497,64 +584,6 @@
   
   
   <entry>
-    <title>Latent diffusion model</title>
-    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
-    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>DDPM最开始的实现是没有使用传统的注意力机制的，就是使用的一个U-Net；在后续的版本中引入了attention机制</p></blockquote><ul><li>总结：原来的Diffusion Models都是直接在像素空间进行的操作，这会消耗大量的计算资源，计算复杂度非常的高。stable diffusion是在latent空间上进行的操作，可以在有限的资源上训练出来。stable diffusion使用了交叉注意力机制，可以condition控制diffusion的生成；可以用在补全、生成、超分等多种任务上。</li><li>GAN的结果多样性不如diffusion model，并且会有训练不稳定和模式坍塌（只会生成几个单一图片，没有多样性可言）的问题。DM属于likelihood-based models（似然模型），不会有上面的问题，并且可以通过充分利用共享的参数来拟合复杂的分布，而不需要像自回归AR模型一样有大量的参数</li><li>DMs会倾向于在模型感知不到的细节上消耗太多的计算资源，尽管使用了一些downsampling的措施，但是在RGB的像素空间上评估和计算梯度也是非常消耗计算资源的。<ul><li>所以想到把模型放到低维度的latent空间上训练</li><li>分成两个阶段</li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Stable diffusion</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>NeRF</title>
-    <link href="/2023/10/02/paper-reading-nerf/"/>
-    <url>/2023/10/02/paper-reading-nerf/</url>
-    
-    <content type="html"><![CDATA[<h2 id="NeRF想要完成的目标：">NeRF想要完成的目标：</h2><ul><li>Novel View Synthesis，翻译成新视角合成工作，给定已知视角下的图片和图片的内外参数合成新视角下的图片。</li><li>NeRF 想做这样一件事——不需要中间三维重建的过程，仅根据位姿内参和图像，直接合成新视角下的图像。为此 NeRF 引入了辐射场的概念。NeRF使用MLP把3D场景表示为一个可学习的、连续的辐射场。</li></ul><h2 id="Positional-Encoding">Positional Encoding</h2><p>深度神经网络倾向于学习低频的参数，但是实际场景中的辐射场基本都是高频的。所以作者提出了Positional Encoding。</p><h2 id="Hierarchical-volume-sampling">Hierarchical volume sampling</h2><p>使用体渲染积分就会遇到以下几个问题，虽然可以离散的近似计算积分，但是面临的问题就是如何采样。采样点过多开销过大，采样点过少近似误差有太大。</p><p>观的一个想法是，最好尽可能的避免在空缺部分以及被遮挡了的部分进行过多的采样，因为这些部分对最好的颜色贡献是很少的，基于这一想法 NeRF 提出分层采样训练的方式</p><blockquote><p>使用两个网络同时进行训练 (后称 coarse 和 fine 网络)， coarse 网络输入的点是通过对光线均匀采样得到的，根据 coarse 网络预测的体密度值，对光线的分布进行估计，然后根据估计出的分布进行第二次重要性采样，然后再把所有的采样点一起输入到 fine 网络进行预测。关于 loss 函数我们同样作为一个开放性的内容，不在此多做讲解了。下面是一个 NeRF 的 Demo 以及我自己训的一个母校的 Demo(由于场景太大，拍摄图像有限，左右两边效果不好)。</p></blockquote><ul><li><p>引用链接</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/380015071">https://zhuanlan.zhihu.com/p/380015071</a></p></blockquote></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>3D Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>NeRF</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Java</title>
     <link href="/2023/10/02/progamming-java/"/>
     <url>/2023/10/02/progamming-java/</url>
@@ -576,64 +605,6 @@
       <tag>Programming</tag>
       
       <tag>Java</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>GNN</title>
-    <link href="/2023/10/02/paper-reading-gnn/"/>
-    <url>/2023/10/02/paper-reading-gnn/</url>
-    
-    <content type="html"><![CDATA[<p>博客链接如下：</p><p><a href="https://distill.pub/2021/gnn-intro/">https://distill.pub/2021/gnn-intro/</a></p><p>把图中的vertex、edge和全局信息都编码为embedding向量</p><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=OWNiNTUxZjNhYmFlNzRhYWI1NWFhNzFhZjRiOWJkNjJfWjVwQkpFQmswalh3OTZtNWxMNkJIVzNvbE5uN2dMS0hfVG9rZW46SFd4c2JvTzN3b2xQRTJ4M1kyMGNka1Q1bm9lXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p><p>不同种类的数据都可以表示成为图的形式：图片数据的像素就是图的一个节点、像素之间是相邻的就可以表示为两个节点之间的一条边。 而对于文本数据每一个token就可以看作是一个节点；而相邻的token就可以看作是一条边。</p><ul><li>三种任务：在图上的任务、节点上的、边上的。</li><li>在图数据上使用机器学习的挑战：<ul><li>使用邻接矩阵表示图的话是一个稀疏矩阵，而使用GPU来计算稀疏矩阵的效率非常的低，这一直是一个待解决的问题。</li><li>如果使用邻接矩表示，同一个图有多种矩阵的表示形式，交换任意的行、列对于图是没有影响的，在进行机器学习的时候需要考虑这种不变性。</li><li>所以使用邻接表的形式来存储图数据，使用V、E、G三个向量表示图的特征信息。</li></ul></li><li>GNN：<ul><li><p>下图就是一个简单的GNN网络</p></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWVkYTdlY2RlMGM3NWVjZDJhNzMyYzBiOTViZDM0MTVfRzFza0F6MXV2VDIxOVB6REE3aFlodDgzRnNBUmJ6Y25fVG9rZW46SGc4amJwVTJ1b3g5ZUV4Vk1xeGNqTHpibmlkXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>GNN block实际上就是一个MLP，注意这里是把V、G、U三个向量分别送入的。最后把节点的向量表示送入一个FC层得到分类结果。（注意不管有多少个顶点只有一个全连接层，所有的顶点共享一个FC的参数）</p></li><li><p>Pooling information汇聚操作</p></li><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NhMjY3OGFiYzZhY2VlMTZiODIwMjY4OTExNDRlY2NfNDRHQVZrMDUzTHlscnVNSjFFUXZxa1FaUzVBcXpaRXdfVG9rZW46QnFIa2JuaUM4b3lrUlZ4a0UyZGNnVE5CblZKXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>如果没有顶点的向量，可以使用和这个顶点连接的所有边的向量聚合来表示这个顶点的特征。</p></li><li><p>上面这样的问题在于我们并没有使用图的结构信息——使用信息传递来解决</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NjIxZGQxZTNmNTcyYWU5OTZhNGMwYTAxNGU1Mjk0MmNfR1VyRGJ1N2tIZ3B0dVlQZnFSdDZSOVJvZmxJR3BhdGxfVG9rZW46WjJzR2JCU3Fwb0NGNUt4YXRPQ2N2aFhGblhnXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>把本身顶点的向量和他的邻居的向量加在一起送入MLP，其实这个思路有点像在矩阵上面做卷积了——可以传递图中节点比较长距离的特征。</p></li></ul></li><li><p>可以在边和顶点之间传递信息：</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NmEwMjRiOTk1MmEwNTBhZDdkNjgyYWU0YjlmNTExODJfd3JWejlBWHNmWHhsNlJPVVVscGsyT1ZSZmtZN0o3QWFfVG9rZW46WGV3MWJrdUpQbzd1WWF4UEVMVmNUWTU4blpnXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>如果维度不同的话可以使用投影的操作把维度弄成一样的。</p></li></ul></li><li><p>全局信息U的作用：抽象的“顶点”，和所有的顶点相连、和所有的边相连。</p><ul><li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Njc5NTY3YjdlYmI2MjYzNTFlZWMwOWZjOTQ3MWY3OGJfUHFyZFNuV2ZoTHlBbXkzWHJOUE5XbVFxN1NnZ1l2d3FfVG9rZW46S1ZwSmJUekhub2FPTzd4a216RmNqWUl6bk9nXzE2OTYyMjc0MTQ6MTY5NjIzMTAxNF9WNA" alt="img"></p></li><li><p>在最后预测的时候可以把周围的相近向量拿过来一起预测——这有点像attention机制。</p></li></ul></li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Graph</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>GNN</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>CMake</title>
-    <link href="/2023/10/02/tools-cmake/"/>
-    <url>/2023/10/02/tools-cmake/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Tools</category>
-      
-      <category>CMake</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Tools</tag>
-      
-      <tag>CMake</tag>
       
     </tags>
     
@@ -671,18 +642,18 @@
   
   
   <entry>
-    <title>Conda</title>
-    <link href="/2023/10/02/tools-conda/"/>
-    <url>/2023/10/02/tools-conda/</url>
+    <title>CMake</title>
+    <link href="/2023/10/02/tools-cmake/"/>
+    <url>/2023/10/02/tools-cmake/</url>
     
-    <content type="html"><![CDATA[<h1>Conda</h1><ul><li><p>从已有的conda环境clone出一个新的conda环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create --name new_env --<span class="hljs-built_in">clone</span> source_env<br></code></pre></td></tr></table></figure></li><li><p>environment.yaml的使用，创建环境和导出现有的环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> create -f environment.yaml<br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> &gt; environment.yaml<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
       <category>Tools</category>
       
-      <category>Conda</category>
+      <category>CMake</category>
       
     </categories>
     
@@ -691,7 +662,7 @@
       
       <tag>Tools</tag>
       
-      <tag>Conda</tag>
+      <tag>CMake</tag>
       
     </tags>
     
@@ -721,6 +692,35 @@
       <tag>Tools</tag>
       
       <tag>Docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Conda</title>
+    <link href="/2023/10/02/tools-conda/"/>
+    <url>/2023/10/02/tools-conda/</url>
+    
+    <content type="html"><![CDATA[<h1>Conda</h1><ul><li><p>从已有的conda环境clone出一个新的conda环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create --name new_env --<span class="hljs-built_in">clone</span> source_env<br></code></pre></td></tr></table></figure></li><li><p>environment.yaml的使用，创建环境和导出现有的环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> create -f environment.yaml<br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> &gt; environment.yaml<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>Conda</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>Conda</tag>
       
     </tags>
     
