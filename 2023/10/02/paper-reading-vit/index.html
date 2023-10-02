@@ -23,17 +23,17 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Vision Transformer Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/10/02/paper-reading-vit/sreenshortcut/Screenshot%202023-08-20%20at%2021.10.30.png">
-<meta property="og:image" content="http://example.com/2023/10/02/paper-reading-vit/sreenshortcut/Screenshot%202023-08-20%20at%2021.26.51.png">
-<meta property="og:image" content="http://example.com/2023/10/02/paper-reading-vit/sreenshortcut/Screenshot%202023-08-20%20at%2021.33.55.png">
-<meta property="og:image" content="http://example.com/2023/10/02/paper-reading-vit/sreenshortcut/Screenshot%202023-08-20%20at%2021.40.09.png">
+<meta property="og:image" content="http://example.com/sreenshortcut/Screenshot%202023-08-20%20at%2021.10.30.png">
+<meta property="og:image" content="http://example.com/sreenshortcut/Screenshot%202023-08-20%20at%2021.26.51.png">
+<meta property="og:image" content="http://example.com/sreenshortcut/Screenshot%202023-08-20%20at%2021.33.55.png">
+<meta property="og:image" content="http://example.com/sreenshortcut/Screenshot%202023-08-20%20at%2021.40.09.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T10:53:04.925Z">
+<meta property="article:modified_time" content="2023-10-02T11:05:06.979Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="ViT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2023/10/02/paper-reading-vit/sreenshortcut/Screenshot%202023-08-20%20at%2021.10.30.png">
+<meta name="twitter:image" content="http://example.com/sreenshortcut/Screenshot%202023-08-20%20at%2021.10.30.png">
   
   
   
@@ -297,7 +297,7 @@
 </ul>
 <h1>总体架构</h1>
 <center>
-<img src="./sreenshortcut/Screenshot 2023-08-20 at 21.10.30.png" srcset="/img/loading.gif" lazyload>
+<img src="/sreenshortcut/Screenshot 2023-08-20 at 21.10.30.png" srcset="/img/loading.gif" lazyload>
 </center>
 <ul>
 <li>把图片拆成一个个的小patch来降低计算量</li>
@@ -320,7 +320,7 @@
 </ul>
 <h1>实验结果</h1>
 <center>
-<img src="./sreenshortcut/Screenshot 2023-08-20 at 21.26.51.png" srcset="/img/loading.gif" lazyload>
+<img src="/sreenshortcut/Screenshot 2023-08-20 at 21.26.51.png" srcset="/img/loading.gif" lazyload>
 </center>
 <ul>
 <li>左图：
@@ -343,12 +343,12 @@
 </li>
 </ul>
 <center>
-<img src="./sreenshortcut/Screenshot 2023-08-20 at 21.33.55.png" srcset="/img/loading.gif" lazyload>
+<img src="/sreenshortcut/Screenshot 2023-08-20 at 21.33.55.png" srcset="/img/loading.gif" lazyload>
 </center>
 <p>图中非常重要的一个信息是在继续堆数据量的时候，模型的表现还会进一步上涨——没有达到所谓的智能顶点</p>
 <p>混合模型在一开始确实集众家之长，在数据集到达一定程度的时候混合模型反而不如纯的Transformer</p>
 <center>
-<img src="./sreenshortcut/Screenshot 2023-08-20 at 21.40.09.png" srcset="/img/loading.gif" lazyload>
+<img src="/sreenshortcut/Screenshot 2023-08-20 at 21.40.09.png" srcset="/img/loading.gif" lazyload>
 </center>
 <p>使用1D的位置编码就足够了，也可以学习到2D空间中的信息，所以使用2D的时候和1D没什么差别。</p>
 <h1>局限性</h1>
@@ -454,9 +454,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/progamming-python/" title="Python">
+                      <a href="/2023/10/02/paper-reading-transformer/" title="Transformer">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Python</span>
+                        <span class="hidden-mobile">Transformer</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -464,8 +464,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/tools-cmake/" title="CMake">
-                        <span class="hidden-mobile">CMake</span>
+                      <a href="/2023/10/02/progamming-java/" title="Java">
+                        <span class="hidden-mobile">Java</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
