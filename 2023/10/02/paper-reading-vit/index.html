@@ -16,19 +16,19 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Vision TransformerTransformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一个">
+    <meta name="description" content="Vision Transformer Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ViT">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-vit/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Vision TransformerTransformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一个">
+<meta property="og:description" content="Vision Transformer Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFiMDJlZDZlNDY0YzYwMWU4MDMxNzgxYmUwN2Q0NWJfSk5WZnVsTTFqeGpPYWVSMDB1eE1Jc0t0Z2RuaFZNTVJfVG9rZW46TmxNcGJMUTZNb2lmYmt4bUIzNGNQNkdVbjdjXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=OGU0MTRiOWI3ZDgxZjgyNmQzZjhjZmYzYmZkZWZhZmVfWGQyT3VOcHRTaElTZ1FLb2tWZEk0WXBmOU5QajlIb2hfVG9rZW46Ujc1UGI5VkFTb0Y4cFd4eDNLUGNicGNmbkV1XzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NlNDg4ZTE0YjM4YWI2ZDNjODhkYzNmODA1NjNiMzdfb2FFdkR3bkJlemdIQTdVUHN3MWg3M29GbkVIaWZVYmpfVG9rZW46RVUxZmJ0dU9zb3FaTmR4anZTQ2NEVTVObkFlXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NGEwN2JlYWI2MGJlNTRkZjgxN2ViNDkxOTgzNDI3ZWJfZWx4WlJMdUNMWmlaSFIzWUVHbHhDRHJUOHJWTTU0UmlfVG9rZW46VUR1VmJUUjhDb0pSVUF4UW5IeWNla0lObm9kXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:37:39.109Z">
+<meta property="article:modified_time" content="2023-10-02T07:00:05.866Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="ViT">
@@ -48,6 +48,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -279,21 +281,26 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Vision-Transformer"><a href="#Vision-Transformer" class="headerlink" title="Vision Transformer"></a>Vision Transformer</h1><p>Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。</p>
+                <h1>Vision Transformer</h1>
+<p>Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。</p>
 <p>在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一个多视角的ViT）。</p>
-<h1 id="应用的困难之处"><a href="#应用的困难之处" class="headerlink" title="应用的困难之处"></a>应用的困难之处</h1><p>Attention机制需要计算注意力矩阵，是两两计算的，所以计算的复杂度是 $$O(n^2) $$，一般来说 $$d_k&#x3D;512$$（GPT、BERT）。但是图片分类则需要 $$224\times 224$$的图片大，计算量太大。</p>
+<h1>应用的困难之处</h1>
+<p>Attention机制需要计算注意力矩阵，是两两计算的，所以计算的复杂度是 $$O(n^2) $$，一般来说 $$d_k=512$$（GPT、BERT）。但是图片分类则需要 $$224\times 224$$的图片大，计算量太大。</p>
 <ul>
-<li>相关的解决的办法<ul>
+<li>相关的解决的办法
+<ul>
 <li>不要把整个图片展开为向量送入模型，把例如ResNet等模型提取出的feature map送入模型</li>
 <li>其他的attention机制：比如稀疏注意力、轴注意力、孤立注意力（使用类似卷积核的slide window的形式）——但是这些机制都比较特殊，没有对应的加速办法。</li>
 <li>ViT所采用的是先把图片打碎成一个个的小的patch（这里选用的是 $$16\times 16$$的大小），编码之后送入模型就和NLP没有区别了。</li>
 </ul>
 </li>
 </ul>
-<h1 id="总体架构"><a href="#总体架构" class="headerlink" title="总体架构"></a>总体架构</h1><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFiMDJlZDZlNDY0YzYwMWU4MDMxNzgxYmUwN2Q0NWJfSk5WZnVsTTFqeGpPYWVSMDB1eE1Jc0t0Z2RuaFZNTVJfVG9rZW46TmxNcGJMUTZNb2lmYmt4bUIzNGNQNkdVbjdjXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h1>总体架构</h1>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFiMDJlZDZlNDY0YzYwMWU4MDMxNzgxYmUwN2Q0NWJfSk5WZnVsTTFqeGpPYWVSMDB1eE1Jc0t0Z2RuaFZNTVJfVG9rZW46TmxNcGJMUTZNb2lmYmt4bUIzNGNQNkdVbjdjXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ul>
 <li>把图片拆成一个个的小patch来降低计算量</li>
-<li>Transformer Encoder：<ul>
+<li>Transformer Encoder：
+<ul>
 <li>这个部分就是一个标准的Transformer，没有针对CV做任何的改动。</li>
 </ul>
 </li>
@@ -301,18 +308,22 @@
 <li>Position Encoding：需要把每个小块在整体的图片中是在什么位置编码到向量中（具体实现的时候是做加法而不是做连接，所以对向量的维度是没有影响的）。这里使用的就是1D的位置编码，和其他编码方式的比较在实验结果模块会继续讲。</li>
 <li>CLS：编号为0的就是用作分类的classfication token。（这个地方可能需要看一下BERT才知道是什么东西）</li>
 <li>最后使用一个MLP分类头映射到分的类别。</li>
-<li>需要注意的是，模型的训练还是使用的有监督学习的方式，没有使用自监督学习。在这里回忆一下：<ul>
+<li>需要注意的是，模型的训练还是使用的有监督学习的方式，没有使用自监督学习。在这里回忆一下：
+<ul>
 <li>GPT的预训练是使用的“单词接龙”的方法，需要预测下一个词</li>
 <li>BERT的预训练使用的是“完形填空”的方式，需要预测被mask掉的词，两种方法的Gound Truth都是原来的词语，所以是自监督的。</li>
 </ul>
 </li>
 <li>Hybrid：混合模型，先使用CNN抽取出特征，之后把feature map送入Transformer</li>
 </ul>
-<h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=OGU0MTRiOWI3ZDgxZjgyNmQzZjhjZmYzYmZkZWZhZmVfWGQyT3VOcHRTaElTZ1FLb2tWZEk0WXBmOU5QajlIb2hfVG9rZW46Ujc1UGI5VkFTb0Y4cFd4eDNLUGNicGNmbkV1XzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h1>实验结果</h1>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=OGU0MTRiOWI3ZDgxZjgyNmQzZjhjZmYzYmZkZWZhZmVfWGQyT3VOcHRTaElTZ1FLb2tWZEk0WXBmOU5QajlIb2hfVG9rZW46Ujc1UGI5VkFTb0Y4cFd4eDNLUGNicGNmbkV1XzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ul>
-<li>左图：<ul>
+<li>左图：
+<ul>
 <li>可以看到在小的数据集上的时候ViT的效果不如ResNet，但是在预训练的数据集比较大的时候ViT的优势就发挥出来了。</li>
-<li>这可能是由于CNN卷积神经网络有很多的”Inductive bias”归纳性偏差，比如说：<ul>
+<li>这可能是由于CNN卷积神经网络有很多的&quot;Inductive bias&quot;归纳性偏差，比如说：
+<ul>
 <li>局部性：卷积核会看到相邻的东西，捕捉它们之间的信息，这显然是成立的——离得越近相关性就会越高。</li>
 <li>平移不变性：卷积核在不同时间遇到相同的输入输出结果是一样的，这也是显然正确的。</li>
 </ul>
@@ -320,7 +331,8 @@
 <li>但是Transformer就没有这样的先验假设。</li>
 </ul>
 </li>
-<li>右图：<ul>
+<li>右图：
+<ul>
 <li>使用5-shot对预训练的模型进行逻辑回归。</li>
 <li>在数据量比较大的时候ViT的效果才会更好。</li>
 </ul>
@@ -331,7 +343,8 @@
 <p>混合模型在一开始确实集众家之长，在数据集到达一定程度的时候混合模型反而不如纯的Transformer</p>
 <p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NGEwN2JlYWI2MGJlNTRkZjgxN2ViNDkxOTgzNDI3ZWJfZWx4WlJMdUNMWmlaSFIzWUVHbHhDRHJUOHJWTTU0UmlfVG9rZW46VUR1VmJUUjhDb0pSVUF4UW5IeWNla0lObm9kXzE2OTYyMjc2MTU6MTY5NjIzMTIxNV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>使用1D的位置编码就足够了，也可以学习到2D空间中的信息，所以使用2D的时候和1D没什么差别。</p>
-<h1 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h1><ul>
+<h1>局限性</h1>
+<ul>
 <li>不好迁移到不同大小的图片中（不好finetune），因为图片大小一旦变化了，patch的数量一定会发生变化。</li>
 </ul>
 
@@ -443,8 +456,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-gan/" title="GAN">
-                        <span class="hidden-mobile">GAN</span>
+                      <a href="/2023/10/02/paper-reading-stable_diffusion/" title="Latent diffusion model">
+                        <span class="hidden-mobile">Latent diffusion model</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -501,6 +514,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

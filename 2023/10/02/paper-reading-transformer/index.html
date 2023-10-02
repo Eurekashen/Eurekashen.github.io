@@ -16,12 +16,12 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2017年在”Attention is all you need”论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操作能够在序列数据上表">
+    <meta name="description" content="2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Transformer">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-transformer/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2017年在”Attention is all you need”论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操作能够在序列数据上表">
+<meta property="og:description" content="2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ODM4NmM5OWQyZjZhZTc4NzZkN2QxOTRhNWU1OTBjMjhfUWxKU3UyTE03VU5MV2hzV3RvQVNWRHF6VTBZaVZxQzRfVG9rZW46RHkyaGJ6RE1vb3FvQzd4VDk0VWNVQU96bmFiXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNkZWY1MTE3NjNjYmE2ZTBlYzZkM2EzYjZiOWVhMjFfVHQ3WFVNV2VoeUs0ZG9YTWRVdUNDUjhTbFlWdlhrWnlfVG9rZW46SmtYWGJROFNtb01kZE94RWZmUGNRdmRLbkxmXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA">
@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=N2UyYzM1YTQwYjRmYzQ0NDY2NDVlYWU4YmI2NjJiMDZfTjZFbWRxQzc5TEJNbmhvWVhSOG1zUWE3Z3VKekpyR1JfVG9rZW46QmlhemJjUDU3b084Wjl4Zm1NUGNvQzNHbjJmXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YjczNTM0MjZiNTYyM2YyMzZhOTQ5ZTQ3ZGY1MDFiZDlfY1NMZTBqb3huanlHdWlnVzg3N29WdXZNaHlEWHdVTEpfVG9rZW46WVhXMGJQNVVDb0xwM0R4QmhPbGN0QWdubjVnXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:37:35.852Z">
+<meta property="article:modified_time" content="2023-10-02T06:59:55.803Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Paper reading">
 <meta property="article:tag" content="Transformer">
@@ -49,6 +49,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -280,51 +282,75 @@
             
               <div class="markdown-body">
                 
-                <p>2017年在”Attention is all you need”论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。</p>
+                <p>2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。</p>
 <p>文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操作能够在序列数据上表现的非常好，Transformer最开始是应用在机器翻译任务上的。</p>
 <ul>
-<li>RNN&amp;encoder-decoder架构，RNN也是使用了这样的架构：<ul>
+<li>RNN&amp;encoder-decoder架构，RNN也是使用了这样的架构：
+<ul>
 <li>RNN采用的基于隐变量的序列模型，这样的时序性太强，并行度非常的差——想要计算$$h_t$$的话必须把先$$h_{t-1}$$计算出来，而且由于两个输出时间需要的path太长，后面的输出很有可能会“忘记”了之前的信息。</li>
 <li>attention机制可以一起吃进全部的序列，可以有很好的并行度，所以Transformer这个模型的并行度非常高。</li>
 <li>RNN的decoder是一个autoregression自回归模型，每次的输出会作为下一次的输入。</li>
 </ul>
 </li>
-<li>之前有过网络模型使用卷积操作替代“recurrent”来提取序列数据中的信息，但是由于卷积核的大小是有限制的，无法提取两个较远的向量之间的关系和序列信息。但是卷积的优点是可以有多个channel通道，可以实现提取多种模式的能力。而attention的优点在于可以看到所有的向量，提取全部的相互关系和信息，并且引入多头注意力机制（类比于卷积中的channel）提取不同的模式的特征。<ul>
+<li>之前有过网络模型使用卷积操作替代“recurrent”来提取序列数据中的信息，但是由于卷积核的大小是有限制的，无法提取两个较远的向量之间的关系和序列信息。但是卷积的优点是可以有多个channel通道，可以实现提取多种模式的能力。而attention的优点在于可以看到所有的向量，提取全部的相互关系和信息，并且引入多头注意力机制（类比于卷积中的channel）提取不同的模式的特征。
+<ul>
 <li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ODM4NmM5OWQyZjZhZTc4NzZkN2QxOTRhNWU1OTBjMjhfUWxKU3UyTE03VU5MV2hzV3RvQVNWRHF6VTBZaVZxQzRfVG9rZW46RHkyaGJ6RE1vb3FvQzd4VDk0VWNVQU96bmFiXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
 </ul>
 </li>
-<li>Transformer架构：<ul>
-<li>Input Embedding&amp;Output Embedding:<ul>
+<li>Transformer架构：
+<ul>
+<li>Input Embedding&amp;Output Embedding:
+<ul>
 <li>输入的是一个句子，首先要把这个句子tokenize打散成一个个的token，每个token会编码成一个向量（向量的长度是一个超参数）；Output Embedding的过程和上述过程相反。</li>
 </ul>
 </li>
-<li>Encoder:<ul>
+<li>Encoder:
+<ul>
 <li>Nx代表块encoder&amp;decoder重复了多少次，也是一个可调的超参数。</li>
-<li>首先编码器和解码器中都使用了残差连接（为了方便模型保证输入和输出是一样形状的，把维度都设置为 $$d_{model}&#x3D;512$$，使得可以进行残差连接）；</li>
+<li>首先编码器和解码器中都使用了残差连接（为了方便模型保证输入和输出是一样形状的，把维度都设置为 $$d_{model}=512$$，使得可以进行残差连接）；</li>
 <li>Layer Normalization：对于二维的矩阵的列是feature、行是batch。bacthnorm（一个feature包含所有的batch）是把矩阵的按照列变化为均值为0方差为1；layernorm（一个batch包含所有的feature）是对行做同样的事情。对于序列模型是一个三维矩阵，多一个seq(n)的维度。做norm就是按照层来做，每次做normalization都是取一层来做归一化。</li>
 <li>Attention：注意力机制，函数的输入会有 $$Q,K,V$$分别代表query、key、value；最后的输出就是value的加权和，所以output的维度是和value是一样的。query和key会计算相似度，相似度越高的key对应的value附近的权重就会更大。</li>
-<li>Attention function：<ul>
-<li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNkZWY1MTE3NjNjYmE2ZTBlYzZkM2EzYjZiOWVhMjFfVHQ3WFVNV2VoeUs0ZG9YTWRVdUNDUjhTbFlWdlhrWnlfVG9rZW46SmtYWGJROFNtb01kZE94RWZmUGNRdmRLbkxmXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<li>Attention function：
+<ul>
+<li>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNkZWY1MTE3NjNjYmE2ZTBlYzZkM2EzYjZiOWVhMjFfVHQ3WFVNV2VoeUs0ZG9YTWRVdUNDUjhTbFlWdlhrWnlfVG9rZW46SmtYWGJROFNtb01kZE94RWZmUGNRdmRLbkxmXzE2OTYyMjc1OTk6MTY5NjIzMTE5OV9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
 </li>
-<li><p>$$Attention(Q, K, V ) &#x3D; softmax(\frac{QK^T}{\sqrt{d_k}} )V$$</p>
+<li>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo stretchy="false">(</mo><mi>Q</mi><mo separator="true">,</mo><mi>K</mi><mo separator="true">,</mo><mi>V</mi><mo stretchy="false">)</mo><mo>=</mo><mi>s</mi><mi>o</mi><mi>f</mi><mi>t</mi><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>Q</mi><msup><mi>K</mi><mi>T</mi></msup></mrow><msqrt><msub><mi>d</mi><mi>k</mi></msub></msqrt></mfrac><mo stretchy="false">)</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">Attention(Q, K, V ) = softmax(\frac{QK^T}{\sqrt{d_k}} )V
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">tt</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4483em;vertical-align:-0.93em;"></span><span class="mord mathnormal">so</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ma</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5183em;"><span style="top:-2.2528em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8572em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.8172em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1828em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></span></p>
 </li>
-<li><p>可以使用上述矩阵乘法来实现注意力分数的计算，矩阵乘法非常好并行计算。  $$QK^T$$是在计算dot product，做一个softmax回归之后把计算出的相关性都投射到0～1的范围内。最后乘以矩阵 $$V$$得到最后的输出。最后除 $$d_k$$的原因是：dk比较大的时候相似度的差距会比较大，会更向两端靠拢。这样导致梯度会小，训练的时候会训练不动，所以除以一个值是不错的选择。</p>
+<li>
+<p>可以使用上述矩阵乘法来实现注意力分数的计算，矩阵乘法非常好并行计算。  $$QK^T$$是在计算dot product，做一个softmax回归之后把计算出的相关性都投射到0～1的范围内。最后乘以矩阵 $$V$$得到最后的输出。最后除 $$d_k$$的原因是：dk比较大的时候相似度的差距会比较大，会更向两端靠拢。这样导致梯度会小，训练的时候会训练不动，所以除以一个值是不错的选择。</p>
 </li>
-<li><p>一般有两种注意力函数：一种是加法的、一种是乘法的；乘法的和上面提到的基本没有区别，只是没有在最后除以 $$d_k$$。</p>
+<li>
+<p>一般有两种注意力函数：一种是加法的、一种是乘法的；乘法的和上面提到的基本没有区别，只是没有在最后除以 $$d_k$$。</p>
 </li>
 </ul>
 </li>
-<li>Multi-head：上面的注意力函数实际上没有可以学习的参数，先使用一个linear层投影到较低的维度h（head头的数量）次（投影的权重是可以学习的，如果直接用dot product没有什么可以学的东西），做h次注意力函数。把每个函数的输出并在一起再投影回来得到输出。这里有点像卷积的输出有不同的通道，可以学习到不同的模式。 $$MultiHead(Q, K, V )&#x3D;Concat(head_1, …, head_h)W^O$$ Where $$head_i &#x3D; Attention(QW^Q_i , KW^K_i ,VW^V _i)$$看着是很多小矩阵的计算，实际上是可以使用是一个大矩阵来计算的——有很高的并行度。</li>
+<li>Multi-head：上面的注意力函数实际上没有可以学习的参数，先使用一个linear层投影到较低的维度h（head头的数量）次（投影的权重是可以学习的，如果直接用dot product没有什么可以学的东西），做h次注意力函数。把每个函数的输出并在一起再投影回来得到输出。这里有点像卷积的输出有不同的通道，可以学习到不同的模式。 $$MultiHead(Q, K, V )=Concat(head_1, …, head_h)W^O$$ Where $$head_i = Attention(QW^Q_i , KW^K_i ,VW^V _i)$$看着是很多小矩阵的计算，实际上是可以使用是一个大矩阵来计算的——有很高的并行度。</li>
 <li>self-attention：自注意力机制，可以看到在encoder中attention块的输入 $$K、Q、V$$是一样的，。三者都是n个长为d的向量，Q和K算相似度，一定自己和自己计算相似度是最大的。</li>
 <li>Position-wise Feed-Forward：其实本质上就是一个MLP，使用相同的mlp对每一个向量都作用一次，这就是Position-wise（MLP是共享的，权重是一样的）。RNN和Transformer都是使用一个MLP来进行到语义空间的映射，二者的区别在于如何提取历史序列信息。RNN是一个一个采集的，Transformer是采集的全局的序列信息。</li>
 </ul>
 </li>
-<li>Decoder:<ul>
+<li>Decoder:
+<ul>
 <li>其实和Encoder中的模块内容几乎是一样的，唯一有区别的地方在于mask，因为在实际中是不知道自己之后的信息的，所以为了使得在训练和测试中decoder的行为是一致的，需要mask掉。Query和Key是等长（因为注意力机制的关键就是计算K、Q之间的相似性得到权重）的，在t时刻：k1~kt、q1～qt，但是注意力机制的时候会和所有做计算，加了mask是在计算value的加权和的时候把后面都弄成0.</li>
 <li>K、V来自于encoder的输出，KQV都是n个长为d的向量，n是句子的长度，d是下面设置的dk。输出是value的加权和。</li>
 </ul>
 </li>
-<li>Positional Encoding：<ul>
+<li>Positional Encoding：
+<ul>
 <li>区别时序信息和序列信息，attention中是没有任何的时序信息的，计算的是value的加权和。序列信息对于这句话中每个词在哪一个位置是不关心的，把这句话的所有单词打乱输出结果不会变的。所以需要引入“位置编码”。RNN通过的是上一个时刻的输出作为下一个时刻的输入来传递的时序信息。attention在输入中加入时序信息。</li>
 </ul>
 </li>
@@ -443,9 +469,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-stable_diffusion/" title="Latent diffusion model">
+                      <a href="/2023/10/02/paper-reading-resnet/" title="ResNet">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Latent diffusion model</span>
+                        <span class="hidden-mobile">ResNet</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -511,6 +537,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

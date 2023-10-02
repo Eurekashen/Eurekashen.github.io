@@ -49,6 +49,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -293,16 +295,21 @@
 <p>注意收敛不代表模型训练好的，是要收敛到理想的位置</p>
 <p>加了残差连接之后能够训练动的原因是梯度保持的好（MuLi），因为如果不加由于求导的链式法则当梯度越来越小很容易会梯度消失。加了之后多了一个浅层网络梯度的加法项，使得梯度可以更新。</p>
 <ul>
-<li>减少训练非常深的网络的计算复杂度<ul>
-<li><p>通过使用1<em>1的卷积增加了通道降低了图片的大小，使得下面👇两种计算方式的理论复杂度是相似的（但是实际上1</em>1的实现卷积效率比较低）</p>
+<li>减少训练非常深的网络的计算复杂度
+<ul>
+<li>
+<p>通过使用1<em>1的卷积增加了通道降低了图片的大小，使得下面👇两种计算方式的理论复杂度是相似的（但是实际上1</em>1的实现卷积效率比较低）</p>
 </li>
-<li><p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZiMWQ0OWU0ZDk3ZDE4YjBjZjgyNDU3YmQ0ZjgyYmZfcFJVTFN4dlFJTDhmbTc1emlhYWhBTWZhaEUyMG9QZFhfVG9rZW46UzdwQmJ4N0xXb1VPZGh4bnNnaWNWRERabldlXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
+<li>
+<p><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZiMWQ0OWU0ZDk3ZDE4YjBjZjgyNDU3YmQ0ZjgyYmZfcFJVTFN4dlFJTDhmbTc1emlhYWhBTWZhaEUyMG9QZFhfVG9rZW46UzdwQmJ4N0xXb1VPZGh4bnNnaWNWRERabldlXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></p>
 </li>
-<li><p>这样就使得训练深层网络不会有爆炸的计算复杂度</p>
+<li>
+<p>这样就使得训练深层网络不会有爆炸的计算复杂度</p>
 </li>
 </ul>
 </li>
-<li>不同的ResNet网络模型<ul>
+<li>不同的ResNet网络模型
+<ul>
 <li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NjAxNzYwZDhiMDhlNDkyYmIwZWMzZGYwMTkyYzcwYmVfRHdsYlFaOFJSS0hHc3VvQ0JvSzZNSjhDMThVS1VYM21fVG9rZW46S3RjOWJXZ04xb3UxVFB4Mml6eWN6ZHM1bmZnXzE2OTYyMjc1NjA6MTY5NjIzMTE2MF9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
 </ul>
 </li>
@@ -406,9 +413,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-nerf/" title="NeRF">
+                      <a href="/2023/10/02/paper-reading-mae/" title="MAE">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">NeRF</span>
+                        <span class="hidden-mobile">MAE</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -416,8 +423,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-stable_diffusion/" title="Latent diffusion model">
-                        <span class="hidden-mobile">Latent diffusion model</span>
+                      <a href="/2023/10/02/paper-reading-transformer/" title="Transformer">
+                        <span class="hidden-mobile">Transformer</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -474,6 +481,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

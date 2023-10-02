@@ -16,12 +16,12 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux&amp;&amp;Shell关于CUDA 以下这个命令可以指定在哪一张显卡上面运行任务 1export CUDA_VISIBLE_DEVICES&#x3D;5  装显卡驱动，后面跟着的数字是版本号 123sudo apt install libnvidia-common-530sudo apt-get -y install libnvidia-gl-530sudo apt install nvi">
+    <meta name="description" content="Linux&amp;&amp;Shell 关于CUDA   以下这个命令可以指定在哪一张显卡上面运行任务 1export CUDA_VISIBLE_DEVICES&#x3D;5   装显卡驱动，后面跟着的数字是版本号 123sudo apt install libnvidia-common-530sudo apt-get -y install libnvidia-gl-530sudo apt install">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux">
 <meta property="og:url" content="http://example.com/2023/10/02/tools-shell-linux/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Linux&amp;&amp;Shell关于CUDA 以下这个命令可以指定在哪一张显卡上面运行任务 1export CUDA_VISIBLE_DEVICES&#x3D;5  装显卡驱动，后面跟着的数字是版本号 123sudo apt install libnvidia-common-530sudo apt-get -y install libnvidia-gl-530sudo apt install nvi">
+<meta property="og:description" content="Linux&amp;&amp;Shell 关于CUDA   以下这个命令可以指定在哪一张显卡上面运行任务 1export CUDA_VISIBLE_DEVICES&#x3D;5   装显卡驱动，后面跟着的数字是版本号 123sudo apt install libnvidia-common-530sudo apt-get -y install libnvidia-gl-530sudo apt install">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-10-02T06:38:07.145Z">
@@ -43,6 +43,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -274,33 +276,47 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Linux-Shell"><a href="#Linux-Shell" class="headerlink" title="Linux&amp;&amp;Shell"></a>Linux&amp;&amp;Shell</h1><h2 id="关于CUDA"><a href="#关于CUDA" class="headerlink" title="关于CUDA"></a>关于CUDA</h2><ul>
-<li><p>以下这个命令可以指定在哪一张显卡上面运行任务</p>
+                <h1>Linux&amp;&amp;Shell</h1>
+<h2 id="关于CUDA">关于CUDA</h2>
+<ul>
+<li>
+<p>以下这个命令可以指定在哪一张显卡上面运行任务</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> CUDA_VISIBLE_DEVICES=5<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>装显卡驱动，后面跟着的数字是版本号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install libnvidia-common-530<br>sudo apt-get -y install libnvidia-gl-530<br>sudo apt install nvidia-driver-530<br></code></pre></td></tr></table></figure></li>
+<li>
+<p>装显卡驱动，后面跟着的数字是版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install libnvidia-common-530<br>sudo apt-get -y install libnvidia-gl-530<br>sudo apt install nvidia-driver-530<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="关于网络"><a href="#关于网络" class="headerlink" title="关于网络"></a>关于网络</h2><h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><ul>
-<li><p>直接在终端中运行程序如果ssh连接断开的话程序会中断运行，这时候有下面的方法</p>
+<h2 id="关于网络">关于网络</h2>
+<h2 id="进程管理">进程管理</h2>
 <ul>
-<li><p>使用nohup命令</p>
+<li>
+<p>直接在终端中运行程序如果ssh连接断开的话程序会中断运行，这时候有下面的方法</p>
+<ul>
+<li>
+<p>使用nohup命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">nohup</span> <span class="hljs-built_in">command</span> &amp;<br></code></pre></td></tr></table></figure>
-
 <p>会把程序挂起到后台运行，程序的输出会默认重定向到日志文件中。执行命令之后会返回一个进程号，可以用于之后kill程序。</p>
 </li>
-<li><p>使用tmux</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">tmux new -s name<br>tmux <span class="hljs-built_in">ls</span><br>tmux kill-session -t name<br>tmux at -t name<br></code></pre></td></tr></table></figure></li>
+<li>
+<p>使用tmux</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">tmux new -s name<br>tmux <span class="hljs-built_in">ls</span><br>tmux kill-session -t name<br>tmux at -t name<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><p>nvtop和htop命令</p>
+<li>
+<p>nvtop和htop命令</p>
 </li>
-<li><p>watch命令，可以用来监听nvidia-smi命令查看GPU的使用</p>
+<li>
+<p>watch命令，可以用来监听nvidia-smi命令查看GPU的使用</p>
 </li>
-<li><p>kill杀死程序（可以一次性杀死多个PID）</p>
+<li>
+<p>kill杀死程序（可以一次性杀死多个PID）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">kill</span> -9 &lt;PID&gt;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>ps ux，显示所有的进程</p>
+<li>
+<p>ps ux，显示所有的进程</p>
 </li>
 </ul>
 
@@ -402,9 +418,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/progamming-python/" title="Python">
+                      <a href="/2023/10/02/tools-git/" title="Git">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Python</span>
+                        <span class="hidden-mobile">Git</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -470,6 +486,11 @@
 
 
   
+
+
+  
+  
+
 
 
 

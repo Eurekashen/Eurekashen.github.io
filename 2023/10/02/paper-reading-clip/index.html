@@ -16,12 +16,12 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。  训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。     突破了categor">
+    <meta name="description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。      突破了categ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CLIP">
 <meta property="og:url" content="http://example.com/2023/10/02/paper-reading-clip/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。  训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。     突破了categor">
+<meta property="og:description" content="模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。      突破了categ">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWFkZGFjNTFkYTIxNzJlZjAyZWE3MGIyY2ZiMWYxNzFfVlNBRFBramZ2enZlc3VXTEJESEpFNlVpelRJVlV4TnpfVG9rZW46VWxBaGJRMXdOb2NPOW94dEtTSGNHcWtobnliXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
 <meta property="og:image" content="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzkzNGMyZGU5ZjQ4ODE4MzY0YzBiNGFmMzA3NGY0MTZfTnZPVkoxMTZ6eFhzTDFOb3htQjA2UnlDM3VvRnFWZ2FfVG9rZW46WksxWWJIcUVBbzlselN4N2toMGM0Z21EbkFoXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA">
@@ -47,6 +47,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -280,30 +282,36 @@
                 
                 <p>模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。</p>
 <ul>
-<li><p>训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。</p>
+<li>
+<p>训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。</p>
 <ul>
 <li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=NWFkZGFjNTFkYTIxNzJlZjAyZWE3MGIyY2ZiMWYxNzFfVlNBRFBramZ2enZlc3VXTEJESEpFNlVpelRJVlV4TnpfVG9rZW46VWxBaGJRMXdOb2NPOW94dEtTSGNHcWtobnliXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
 </ul>
 </li>
-<li><p>突破了category目录的限制，像之前的模型都是在类似于ImageNet（1000类）这样有明确数量的类别的数据集上训练的，如果出现一个不在给定目录里面的样本就抓瞎了。而CLIP结合NLP的prompt很好解决了这样的问题。不需要明确的softmax分类头。上图中使用一个句子作为prompt是为了避免使用单词的歧异性（在论文中给出了多种prompt engineering的方法）。下面的这张图就能很好的说明CLIP zero shot的能力。</p>
+<li>
+<p>突破了category目录的限制，像之前的模型都是在类似于ImageNet（1000类）这样有明确数量的类别的数据集上训练的，如果出现一个不在给定目录里面的样本就抓瞎了。而CLIP结合NLP的prompt很好解决了这样的问题。不需要明确的softmax分类头。上图中使用一个句子作为prompt是为了避免使用单词的歧异性（在论文中给出了多种prompt engineering的方法）。下面的这张图就能很好的说明CLIP zero shot的能力。</p>
 <ul>
 <li><img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=YzkzNGMyZGU5ZjQ4ODE4MzY0YzBiNGFmMzA3NGY0MTZfTnZPVkoxMTZ6eFhzTDFOb3htQjA2UnlDM3VvRnFWZ2FfVG9rZW46WksxWWJIcUVBbzlselN4N2toMGM0Z21EbkFoXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img"></li>
 </ul>
 </li>
-<li><p>模型在最后学习到的不是的像ResNet一样单纯的视觉特征和信息，而是包含NLP中的语义信息的多模态特征。输出是文本信息而不是1&#x2F;N的label，自由度大了很多。</p>
+<li>
+<p>模型在最后学习到的不是的像ResNet一样单纯的视觉特征和信息，而是包含NLP中的语义信息的多模态特征。输出是文本信息而不是1/N的label，自由度大了很多。</p>
 </li>
-<li><p>image_encoder 使用 ResNet or Vision Transformer；text_encoder 使用 CBOW or Text Transformer。采用的是训练好的模型，即使这样CLIP的训练开销仍然是巨大的。</p>
+<li>
+<p>image_encoder 使用 ResNet or Vision Transformer；text_encoder 使用 CBOW or Text Transformer。采用的是训练好的模型，即使这样CLIP的训练开销仍然是巨大的。</p>
 </li>
-<li><p>CLIP的零样本预测上对于“有明显的一个或者多个具体物体被描述”的数据集的效果非常好；但是对于“没有特定的具体物体描述，抽象的概念或者需要具体知识（例如纹理、肿瘤）”的数据集效果不好。所以在这些数据集上使用few-shot而不是zero-shot是更合理的选择。</p>
+<li>
+<p>CLIP的零样本预测上对于“有明显的一个或者多个具体物体被描述”的数据集的效果非常好；但是对于“没有特定的具体物体描述，抽象的概念或者需要具体知识（例如纹理、肿瘤）”的数据集效果不好。所以在这些数据集上使用few-shot而不是zero-shot是更合理的选择。</p>
 </li>
-<li><p>out-of-distribution的问题，CLIP在MNIST数据集上的效果甚至不如线性回归。因为MNIST是一个人工合成的数据集，而CLIP是在自然的图片进行训练的。所以总的来说CLIP和其他DL模型一样脆弱。</p>
+<li>
+<p>out-of-distribution的问题，CLIP在MNIST数据集上的效果甚至不如线性回归。因为MNIST是一个人工合成的数据集，而CLIP是在自然的图片进行训练的。所以总的来说CLIP和其他DL模型一样脆弱。</p>
 </li>
 </ul>
 <img src="https://pq01uwab7j.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2NkYjA0OTlkZGVmMWFlNGQ5YzZhZjliNzA2NGFjZGRfM3FIOVlvVEJlcFBIOHJhMjJ0eml2c3JrV3FVSkRXWUxfVG9rZW46UGh4Y2JIVG5Tb1I4STF4SGZUcWNVcHZBbmtjXzE2OTYyMjczMjk6MTY5NjIzMDkyOV9WNA" srcset="/img/loading.gif" lazyload alt="img" style="zoom:50%;" />
-
 <ul>
 <li>可以非常方便的迁移到目标检测、图像生成、语义分割等任务。</li>
-<li>Fine tune和linear probe的区别：<ul>
+<li>Fine tune和linear probe的区别：
+<ul>
 <li>Fine tune是把整个模型都放开，利用新的数据更新整个模型的参数权重，自由度比较高。在论文中作者没有使用微调就是因为自由度太高，作者认为微调不足以说明其zero-shot的能力。</li>
 <li>Linear probe是把整个模型的参数权重全部冻住，在最后加一层softmax分类头，喂入新的数据只训练这最后一层。在论文中提到的类似的还有logistic regression也是冻住模型的参数在最后加逻辑回归。</li>
 </ul>
@@ -410,9 +418,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-bert/" title="BERT">
+                      <a href="/2023/10/02/paper-reading-alexnet/" title="AlexNet">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BERT</span>
+                        <span class="hidden-mobile">AlexNet</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -420,8 +428,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/paper-reading-dalle2/" title="DALL-E 2">
-                        <span class="hidden-mobile">DALL-E 2</span>
+                      <a href="/2023/10/02/paper-reading-controlnet/" title="ControlNet">
+                        <span class="hidden-mobile">ControlNet</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -478,6 +486,11 @@
 
 
   
+
+
+  
+  
+
 
 
 
