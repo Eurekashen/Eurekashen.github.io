@@ -5,35 +5,6 @@
   
   <entry>
     <title>Lecture 1</title>
-    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
-    <url>/2023/10/02/notes-com-network-lecture-1/</url>
-    
-    <content type="html"><![CDATA[<h1 id="计算机网络第一次课程笔记"><a href="#计算机网络第一次课程笔记" class="headerlink" title="计算机网络第一次课程笔记"></a>计算机网络第一次课程笔记</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>Lecture Notes</category>
-      
-      <category>Computer Network</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Lecture Notes</tag>
-      
-      <tag>Computer Network</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Lecture 1</title>
     <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
     <url>/2023/10/02/notes-com-arch-lecture-1/</url>
     
@@ -91,6 +62,35 @@
   
   
   <entry>
+    <title>Lecture 1</title>
+    <link href="/2023/10/02/notes-com-network-lecture-1/"/>
+    <url>/2023/10/02/notes-com-network-lecture-1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="计算机网络第一次课程笔记"><a href="#计算机网络第一次课程笔记" class="headerlink" title="计算机网络第一次课程笔记"></a>计算机网络第一次课程笔记</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Lecture Notes</category>
+      
+      <category>Computer Network</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Lecture Notes</tag>
+      
+      <tag>Computer Network</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Lecture 2</title>
     <link href="/2023/10/02/notes-com-network-lecture-2/"/>
     <url>/2023/10/02/notes-com-network-lecture-2/</url>
@@ -120,35 +120,6 @@
   
   
   <entry>
-    <title>AlexNet</title>
-    <link href="/2023/10/02/paper-reading-alexnet/"/>
-    <url>/2023/10/02/paper-reading-alexnet/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>AlexNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Lecture 1</title>
     <link href="/2023/10/02/notes-os-lecture-1/"/>
     <url>/2023/10/02/notes-os-lecture-1/</url>
@@ -170,6 +141,64 @@
       <tag>Lecture Notes</tag>
       
       <tag>Operating System</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-os-lecture-2/"/>
+    <url>/2023/10/02/notes-os-lecture-2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="操作系统第二次课程笔记"><a href="#操作系统第二次课程笔记" class="headerlink" title="操作系统第二次课程笔记"></a>操作系统第二次课程笔记</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Lecture Notes</category>
+      
+      <category>Operating System</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Lecture Notes</tag>
+      
+      <tag>Operating System</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AlexNet</title>
+    <link href="/2023/10/02/paper-reading-alexnet/"/>
+    <url>/2023/10/02/paper-reading-alexnet/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>AlexNet</tag>
       
     </tags>
     
@@ -236,35 +265,6 @@
   
   
   <entry>
-    <title>ControlNet</title>
-    <link href="/2023/10/02/paper-reading-controlnet/"/>
-    <url>/2023/10/02/paper-reading-controlnet/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>ControlNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>DALL-E 2</title>
     <link href="/2023/10/02/paper-reading-dalle2/"/>
     <url>/2023/10/02/paper-reading-dalle2/</url>
@@ -294,38 +294,9 @@
   
   
   <entry>
-    <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-os-lecture-2/"/>
-    <url>/2023/10/02/notes-os-lecture-2/</url>
-    
-    <content type="html"><![CDATA[<h1 id="操作系统第二次课程笔记"><a href="#操作系统第二次课程笔记" class="headerlink" title="操作系统第二次课程笔记"></a>操作系统第二次课程笔记</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>Lecture Notes</category>
-      
-      <category>Operating System</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Lecture Notes</tag>
-      
-      <tag>Operating System</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>DDPM</title>
-    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
-    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
+    <title>ControlNet</title>
+    <link href="/2023/10/02/paper-reading-controlnet/"/>
+    <url>/2023/10/02/paper-reading-controlnet/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -343,7 +314,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>DDPM</tag>
+      <tag>ControlNet</tag>
       
     </tags>
     
@@ -381,6 +352,35 @@
   
   
   <entry>
+    <title>GNN</title>
+    <link href="/2023/10/02/paper-reading-gnn/"/>
+    <url>/2023/10/02/paper-reading-gnn/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Graph</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>GNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MAE</title>
     <link href="/2023/10/02/paper-reading-mae/"/>
     <url>/2023/10/02/paper-reading-mae/</url>
@@ -410,9 +410,9 @@
   
   
   <entry>
-    <title>NeRF</title>
-    <link href="/2023/10/02/paper-reading-nerf/"/>
-    <url>/2023/10/02/paper-reading-nerf/</url>
+    <title>DDPM</title>
+    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
+    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -421,7 +421,7 @@
       
       <category>Paper reading</category>
       
-      <category>3D Vision</category>
+      <category>Generative Model</category>
       
     </categories>
     
@@ -430,7 +430,36 @@
       
       <tag>Paper reading</tag>
       
-      <tag>NeRF</tag>
+      <tag>DDPM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Latent diffusion model</title>
+    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
+    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>Stable diffusion</tag>
       
     </tags>
     
@@ -468,9 +497,9 @@
   
   
   <entry>
-    <title>GNN</title>
-    <link href="/2023/10/02/paper-reading-gnn/"/>
-    <url>/2023/10/02/paper-reading-gnn/</url>
+    <title>NeRF</title>
+    <link href="/2023/10/02/paper-reading-nerf/"/>
+    <url>/2023/10/02/paper-reading-nerf/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -479,7 +508,7 @@
       
       <category>Paper reading</category>
       
-      <category>Graph</category>
+      <category>3D Vision</category>
       
     </categories>
     
@@ -488,36 +517,7 @@
       
       <tag>Paper reading</tag>
       
-      <tag>GNN</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Latent diffusion model</title>
-    <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
-    <url>/2023/10/02/paper-reading-stable_diffusion/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>Stable diffusion</tag>
+      <tag>NeRF</tag>
       
     </tags>
     
@@ -671,35 +671,6 @@
   
   
   <entry>
-    <title>Conda</title>
-    <link href="/2023/10/02/tools-conda/"/>
-    <url>/2023/10/02/tools-conda/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Tools</category>
-      
-      <category>Conda</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Tools</tag>
-      
-      <tag>Conda</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Docker</title>
     <link href="/2023/10/02/tools-docker/"/>
     <url>/2023/10/02/tools-docker/</url>
@@ -729,9 +700,9 @@
   
   
   <entry>
-    <title>Git</title>
-    <link href="/2023/10/02/tools-git/"/>
-    <url>/2023/10/02/tools-git/</url>
+    <title>Conda</title>
+    <link href="/2023/10/02/tools-conda/"/>
+    <url>/2023/10/02/tools-conda/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -740,7 +711,7 @@
       
       <category>Tools</category>
       
-      <category>Git</category>
+      <category>Conda</category>
       
     </categories>
     
@@ -749,7 +720,7 @@
       
       <tag>Tools</tag>
       
-      <tag>Git</tag>
+      <tag>Conda</tag>
       
     </tags>
     
@@ -779,6 +750,35 @@
       <tag>Tools</tag>
       
       <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Git</title>
+    <link href="/2023/10/02/tools-git/"/>
+    <url>/2023/10/02/tools-git/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+      <tag>Git</tag>
       
     </tags>
     
