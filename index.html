@@ -722,7 +722,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-bert/" target="_self">
         <div>
-          
+          BERT主要有两个重要的创新点: 第一个就是微调，预训练不是BERT独创的，但是BERT让这种方法和使用预训练模型在下游任务上进行微调这种方法“出圈”了。 Bidirectional：GPT的训练方法是单词接龙，也就是说模型只能够看到之前的文本信息。BERT的训练方法是“完形填空”，可以看到上下文的信息。这种双向的信息在很多时候都是合法的，比如说在进行选择题或者是问答的时候，也是会从后向前看完整
         </div>
       </a>
 
@@ -792,7 +792,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-clip/" target="_self">
         <div>
-          
+          模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。  训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。     突破了categor
         </div>
       </a>
 
@@ -862,7 +862,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-dalle2/" target="_self">
         <div>
-          
+          DallE2也是基于扩散模型做的图片生成，使用CLIP的image encoder和text encoder来抽取文本和图像的特征。  层级式：模型是先生成一张 $$64\times 64$$的图片，然后通过训练的模型上采样不断的提高分辨率到 $$1024\times 1024$$  生成出来的图片又逼真又多样。  模型架构：    图片的上半部分就是一个CLIP模型，下半部分是一个“两阶段”的生
         </div>
       </a>
 

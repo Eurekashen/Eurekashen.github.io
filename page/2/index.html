@@ -372,7 +372,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-gnn/" target="_self">
         <div>
-          
+          博客链接如下： https://distill.pub/2021/gnn-intro/ 把图中的vertex、edge和全局信息都编码为embedding向量  不同种类的数据都可以表示成为图的形式：图片数据的像素就是图的一个节点、像素之间是相邻的就可以表示为两个节点之间的一条边。 而对于文本数据每一个token就可以看作是一个节点；而相邻的token就可以看作是一条边。  三种任务：在图上的任务
         </div>
       </a>
 
@@ -442,7 +442,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-mae/" target="_self">
         <div>
-          
+          文章的题目就说了MAE是一个scalable（可扩展）的视觉学习器。 MAE就是一个BERT的CV版本，BERT是mask掉词语的token、而MAE是把一部分的图片mask掉。所谓的autoencoder中的auto的意思是“自”，而不是“自动”的意思——也就是输入的x和输出的y是一个东西，通过encoder-decoder架构自监督的训练。  asymmetric encoder-decode
         </div>
       </a>
 
@@ -512,7 +512,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-nerf/" target="_self">
         <div>
-          
+          NeRF想要完成的目标： Novel View Synthesis，翻译成新视角合成工作，给定已知视角下的图片和图片的内外参数合成新视角下的图片。 NeRF 想做这样一件事——不需要中间三维重建的过程，仅根据位姿内参和图像，直接合成新视角下的图像。为此 NeRF 引入了辐射场的概念。NeRF使用MLP把3D场景表示为一个可学习的、连续的辐射场。  Positional Encoding深度神经网络
         </div>
       </a>
 
@@ -582,7 +582,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-resnet/" target="_self">
         <div>
-          
+          赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：  上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接结构
         </div>
       </a>
 
@@ -652,7 +652,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-stable_diffusion/" target="_self">
         <div>
-          
+          DDPM最开始的实现是没有使用传统的注意力机制的，就是使用的一个U-Net；在后续的版本中引入了attention机制   总结：原来的Diffusion Models都是直接在像素空间进行的操作，这会消耗大量的计算资源，计算复杂度非常的高。stable diffusion是在latent空间上进行的操作，可以在有限的资源上训练出来。stable diffusion使用了交叉注意力机制，可以co
         </div>
       </a>
 
@@ -722,7 +722,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-transformer/" target="_self">
         <div>
-          
+          2017年在”Attention is all you need”论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操作能够在序列数据上表
         </div>
       </a>
 
@@ -792,7 +792,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-vit/" target="_self">
         <div>
-          
+          Vision TransformerTransformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一个
         </div>
       </a>
 
@@ -862,7 +862,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-gan/" target="_self">
         <div>
-          
+          理论部分，关于概率论的推导部分没有细看，主要在讲证明目标函数的选择是正确的以及优化目标函数。注意理解一下琴声-香浓散度、KL散度 GAN模型的训练过程非常的有意思，使用的是没有标号的数据——也就是说属于无监督学习。但是GAN的目标函数是使用的有label的，其label就是数据是真实的还是模型生成出来的。这推动了之后的弱监督学习和半监督学习的发展。  GAN模型是一个framework 生成模型G
         </div>
       </a>
 
