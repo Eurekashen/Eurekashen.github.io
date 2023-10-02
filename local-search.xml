@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>文本图</title>
+    <link href="/2023/10/03/discussion-graph-text_graph/"/>
+    <url>/2023/10/03/discussion-graph-text_graph/</url>
+    
+    <content type="html"><![CDATA[<p>文本图就是图数据的每个节点上面带有了文本的信息</p><ul><li>加上这个文本信息之后，整个图结构对于分类/聚类任务的影响会变的较小<ul><li>换言之也就是出现了信息冗余的情况；</li><li>举个例子，对于一个论文引用关系的数据集，如果每个节点都有了对应论文的标题和摘要，就构成了一个典型的文本图；我们需要分出每篇文章术语那个领域聚类，但是既然我们已经知道了论文的标题和摘要，其实论文大致的内容和领域已经大差不差了，引用关系等图结构的影响也就相应的降低了。</li><li>文本给出的信息越详细，图结构的影响就越小，最后的分类效果其实就是在看text encoder的能力了。</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Discussion</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Graph</tag>
+      
+      <tag>Discussion</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在图数据集上进行预训练？</title>
+    <link href="/2023/10/03/discussion-graph_pre_train/"/>
+    <url>/2023/10/03/discussion-graph_pre_train/</url>
+    
+    <content type="html"><![CDATA[<p>​GPT、BERT的常见的基于预训练的生成模型都是在大规模的文本数据集上进行的预训练，它们分别采用了“文本接龙”和“完形填空”的方式来进行预训练。但是在图数据集上进行大规模的预训练之后迁移到下游任务上进行微调的想法缺陷的不是那么的可取：</p><ul><li>首先上述的语言模型能够在海量的文本数据集上进行预训练并且很好的迁移到下游任务的条件是上游任务和下游任务满足近似相同的规则，对于语言模型来说这个规则可以是人类语言的规则；而同样使用预训练的视觉模型比如说MAE也是满足了相邻patch之间的相关性相较于较远的patch之间是更高的。</li><li>但是图数据集显然是不满足上面的规则的；举个简单的例子：在社交网络中如果A和B是好朋友、B和C也是好朋友，那么大概率的A和C也是朋友关系；但是这对于一个化学分子来说确实说不通的，在分子结构中三元环因为斥力过大是非常不稳定的，也就是说如果A和B成键、B和C成键，那么A和C大概率是没有化学键连接的。</li><li>图数据集上的预训练受限于上游和下游的数据集的<mark>规则</mark>的相似程度，只有当规则的相似度高到一定程度的时候才能够有有意义的预训练和迁移效果。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Discussion</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Graph</tag>
+      
+      <tag>Discussion</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Lecture 1</title>
     <link href="/2023/10/02/notes-com-arch-lecture-1/"/>
     <url>/2023/10/02/notes-com-arch-lecture-1/</url>
@@ -63,35 +117,6 @@
   
   <entry>
     <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
-    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
-    
-    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>Lecture Notes</category>
-      
-      <category>Computer Architecture</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Lecture Notes</tag>
-      
-      <tag>Computer Architecture</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Lecture 2</title>
     <link href="/2023/10/02/notes-com-network-lecture-2/"/>
     <url>/2023/10/02/notes-com-network-lecture-2/</url>
     
@@ -120,11 +145,11 @@
   
   
   <entry>
-    <title>Lecture 1</title>
-    <link href="/2023/10/02/notes-os-lecture-1/"/>
-    <url>/2023/10/02/notes-os-lecture-1/</url>
+    <title>Lecture 2</title>
+    <link href="/2023/10/02/notes-os-lecture-2/"/>
+    <url>/2023/10/02/notes-os-lecture-2/</url>
     
-    <content type="html"><![CDATA[<h1>What is an Operating System?</h1><blockquote><p>A program that acts as an intermediary between a user of a computer and the computer hardware.</p></blockquote><p>是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。</p><ul><li>存在的目的和意义：<ul><li>执行用户的程序，让解决问题更加的简单、让计算机系统更加的易用。</li><li>调度系统的硬件，让硬件高效的运行——在完成相同任务的前提下，占用的资源越少越好；</li></ul></li></ul><h2 id="Computer-System-Structure">Computer System Structure</h2><img src="https://z1.ax1x.com/2023/10/02/pPL643Q.png" style="zoom:80%;" /><p>事实上我们平时使用的“OS”不是真正的那个“A program”，而是 运行在操作系统上的各种程序。</p><h1>OS Definition</h1><ul><li><p>OS is a <mark><strong>resource allocator</strong></mark></p><ul><li>*Manages all resources；*管理所有的硬件资源-lab1会接触到定时器timer</li><li>*Decides between conflicting requests for efficient and fair resource use；*当资源出现冲突的是时候决定怎么样的分配是最高效的、最公平的。</li></ul></li><li><p>OS is a <mark><strong>control program</strong></mark></p><ul><li><em>Controls execution of programs to prevent errors and improper use of the computer</em>；当程序出现错误的时候handle这些错误，典型的问题就是C语言对0地址访问之后程序报错退出，不会把整个系统弄崩掉。</li></ul></li></ul><h2 id="kernel">kernel</h2><p><mark><strong>内核</strong></mark>：操作系统中一直在运行的、最早启动、最先被赋予进程ID的程序就是kernel</p><blockquote><p>Everything else is either a system program (ships with the operating system) or an application program</p></blockquote><p>从宏观的角度来看，<em>因为不可能有一个程序始终都占用CPU在运行</em></p><h2 id="Computer-Startup">Computer Startup</h2><ul><li>启动引导程序<strong>bootstrap program</strong>：<ul><li>当系统加电启动的时候用来把操作系统的内核加载到内存中去并且开始执行</li><li>一般来说放到主板上面的ROM&amp;EPROM中，这就是所谓的固件firmware，是烧录在ROM的</li><li><em>对于现代处理器来说，很重要的是建立虚地址</em></li></ul></li></ul><h1>Computer System Organization</h1><p><img src="https://z1.ax1x.com/2023/10/02/pPL6qEV.png" alt=""></p><p>冯诺依曼架构是围绕<strong>内存</strong>展开的，所有设备通过bus和内存建立链接</p><blockquote><p>I/O devices and the CPU can execute concurrently.</p></blockquote><p>CPU和IO设备是可以并发的运行的</p><p>一个device会被对应的device controller管理，有自己Local buffer，CPU控制local buffer和main memory之间的数据交互。I/O is from the device to local buffer of controller.I/O是从device</p>]]></content>
+    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
     
     
     <categories>
@@ -150,10 +175,39 @@
   
   <entry>
     <title>Lecture 2</title>
-    <link href="/2023/10/02/notes-os-lecture-2/"/>
-    <url>/2023/10/02/notes-os-lecture-2/</url>
+    <link href="/2023/10/02/notes-com-arch-lecture-2/"/>
+    <url>/2023/10/02/notes-com-arch-lecture-2/</url>
     
-    <content type="html"><![CDATA[<h1>操作系统第二次课程笔记</h1>]]></content>
+    <content type="html"><![CDATA[<h1>计算机体系结构第二次课程笔记</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Lecture Notes</category>
+      
+      <category>Computer Architecture</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Lecture Notes</tag>
+      
+      <tag>Computer Architecture</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Chapter 1</title>
+    <link href="/2023/10/02/notes-os-Chapter-1/"/>
+    <url>/2023/10/02/notes-os-Chapter-1/</url>
+    
+    <content type="html"><![CDATA[<h1>What is an Operating System?</h1><blockquote><p>A program that acts as an intermediary between a user of a computer and the computer hardware.</p></blockquote><p>是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。</p><ul><li>存在的目的和意义：<ul><li>执行用户的程序，让解决问题更加的简单、让计算机系统更加的易用。</li><li>调度系统的硬件，让硬件高效的运行——在完成相同任务的前提下，占用的资源越少越好；</li></ul></li></ul><h2 id="Computer-System-Structure">Computer System Structure</h2><img src="https://z1.ax1x.com/2023/10/02/pPL643Q.png" style="zoom:80%;" /><p>事实上我们平时使用的“OS”不是真正的那个“A program”，而是 运行在操作系统上的各种程序。</p><h1>OS Definition</h1><ul><li><p>OS is a <mark><strong>resource allocator</strong></mark></p><ul><li>*Manages all resources；*管理所有的硬件资源-lab1会接触到定时器timer</li><li>*Decides between conflicting requests for efficient and fair resource use；*当资源出现冲突的是时候决定怎么样的分配是最高效的、最公平的。</li></ul></li><li><p>OS is a <mark><strong>control program</strong></mark></p><ul><li><em>Controls execution of programs to prevent errors and improper use of the computer</em>；当程序出现错误的时候handle这些错误，典型的问题就是C语言对0地址访问之后程序报错退出，不会把整个系统弄崩掉。</li></ul></li></ul><h2 id="kernel">kernel</h2><p><mark><strong>内核</strong></mark>：操作系统中一直在运行的、最早启动、最先被赋予进程ID的程序就是kernel</p><blockquote><p>Everything else is either a system program (ships with the operating system) or an application program</p></blockquote><p>从宏观的角度来看，<em>因为不可能有一个程序始终都占用CPU在运行</em></p><h2 id="Computer-Startup">Computer Startup</h2><ul><li>启动引导程序<strong>bootstrap program</strong>：<ul><li>当系统加电启动的时候用来把操作系统的内核加载到内存中去并且开始执行</li><li>一般来说放到主板上面的ROM&amp;EPROM中，这就是所谓的固件firmware，是烧录在ROM的</li><li><em>对于现代处理器来说，很重要的是建立虚地址</em></li></ul></li></ul><h1>Computer System Organization</h1><p><img src="https://z1.ax1x.com/2023/10/02/pPL6qEV.png" alt=""></p><p>冯诺依曼架构是围绕<strong>内存</strong>展开的，所有设备通过bus和内存建立链接</p><blockquote><p>I/O devices and the CPU can execute concurrently.</p></blockquote><p>CPU和IO设备是可以并发的运行的</p><p>一个device会被对应的device controller管理，有自己Local buffer，CPU控制local buffer和main memory之间的数据交互。I/O is from the device to local buffer of controller.I/O的pipeline是从device到local buffer到controller的。当操作设备的操作完成之后，device会触发<mark><strong>interrupt中断</strong></mark>的方式通知CPU.<br>当设备非常多的时候，有<u><em>中断控制器</em></u>来管理、控制中断。</p><h1>Interrupt</h1><p>中断向量interrupt vector，每个元素就是对应中断事件的对应处理的首地址。根据interrupt number来决定要使用哪一个来处理。</p><p>context：上下文，不能丢失上下文</p><p>中断只不可预知的，中断的优先级（中断处理的时候又有中断）</p><p>trap：软中断，软件触发的中断——程序出错了、故意触发的（user request/system call，是开发人员有意调用操作系统的接口从user code进入system code kernel里面运行，调用系统的服务）。system call的number代表不同的功能</p><p>在RISC-V中不同的一套术语体系：所有的中断称为traps，下面分为interrupt硬件中断和exceptions异常&amp;ecalls环境调用(RISC-V 中的system call)</p><h2 id="Interrupt-handling">Interrupt handling</h2><p>保留运行时的context上下文也就是寄存器和PC(program counter)</p><h2 id="I-O-Two-methods">I/O-Two methods</h2><p>很多的I/O是通过中断的处理来完成的</p><ul><li>Synchronous</li><li>Asynchronous（异步、非阻塞IO）屏幕打印被键盘中断的例子<ul><li>有两条控制流，一个做I/O处理、一个回到原来的位置继续运行——需要多个线程的参与。</li></ul></li></ul><h2 id="Device-Status-Table">Device-Status Table</h2><p>使用一个链表来管理设备、监控设备的状态、根据优先级管理request的队列</p><h2 id="Direct-Memory-Access-Structure">Direct Memory Access Structure</h2><p>直接内存访问</p><p>中断的效率不够高</p><p>DMA能够在CPU不干涉的情况下和main memory进行数据交互，等到一个block数据传输完了之后才有一个interrupt（不是不干预，而是少干预，从per byte—&gt;per block）</p><h1>Storage Hierarchy</h1><h2 id="Caching">Caching</h2><p>是一种操作，用上层快的缓存下面慢的，main memory可以看作是最后一层cache</p><p>处理速度不匹配的问题</p><h1>Multiprocessor Systems</h1><p>多处理器系统</p><ul><li>SMP architecture：对称多处理器系统</li></ul><p>多核系统</p><p>NUMA架构：不是共享内存，访问remote memory的时候速度会慢</p><h1>Operating System Structure</h1><ul><li>Multiprogramming-更高的CPU利用率：把一堆程序放到内存中，</li><li>Timesharing (multitasking)-更高的交互性：同时的运行多个任务，每个程序都可以快速的响应</li></ul><p>两者之间并不矛盾</p>]]></content>
     
     
     <categories>
@@ -265,35 +319,6 @@
   
   
   <entry>
-    <title>ControlNet</title>
-    <link href="/2023/10/02/paper-reading-controlnet/"/>
-    <url>/2023/10/02/paper-reading-controlnet/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>ControlNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>DALL-E 2</title>
     <link href="/2023/10/02/paper-reading-dalle2/"/>
     <url>/2023/10/02/paper-reading-dalle2/</url>
@@ -315,35 +340,6 @@
       <tag>Paper reading</tag>
       
       <tag>DALL-E2</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>DDPM</title>
-    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
-    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Generative Model</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>DDPM</tag>
       
     </tags>
     
@@ -410,6 +406,35 @@
   
   
   <entry>
+    <title>ControlNet</title>
+    <link href="/2023/10/02/paper-reading-controlnet/"/>
+    <url>/2023/10/02/paper-reading-controlnet/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>ControlNet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MAE</title>
     <link href="/2023/10/02/paper-reading-mae/"/>
     <url>/2023/10/02/paper-reading-mae/</url>
@@ -431,6 +456,35 @@
       <tag>Paper reading</tag>
       
       <tag>MAE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DDPM</title>
+    <link href="/2023/10/02/paper-reading-ddpm_ddim/"/>
+    <url>/2023/10/02/paper-reading-ddpm_ddim/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Generative Model</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>DDPM</tag>
       
     </tags>
     
@@ -468,35 +522,6 @@
   
   
   <entry>
-    <title>ResNet</title>
-    <link href="/2023/10/02/paper-reading-resnet/"/>
-    <url>/2023/10/02/paper-reading-resnet/</url>
-    
-    <content type="html"><![CDATA[<p>赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。</p><p>通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。</p><ul><li>让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。</li></ul><p>引入了残差连接：</p><center><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.06.36.png"></center><p>上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。</p><p>如果没有这样的连接结构是一个plane的网络的话，当网络变的越来越深的时候结果反而会变差。理论上来说非常深的网络结果不会变差因为最后几层学习到的输出如果是0的话就和浅层是一样的。但是在实际中SGD随机梯度下降没有办法做到，深层网络学习到的东西是错误的。</p><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.13.42.png"><p>当网络层数深的时候就训练不动了</p><p>注意收敛不代表模型训练好的，是要收敛到理想的位置</p><p>加了残差连接之后能够训练动的原因是梯度保持的好（MuLi），因为如果不加由于求导的链式法则当梯度越来越小很容易会梯度消失。加了之后多了一个浅层网络梯度的加法项，使得梯度可以更新。</p><ul><li>减少训练非常深的网络的计算复杂度<ul><li><p>通过使用1<em>1的卷积增加了通道降低了图片的大小，使得下面👇两种计算方式的理论复杂度是相似的（但是实际上1</em>1的实现卷积效率比较低）</p></li><li><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.07.04.png"> </li><li><p>这样就使得训练深层网络不会有爆炸的计算复杂度</p></li></ul></li><li>不同的ResNet网络模型<ul><li><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.06.52.png"></li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>Paper reading</category>
-      
-      <category>Computer Vision</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Paper reading</tag>
-      
-      <tag>ResNet</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Latent diffusion model</title>
     <link href="/2023/10/02/paper-reading-stable_diffusion/"/>
     <url>/2023/10/02/paper-reading-stable_diffusion/</url>
@@ -518,6 +543,35 @@
       <tag>Paper reading</tag>
       
       <tag>Stable diffusion</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ResNet</title>
+    <link href="/2023/10/02/paper-reading-resnet/"/>
+    <url>/2023/10/02/paper-reading-resnet/</url>
+    
+    <content type="html"><![CDATA[<p>赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。</p><p>通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。</p><ul><li>让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。</li></ul><p>引入了残差连接：</p><center><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.06.36.png"></center><p>上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。</p><p>如果没有这样的连接结构是一个plane的网络的话，当网络变的越来越深的时候结果反而会变差。理论上来说非常深的网络结果不会变差因为最后几层学习到的输出如果是0的话就和浅层是一样的。但是在实际中SGD随机梯度下降没有办法做到，深层网络学习到的东西是错误的。</p><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.13.42.png"><p>当网络层数深的时候就训练不动了</p><p>注意收敛不代表模型训练好的，是要收敛到理想的位置</p><p>加了残差连接之后能够训练动的原因是梯度保持的好（MuLi），因为如果不加由于求导的链式法则当梯度越来越小很容易会梯度消失。加了之后多了一个浅层网络梯度的加法项，使得梯度可以更新。</p><ul><li>减少训练非常深的网络的计算复杂度<ul><li><p>通过使用1<em>1的卷积增加了通道降低了图片的大小，使得下面👇两种计算方式的理论复杂度是相似的（但是实际上1</em>1的实现卷积效率比较低）</p></li><li><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.07.04.png"> </li><li><p>这样就使得训练深层网络不会有爆炸的计算复杂度</p></li></ul></li><li>不同的ResNet网络模型<ul><li><img src="/sreenshortcut/Screenshot 2023-08-17 at 20.06.52.png"></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Paper reading</category>
+      
+      <category>Computer Vision</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Paper reading</tag>
+      
+      <tag>ResNet</tag>
       
     </tags>
     
@@ -584,6 +638,35 @@
   
   
   <entry>
+    <title>Java</title>
+    <link href="/2023/10/02/progamming-java/"/>
+    <url>/2023/10/02/progamming-java/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Programming</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Programming</tag>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Python</title>
     <link href="/2023/10/02/progamming-python/"/>
     <url>/2023/10/02/progamming-python/</url>
@@ -634,35 +717,6 @@
       <tag>Tools</tag>
       
       <tag>CMake</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Java</title>
-    <link href="/2023/10/02/progamming-java/"/>
-    <url>/2023/10/02/progamming-java/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>Programming</category>
-      
-      <category>Java</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Programming</tag>
-      
-      <tag>Java</tag>
       
     </tags>
     

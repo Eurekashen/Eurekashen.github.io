@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":90,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -224,6 +224,132 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/10/03/discussion-graph-text_graph/" target="_self">
+          文本图
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/03/discussion-graph-text_graph/" target="_self">
+        <div>
+          文本图就是图数据的每个节点上面带有了文本的信息  加上这个文本信息之后，整个图结构对于分类/聚类任务的影响会变的较小  换言之也就是出现了信息冗余的情况； 举个例子，对于一个论文引用关系的数据集，如果每个节点都有了对应论文的标题和摘要，就构成了一个典型的文本图；我们需要分出每篇文章术语那个领域聚类，但是既然我们已经知道了论文的标题和摘要，其实论文大致的内容和领域已经大差不差了，引用关系等图结构的影
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-03 00:00" pubdate>
+              2023-10-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Discussion/" class="category-chain-item">Discussion</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Graph/">#Graph</a>
+            
+              <a href="/tags/Discussion/">#Discussion</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/10/03/discussion-graph_pre_train/" target="_self">
+          在图数据集上进行预训练？
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/03/discussion-graph_pre_train/" target="_self">
+        <div>
+          ​		GPT、BERT的常见的基于预训练的生成模型都是在大规模的文本数据集上进行的预训练，它们分别采用了“文本接龙”和“完形填空”的方式来进行预训练。但是在图数据集上进行大规模的预训练之后迁移到下游任务上进行微调的想法缺陷的不是那么的可取：  首先上述的语言模型能够在海量的文本数据集上进行预训练并且很好的迁移到下游任务的条件是上游任务和下游任务满足近似相同的规则，对于语言模型来说这个规则可以是人类
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-03 00:00" pubdate>
+              2023-10-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Discussion/" class="category-chain-item">Discussion</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Graph/">#Graph</a>
+            
+              <a href="/tags/Discussion/">#Discussion</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/10/02/notes-com-arch-lecture-1/" target="_self">
           Lecture 1
         </a>
@@ -364,76 +490,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/notes-com-arch-lecture-2/" target="_self">
-          Lecture 2
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-com-arch-lecture-2/" target="_self">
-        <div>
-          计算机体系结构第二次课程笔记
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Lecture-Notes/" class="category-chain-item">Lecture Notes</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Lecture-Notes/Computer-Architecture/" class="category-chain-item">Computer Architecture</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Lecture-Notes/">#Lecture Notes</a>
-            
-              <a href="/tags/Computer-Architecture/">#Computer Architecture</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/2023/10/02/notes-com-network-lecture-2/" target="_self">
           Lecture 2
         </a>
@@ -504,15 +560,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/notes-os-lecture-1/" target="_self">
-          Lecture 1
+        <a href="/2023/10/02/notes-os-lecture-2/" target="_self">
+          Lecture 2
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-os-lecture-1/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-os-lecture-2/" target="_self">
         <div>
-          What is an Operating System?  A program that acts as an intermediary between a user of a computer and the computer hardware.  是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。  存在的目
+          操作系统第二次课程笔记
         </div>
       </a>
 
@@ -574,15 +630,85 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/notes-os-lecture-2/" target="_self">
+        <a href="/2023/10/02/notes-com-arch-lecture-2/" target="_self">
           Lecture 2
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-os-lecture-2/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-com-arch-lecture-2/" target="_self">
         <div>
-          操作系统第二次课程笔记
+          计算机体系结构第二次课程笔记
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Lecture-Notes/" class="category-chain-item">Lecture Notes</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Lecture-Notes/Computer-Architecture/" class="category-chain-item">Computer Architecture</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Lecture-Notes/">#Lecture Notes</a>
+            
+              <a href="/tags/Computer-Architecture/">#Computer Architecture</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/10/02/notes-os-Chapter-1/" target="_self">
+          Chapter 1
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/notes-os-Chapter-1/" target="_self">
+        <div>
+          What is an Operating System?  A program that acts as an intermediary between a user of a computer and the computer hardware.  是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。  存在的目
         </div>
       </a>
 
@@ -771,146 +897,6 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/BERT/">#BERT</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-clip/" target="_self">
-          CLIP
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-clip/" target="_self">
-        <div>
-          模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。        突破了cat
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Computer-Vision/" class="category-chain-item">Computer Vision</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/CLIP/">#CLIP</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-controlnet/" target="_self">
-          ControlNet
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-controlnet/" target="_self">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Generative-Model/" class="category-chain-item">Generative Model</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/ControlNet/">#ControlNet</a>
             
           </div>
         

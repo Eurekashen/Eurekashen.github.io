@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":90,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -224,6 +224,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/10/02/paper-reading-clip/" target="_self">
+          CLIP
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-clip/" target="_self">
+        <div>
+          模型结合了自然语言处理，使用image-text pairs进行预训练，训练之后的模型在大量的数据集上面进行zero-shot的分类预测都可以获得非常好的效果。   训练过程是一个对比学习（只需要正负样本的定义，矩阵的对角线上是正样本其余是负样本）判断是否成对，是自监督的。在4亿个image-text对上进行训练，分类的时候通过计算余弦相似度，相似度最大的就是分类输出。        突破了cat
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Paper-reading/Computer-Vision/" class="category-chain-item">Computer Vision</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Paper-reading/">#Paper reading</a>
+            
+              <a href="/tags/CLIP/">#CLIP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/10/02/paper-reading-dalle2/" target="_self">
           DALL-E 2
         </a>
@@ -281,76 +351,6 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/DALL-E2/">#DALL-E2</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-ddpm_ddim/" target="_self">
-          DDPM
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-ddpm_ddim/" target="_self">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Generative-Model/" class="category-chain-item">Generative Model</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/DDPM/">#DDPM</a>
             
           </div>
         
@@ -504,6 +504,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/10/02/paper-reading-controlnet/" target="_self">
+          ControlNet
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-controlnet/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Paper-reading/Generative-Model/" class="category-chain-item">Generative Model</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Paper-reading/">#Paper reading</a>
+            
+              <a href="/tags/ControlNet/">#ControlNet</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/10/02/paper-reading-mae/" target="_self">
           MAE
         </a>
@@ -561,6 +631,76 @@
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
               <a href="/tags/MAE/">#MAE</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/10/02/paper-reading-ddpm_ddim/" target="_self">
+          DDPM
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-ddpm_ddim/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-10-02 00:00" pubdate>
+              2023-10-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Paper-reading/Generative-Model/" class="category-chain-item">Generative Model</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Paper-reading/">#Paper reading</a>
+            
+              <a href="/tags/DDPM/">#DDPM</a>
             
           </div>
         
@@ -644,76 +784,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/paper-reading-resnet/" target="_self">
-          ResNet
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-resnet/" target="_self">
-        <div>
-          赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：    上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Computer-Vision/" class="category-chain-item">Computer Vision</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/ResNet/">#ResNet</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/2023/10/02/paper-reading-stable_diffusion/" target="_self">
           Latent diffusion model
         </a>
@@ -784,85 +854,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/02/paper-reading-transformer/" target="_self">
-          Transformer
+        <a href="/2023/10/02/paper-reading-resnet/" target="_self">
+          ResNet
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-transformer/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-resnet/" target="_self">
         <div>
-          2017年在&quot;Attention is all you need&quot;论文中提出，虽然题目说的是“只需要注意力机制就可以了”；但是在很多的后续实验验证都证明了注意力机制在Transformer这个架构中不是单个就能起作用的，其中的MLP、Residual connection一系列其他的操作也是必不可少的。 文章提出了一种“简单”的架构，没有使用recurrence（循环）和卷积操
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-02 00:00" pubdate>
-              2023-10-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Paper-reading/" class="category-chain-item">Paper reading</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Paper-reading/Natural-Language-Processing/" class="category-chain-item">Natural Language Processing</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Paper-reading/">#Paper reading</a>
-            
-              <a href="/tags/Transformer/">#Transformer</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/02/paper-reading-vit/" target="_self">
-          ViT
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/02/paper-reading-vit/" target="_self">
-        <div>
-          Vision Transformer Transformer在NLP领域大放异彩，直接将Transformer应用在了图像数据上，打破了CV和NLP在模型上的壁垒。让之后的多模态任务只用一个Transformer解决多种数据成为了可能。 在这之后图片分类数据集上表现最好的几个模型都是基于ViT的；而在目标检测例如COCO数据集上表现最好的几个模型是基于Swin Transformer的（可以理解一
+          赢得了2015年的ImageNet数据集上面的竞赛，直到现在依然应用非常的广泛。 通道数channels可以看作是模式——每一个通道就是学习到的一种模式，通道数越多学习到的模式越多。  让训练非常深的神经网络成为了可能，并且在网络变得越来越深的时候不会让结果变差。  引入了残差连接：    上图是一个残差块，把输入和输出通过一个shortcut connection连接到一起。 如果没有这样的连接
         </div>
       </a>
 
@@ -910,7 +910,7 @@
             
               <a href="/tags/Paper-reading/">#Paper reading</a>
             
-              <a href="/tags/ViT/">#ViT</a>
+              <a href="/tags/ResNet/">#ResNet</a>
             
           </div>
         
