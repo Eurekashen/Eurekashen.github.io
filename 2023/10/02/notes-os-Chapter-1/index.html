@@ -27,8 +27,9 @@
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/02/pPL6qEV.png">
 <meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.14.47.png">
 <meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.15.31.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/06/Screenshot-2023-10-06-at-19.07.18.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-06T06:56:13.550Z">
+<meta property="article:modified_time" content="2023-10-06T11:59:30.657Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Lecture Notes">
 <meta property="article:tag" content="Operating System">
@@ -228,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          4.1k 字
         
       </span>
     
@@ -239,7 +240,7 @@
         
         
         
-          26 分钟
+          35 分钟
         
       </span>
     
@@ -395,7 +396,57 @@
 </ul>
 <p>这两种技术是不冲突、不矛盾的，multitasking系统一定是一个Multiprogramming的</p>
 <h1>Operating-System Operations</h1>
-<p>操作系统在模式上的分割。</p>
+<p>操作系统在模式上的分割：User mode和kernel mode(supervisor mode)，两个模式的区别和切换是由**<u>硬件中的一个bit状态位</u>**决定的。有些硬件是privileged，这种硬件只能够在kernel node下面运行，在kernel mode中可以运行“特权”指令（system call，例如在屏幕上显示、调用I/O等），特权指令在user mode中不可以运行。<br>
+<mark>隔离：mode是隔离的，在运行kernel code的时候绝对不可能同时运行着user code</mark></p>
+<blockquote>
+<p>System call changes mode to kernel, return from call resets it to user<br>
+System call会把模式切换成kernel mode，执行完成之后又会返回到user mode</p>
+</blockquote>
+<p>除了这些还有machine mode，machine mode不是每个系统都有</p>
+<ul>
+<li>system call调用过程</li>
+</ul>
+<p><img src="https://s1.imagehub.cc/images/2023/10/06/Screenshot-2023-10-06-at-19.07.18.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<blockquote>
+<p>其实操作系统就是提供了很多system call让用户可以去调用，这些system call都是可重入的、并发访问的</p>
+</blockquote>
+<h1>Operating-System functions</h1>
+<p>操作系统的主要功能</p>
+<h2 id="Process-Management">Process Management</h2>
+<blockquote>
+<p>A process is a program in execution<br>
+进程就是运行当中的程序</p>
+</blockquote>
+<ul>
+<li>
+<p>进程和程序的区别：</p>
+</li>
+<li>
+<p>进程是对resources的一种抽象：</p>
+<ul>
+<li>进程需要资源来完成任务</li>
+<li>进程的终止就是把占用的资源释放</li>
+<li>进程的状态：进程的状态由进程对应的<mark>program counter（和组成一样，指示下一条指令的位置）</mark>和例如寄存器的值来描述；对于多线程的进程，每个线程thread会对应一个PC。</li>
+</ul>
+</li>
+<li>
+<p>CPU的复用：<mark>multiplexing the CPUs</mark>，只有一个/多个CPU，很多进程共享CPU这一个计算资源并发的运行。时分复用——在时间上分割</p>
+</li>
+<li>
+<p><strong>进程的管理：建立、删除、恢复、同步、进程之间的沟通、防止deadlock</strong></p>
+</li>
+</ul>
+<h2 id="Memory-Management">Memory Management</h2>
+<p>内存管理需哟啊解决的是在空间上分割的复用——空分复用</p>
+<p>所有的指令和数据要在进程运行之前加载到内存中（不绝对），管理内存的分配、追踪内存、管理进程使用的内存。</p>
+<h2 id="Storage-Management">Storage Management</h2>
+<p>管理文件和文件系统，文件系统有基本的创建删除文件、目录的功能；还要有海量文件管理的功能，有并发访问控制等功能。</p>
+<h2 id="I-O">I/O</h2>
+<ul>
+<li>hide peculiarities：IO设备的种类厂家非常多，需要隐藏IO设备的奇异性，让设备用起来简单，对user提供一个比较统一的接口。</li>
+<li>OS要保证IO设备的高效</li>
+<li>OS要提供统一的设备驱动接口、厂家编写对于指定的设备的驱动程序。</li>
+</ul>
 
                 
               </div>
