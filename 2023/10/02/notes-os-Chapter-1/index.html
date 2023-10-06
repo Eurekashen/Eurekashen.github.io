@@ -25,10 +25,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/02/pPL643Q.png">
 <meta property="og:image" content="https://z1.ax1x.com/2023/10/02/pPL6qEV.png">
-<meta property="og:image" content="https://www.dropbox.com/scl/fi/sesnk83zlu5fvgr46yc7z/Screenshot-2023-10-05-at-22.07.29.png?rlkey=56he2t9tgdooud0m018lvg3t3&amp;dl=0">
-<meta property="og:image" content="https://www.dropbox.com/scl/fi/lmm3tc2vawtq7y9631mrh/Screenshot-2023-10-05-at-22.07.44.png?rlkey=qcjwlpbf5r6m8m94m5ojx1e4p&amp;dl=0">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.14.47.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.15.31.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-05T14:10:52.346Z">
+<meta property="article:modified_time" content="2023-10-06T06:56:13.550Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Lecture Notes">
 <meta property="article:tag" content="Operating System">
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          3.1k 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          21 分钟
+          26 分钟
         
       </span>
     
@@ -341,6 +341,9 @@
 <h1>Interrupt</h1>
 <ul>
 <li>
+<p>polling和vectored是两种中断的类型，polling是CPU定期的检查中断是否发生；vectored是使用<strong>中断向量</strong>的方式处理中断。</p>
+</li>
+<li>
 <p>中断向量interrupt vector：向量的每个元素就是对应中断事件的对应处理的首地址。处理中断的时候根据interrupt number来决定要使用哪一个来处理。</p>
 </li>
 <li>
@@ -365,33 +368,34 @@
 <li>系统不等中断处理完成就恢复运行。</li>
 <li>中断处理和系统运行是同时执行的。</li>
 </ul>
-<p><img src="https://www.dropbox.com/scl/fi/sesnk83zlu5fvgr46yc7z/Screenshot-2023-10-05-at-22.07.29.png?rlkey=56he2t9tgdooud0m018lvg3t3&amp;dl=0" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.14.47.png" srcset="/img/loading.gif" lazyload alt="Screenshot-2023-10-05-at-22.14.47.png"></p>
 </li>
 </ul>
 <h2 id="Device-Status-Table">Device-Status Table</h2>
 <p>使用一个链表来管理设备、监控设备的状态、<mark>根据优先级管理</mark>request的队列</p>
-<p><img src="https://www.dropbox.com/scl/fi/lmm3tc2vawtq7y9631mrh/Screenshot-2023-10-05-at-22.07.44.png?rlkey=qcjwlpbf5r6m8m94m5ojx1e4p&amp;dl=0" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.15.31.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <h2 id="Direct-Memory-Access-Structure">Direct Memory Access Structure</h2>
-<p>直接内存访问</p>
-<p>中断的效率不够高</p>
-<p>DMA能够在CPU不干涉的情况下和main memory进行数据交互，等到一个block数据传输完了之后才有一个interrupt（不是不干预，而是少干预，从per byte—&gt;per block）</p>
+<p>对于高速IO设备中断的效率不够高，可以使用直接内存访问的模式。</p>
+<p>DMA能够在CPU不干涉（不是不干预，而是少干预，从per byte—&gt;per block）的情况下和main memory进行数据交互，等到一个block数据传输完了之后才有一个interrupt</p>
 <h1>Storage Hierarchy</h1>
+<p>存储设别在<mark>speed、cost、valatility</mark>三个层面是层级组织的，这里不再赘述。</p>
 <h2 id="Caching">Caching</h2>
-<p>是一种操作，用上层快的缓存下面慢的，main memory可以看作是最后一层cache</p>
-<p>处理速度不匹配的问题</p>
+<p>Caching是一种操作，用上层快的缓存下面慢的，<u>main memory可以看作是最后一层cache</u>，用来处理速度不匹配的问题</p>
 <h1>Multiprocessor Systems</h1>
 <p>多处理器系统</p>
 <ul>
-<li>SMP architecture：对称多处理器系统</li>
+<li>SMP architecture：对称多处理器系统，每个CPU都有自己的寄存器，所有的CPU通过bus共享main memory。</li>
+<li>多核系统：一个CPU上有多个处理核心，每个core拥有多极缓存多级缓存，在一个chip上的信息传输比chip之间的要快。</li>
+<li>NUMA架构：不是共享内存，每个CPU有属于自己的local memory，别的CPU的memory称为remote memory，都可以访问但是访问remote memory的时候速度会慢。</li>
 </ul>
-<p>多核系统</p>
-<p>NUMA架构：不是共享内存，访问remote memory的时候速度会慢</p>
 <h1>Operating System Structure</h1>
 <ul>
-<li>Multiprogramming-更高的CPU利用率：把一堆程序放到内存中，</li>
-<li>Timesharing (multitasking)-更高的交互性：同时的运行多个任务，每个程序都可以快速的响应</li>
+<li>Multiprogramming——更高的CPU利用率：把一堆程序放到内存中，<u><strong>因为每个user不可能时时刻刻都把CPU占满，所以Multiprogramming这种策略会让调度所有的任务让CPU永远有任务</strong></u>。任务相关的所有东西都会被存放到内存中，当一个任务有需要等待的东西（IO或者其他）就会切换到下一个任务。</li>
+<li>Timesharing分时(multitasking)——更高的交互性（命令可以更快的响应）：同时的运行多个任务，每个程序都可以快速的响应。<em>CPU一会执行这个一会执行那个</em>，操作系统通过调度让每个user的程序都可以快速的得到响应，<strong>如果main memory的空间不够了要和把这些程序拿进拿出（swapping技术）。还有虚拟内存技术可以允许进程不完全在memory中（把碎片的内存映射成连续的内存）。</strong></li>
 </ul>
-<p>两者之间并不矛盾</p>
+<p>这两种技术是不冲突、不矛盾的，multitasking系统一定是一个Multiprogramming的</p>
+<h1>Operating-System Operations</h1>
+<p>操作系统在模式上的分割。</p>
 
                 
               </div>
