@@ -18,7 +18,7 @@
   
     <meta name="description" content="What is an Operating System?  A program that acts as an intermediary between a user of a computer and the computer hardware.  是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。  存在的目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chapter 1">
+<meta property="og:title" content="Chapter 1 Introduction">
 <meta property="og:url" content="http://example.com/2023/10/02/notes-os-Chapter-1/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="What is an Operating System?  A program that acts as an intermediary between a user of a computer and the computer hardware.  是一个在用户和计算机硬件之间的程序，不过现在这句话的定义不是非常的恰当，现在基本都是&quot;many programs&quot;。  存在的目">
@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/05/Screenshot-2023-10-05-at-22.15.31.png">
 <meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/06/Screenshot-2023-10-06-at-19.07.18.png">
 <meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-06T11:59:30.657Z">
+<meta property="article:modified_time" content="2023-10-06T14:10:31.304Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Lecture Notes">
 <meta property="article:tag" content="Operating System">
@@ -38,7 +38,7 @@
   
   
   
-  <title>Chapter 1 - Hexo</title>
+  <title>Chapter 1 Introduction - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Chapter 1"></span>
+            <span id="subtitle" data-typed-text="Chapter 1 Introduction"></span>
           
         </div>
 
@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.1k 字
+          4.3k 字
         
       </span>
     
@@ -240,7 +240,7 @@
         
         
         
-          35 分钟
+          37 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Chapter 1</h1>
+            <h1 id="seo-header">Chapter 1 Introduction</h1>
             
             
               <div class="markdown-body">
@@ -394,7 +394,8 @@
 <li>Multiprogramming——更高的CPU利用率：把一堆程序放到内存中，<u><strong>因为每个user不可能时时刻刻都把CPU占满，所以Multiprogramming这种策略会让调度所有的任务让CPU永远有任务</strong></u>。任务相关的所有东西都会被存放到内存中，当一个任务有需要等待的东西（IO或者其他）就会切换到下一个任务。</li>
 <li>Timesharing分时(multitasking)——更高的交互性（命令可以更快的响应）：同时的运行多个任务，每个程序都可以快速的响应。<em>CPU一会执行这个一会执行那个</em>，操作系统通过调度让每个user的程序都可以快速的得到响应，<strong>如果main memory的空间不够了要和把这些程序拿进拿出（swapping技术）。还有虚拟内存技术可以允许进程不完全在memory中（把碎片的内存映射成连续的内存）。</strong></li>
 </ul>
-<p>这两种技术是不冲突、不矛盾的，multitasking系统一定是一个Multiprogramming的</p>
+<p>这两种技术是不冲突、不矛盾的，multitasking系统一定是一个Multiprogramming的。</p>
+<p><u>对于多用户的OS来说multitasking就是把时间分成了一个个小的时间片，每一个时间片给特定的一个user；而在这个时间片内对于这个特定的用户OS又是Multiprogramming的。</u></p>
 <h1>Operating-System Operations</h1>
 <p>操作系统在模式上的分割：User mode和kernel mode(supervisor mode)，两个模式的区别和切换是由**<u>硬件中的一个bit状态位</u>**决定的。有些硬件是privileged，这种硬件只能够在kernel node下面运行，在kernel mode中可以运行“特权”指令（system call，例如在屏幕上显示、调用I/O等），特权指令在user mode中不可以运行。<br>
 <mark>隔离：mode是隔离的，在运行kernel code的时候绝对不可能同时运行着user code</mark></p>
@@ -424,6 +425,7 @@ System call会把模式切换成kernel mode，执行完成之后又会返回到u
 <li>
 <p>进程是对resources的一种抽象：</p>
 <ul>
+<li>程序是一个passive entity，进程是一个active entity；一个程序可以有多个对应的进程（例如开上多个vim）</li>
 <li>进程需要资源来完成任务</li>
 <li>进程的终止就是把占用的资源释放</li>
 <li>进程的状态：进程的状态由进程对应的<mark>program counter（和组成一样，指示下一条指令的位置）</mark>和例如寄存器的值来描述；对于多线程的进程，每个线程thread会对应一个PC。</li>
@@ -431,6 +433,9 @@ System call会把模式切换成kernel mode，执行完成之后又会返回到u
 </li>
 <li>
 <p>CPU的复用：<mark>multiplexing the CPUs</mark>，只有一个/多个CPU，很多进程共享CPU这一个计算资源并发的运行。时分复用——在时间上分割</p>
+<blockquote>
+<p>multiplexing：是一种比较抽象的概念，让多个进程使用有限的资源，有不同的实现策略。</p>
+</blockquote>
 </li>
 <li>
 <p><strong>进程的管理：建立、删除、恢复、同步、进程之间的沟通、防止deadlock</strong></p>
@@ -501,7 +506,7 @@ System call会把模式切换成kernel mode，执行完成之后又会返回到u
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Chapter 1</div>
+      <div>Chapter 1 Introduction</div>
       <div>http://example.com/2023/10/02/notes-os-Chapter-1/</div>
     </div>
     <div class="license-meta">

@@ -16,23 +16,26 @@
   <meta name="author" content="Shuaike Shen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机体系结构第二次课程笔记">
+    <meta name="description" content="Process Concept 在教科书中jobs&#x2F;process这两个术语是可以相互替换的 Process就是一个正在执行的程序   进程的结构图：       这里的stack和heap和数据结构中的区分 text section存储的是程序的代码，data section存储的global的变量；stack中存储function parameters, local vars, return">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lecture 2">
-<meta property="og:url" content="http://example.com/2023/10/02/notes-com-arch-lecture-2/index.html">
+<meta property="og:title" content="Chapter 3 Processes">
+<meta property="og:url" content="http://example.com/2023/10/07/notes-os-Chapter-3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="计算机体系结构第二次课程笔记">
+<meta property="og:description" content="Process Concept 在教科书中jobs&#x2F;process这两个术语是可以相互替换的 Process就是一个正在执行的程序   进程的结构图：       这里的stack和heap和数据结构中的区分 text section存储的是程序的代码，data section存储的global的变量；stack中存储function parameters, local vars, return">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-02T06:38:34.366Z">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/07/Screenshot-2023-10-07-at-11.24.58.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2023/10/07/Screenshot-2023-10-07-at-11.34.44.png">
+<meta property="article:published_time" content="2023-10-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-07T06:25:30.941Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Lecture Notes">
-<meta property="article:tag" content="Computer Architecture">
+<meta property="article:tag" content="Operating System">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s1.imagehub.cc/images/2023/10/07/Screenshot-2023-10-07-at-11.24.58.png">
   
   
   
-  <title>Lecture 2 - Hexo</title>
+  <title>Chapter 3 Processes - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Lecture 2"></span>
+            <span id="subtitle" data-typed-text="Chapter 3 Processes"></span>
           
         </div>
 
@@ -211,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-02 00:00" pubdate>
-          2023年10月2日 凌晨
+        <time datetime="2023-10-07 00:00" pubdate>
+          2023年10月7日 凌晨
         </time>
       </span>
     
@@ -223,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          14 字
+          593 字
         
       </span>
     
@@ -234,7 +237,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -271,12 +274,54 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Lecture 2</h1>
+            <h1 id="seo-header">Chapter 3 Processes</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>计算机体系结构第二次课程笔记</h1>
+                <h1>Process Concept</h1>
+<p>在教科书中jobs/process这两个术语是可以相互替换的<br>
+Process就是一个正在执行的程序</p>
+<ul>
+<li>
+<p>进程的结构图：</p>
+<center>
+  <img src="https://s1.imagehub.cc/images/2023/10/07/Screenshot-2023-10-07-at-11.24.58.png" srcset="/img/loading.gif" lazyload style="zoom:80%;" />
+</center>
+<ul>
+<li>这里的stack和heap和数据结构中的区分</li>
+<li>text section存储的是程序的代码，data section存储的global的变量；stack中存储function parameters, local vars, return addresses等；heap中存储的是动态分配malloc的内存；</li>
+<li>进程还包含program counter</li>
+<li>如果本地变量的太多例如一个超长的数组，就会发生<mark>stack overflow</mark></li>
+</ul>
+</li>
+</ul>
+<h1>Process State</h1>
+<p>进程的状态，使用<code>ps</code>命令查看进程的状态</p>
+<ul>
+<li>
+<p>new:  The process is being created</p>
+</li>
+<li>
+<p>running：Instructions are being executed</p>
+</li>
+<li>
+<p>waiting：The process is waiting/blocked for some event to occur</p>
+</li>
+<li>
+<p>ready：The process is waiting to be assigned to a processor</p>
+</li>
+<li>
+<p>terminated：The process has finished execution</p>
+</li>
+</ul>
+<p>区分waiting和ready，ready是等待CPU；waiting是等待别的事件（e.g:I/O）的发生</p>
+<ul>
+<li>
+<p>使用state diagram来表示state transition</p>
+<p><img src="https://s1.imagehub.cc/images/2023/10/07/Screenshot-2023-10-07-at-11.34.44.png" srcset="/img/loading.gif" lazyload alt=""></p>
+</li>
+</ul>
 
                 
               </div>
@@ -300,7 +345,7 @@
   
     <span>></span>
     
-  <a href="/categories/Lecture-Notes/Computer-Architecture/" class="category-chain-item">Computer Architecture</a>
+  <a href="/categories/Lecture-Notes/Operating-System/" class="category-chain-item">Operating System</a>
   
   
 
@@ -319,7 +364,7 @@
       
         <a href="/tags/Lecture-Notes/" class="print-no-link">#Lecture Notes</a>
       
-        <a href="/tags/Computer-Architecture/" class="print-no-link">#Computer Architecture</a>
+        <a href="/tags/Operating-System/" class="print-no-link">#Operating System</a>
       
     </div>
   
@@ -331,8 +376,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Lecture 2</div>
-      <div>http://example.com/2023/10/02/notes-com-arch-lecture-2/</div>
+      <div>Chapter 3 Processes</div>
+      <div>http://example.com/2023/10/07/notes-os-Chapter-3/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +389,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月2日</div>
+          <div>2023年10月7日</div>
         </div>
       
       
@@ -376,18 +421,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/02/notes-com-network-lecture-2/" title="Lecture 2">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Lecture 2</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/02/notes-os-Chapter-1/" title="Chapter 1 Introduction">
-                        <span class="hidden-mobile">Chapter 1 Introduction</span>
+                      <a href="/2023/10/03/discussion-graph-text_graph/" title="文本图">
+                        <span class="hidden-mobile">文本图</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
