@@ -44,7 +44,7 @@ Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen
 </div>
 
 
-# 🌐 Research interests
+# 🌐 Research Interests
 
 <div style="display: inline-block; width: 45%;" markdown="1">
   
@@ -70,7 +70,7 @@ Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen
 
 </div>
 
-# 🏯 Research experience
+# 🏯 Research Experience
 ## State Key Lab of CAD & CG, Zhejiang University
 
 *Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/)
