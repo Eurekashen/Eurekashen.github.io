@@ -19,9 +19,12 @@ redirect_from:
 
 # 🧑🏻‍💻 About me
 
+I am currently a junior undergraduate student from [Mixed Class, Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/) of [Zhejiang University](https://www.zju.edu.cn/english/), majoring in Computer Science and Technology. My advisors are professor [Chunhua Shen](https://cshen.github.io/) and [Hao Chen](https://stan-haochen.github.io/) who are affiliated to [State Key Lab of CAD & CG, Zhejiang University](http://www.cad.zju.edu.cn/english.html).
+
+I am keenly interested in research topics associated with Artificial Intelligence assisted Biomolecule Design, Materials&Drug Discovery, and Diffusion Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing diffusion models for the creation of innovative crystal structures, protein motif scaffolding, and the design of protein binders.
 
 # 🔥 News
-- *2023.01*: &nbsp;🎉🎉 The first paper I participate in was accepted. 
+- *2023.01*: &nbsp;🎉🎉 The first paper I participated in was accepted. 
 
 # 📝 Publications 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR'2024 spotlight</div><img src='images/vfn.png' alt="sym" width="100%"></div></div>
@@ -73,8 +76,9 @@ Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen
 # 🏯 Research Experience
 ## State Key Lab of CAD & CG, Zhejiang University
 
-*Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/)
+*Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - Present)*
 
+I contributed to a protein project by proposing a novel structure encoder, addressing the atom representation bottleneck observed in traditional IPA encoders. The introduced encoder exhibited superior designability (**67.04%** vs. 53.58%) and diversity (**66.54%** vs. 51.98%) compared to the previous model. In both Inverse Folding and Protein Design tasks, this innovative encoder consistently outperformed its predecessor.
 
 # 📖 Educations
 - *2021.09 - 2025.6 (now)*, Zhejiang University, Zhejiang
