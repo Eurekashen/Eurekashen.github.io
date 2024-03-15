@@ -6,13 +6,13 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Shuaike Shen"
+title                    : "Shuaike Shen's Homepage'"
 description              : "A junior undergraduate student from the Mixed class of Chu Kochen Honors College of Zhejiang University, majoring in computer science and technology. "
 repository               : "Eurekashen/Eurekashen.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+google_analytics_id      :  G-8ZKNGLG171 # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
