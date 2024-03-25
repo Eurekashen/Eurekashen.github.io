@@ -78,7 +78,7 @@ Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen
 
 *Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - Present)*
 
-I contributed to a protein project by proposing a novel structure encoder, addressing the atom representation bottleneck observed in traditional IPA encoders. The introduced encoder exhibited superior designability (**67.04%** vs. 53.58%) and diversity (**66.54%** vs. 51.98%) compared to the previous model. In both Inverse Folding and Protein Design tasks, this innovative encoder consistently outperformed its predecessor.
+* I contributed to a protein project by proposing a novel structure encoder, addressing the atom representation bottleneck observed in traditional IPA encoders. The introduced encoder exhibited superior designability (**67.04%** vs. 53.58%) and diversity (**66.54%** vs. 51.98%) compared to the previous model. In both Inverse Folding and Protein Design tasks, this innovative encoder consistently outperformed its predecessor.
 
 # 📖 Educations
 - *2021.09 - 2025.6 (now)*, Zhejiang University, Zhejiang
