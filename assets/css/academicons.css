@@ -15,6 +15,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'fa-brands';
+  src: url('../fonts/fa-brands-400.eot');
+  src: url('../fonts/fa-brands-400.eot') format('embedded-opentype'),
+    url('../fonts/fa-brands-400.ttf') format('truetype'),
+    url('../fonts/fa-brands-400.woff') format('woff'),
+    url('../fonts/fa-brands-400.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .ai {
   display: inline-block;
   font: normal normal normal 14px/1 Academicons;
