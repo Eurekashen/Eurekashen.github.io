@@ -27,6 +27,23 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 - *2023.01*: &nbsp;🎉🎉 The first paper I participated in was accepted. 
 
 # 📝 Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'2024</div><img src='images/fadiff.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Floating Anchor Diffusion Model for Multi-motif Scaffolding**
+
+Ke Liu, Shuaike Shen, Weian Mao, Xiaoran Jiao, Zheng Sun, Hao Chen, Chunhua Shen
+
+**Introduction**
+
+- A method to scaffold *multiple protein functional motifs without prior knowledge*. FADiff is based on a diffusion process which is modified to take into account the movement of the single motifs as **independent rigid bodies**.
+
+</div>
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR'2024 spotlight</div><img src='images/vfn.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
@@ -40,7 +57,7 @@ Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen
 
 **Introduction**
 
-- We propose a novel structure encoder, which can address the atom representation bottleneck observed in traditional IPA encoders.
+- We propose a novel structure graph encoder, which can address the atom representation bottleneck observed in traditional IPA encoders.
 
 </div>
 </div>
