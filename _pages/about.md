@@ -23,8 +23,12 @@ I am currently a junior undergraduate student from [Mixed Class, Chu Kochen Hono
 
 I am keenly interested in research topics associated with Artificial Intelligence assisted Biomolecule Design, Materials&Drug Discovery, and Diffusion Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing diffusion models for the creation of innovative crystal structures, protein motif scaffolding, and the design of protein binders.
 
+<span style="color: red;">I am looking for PhD position for Fall 2025 intake, if you have any clues please feel free to contact me.</span>
+
 # 🔥 News
-- *2023.01*: &nbsp;🎉🎉 The first paper I participated in was accepted. 
+
+- *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024 
+- *2024.01*: &nbsp;🎉🎉 The first paper I participated in was accepted by ICLR'2024. 
 
 # 📝 Publications 
 
@@ -34,7 +38,9 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 **Floating Anchor Diffusion Model for Multi-motif Scaffolding**
 
-Ke Liu, Shuaike Shen, Weian Mao, Xiaoran Jiao, Zheng Sun, Hao Chen, Chunhua Shen
+Ke Liu, **Shuaike Shen**, Weian Mao, Xiaoran Jiao, Zheng Sun, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
+
+[**\[Project Page\]**](https://bioai-nexus.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) 
 
 **Introduction**
 
@@ -48,11 +54,12 @@ Ke Liu, Shuaike Shen, Weian Mao, Xiaoran Jiao, Zheng Sun, Hao Chen, Chunhua Shen
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
-[**De novo Protein Design Using Geometric Vector Field Networks**](https://openreview.net/pdf?id=9UIGyJJpay)
+**De novo Protein Design Using Geometric Vector Field Networks**
 
-Weian Mao\*, Zheng Sun\*, Muzhi Zhu\*, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen, Chunhua Shen
+Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaike Shen**, Lin Yuanbo Wu, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
 
-[**Code**](https://github.com/Eurekashen/vector_field_network)
+[**\[Code\]**](https://github.com/aim-uofa/VFN) [**\[Project Page\]**](https://bioai-nexus.github.io/projects/VFN/) [**\[Paper\]**](https://openreview.net/pdf?id=9UIGyJJpay)
+
 - The code will be released after being sorted out. 
 
 **Introduction**
