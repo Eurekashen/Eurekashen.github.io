@@ -38,7 +38,7 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 **Floating Anchor Diffusion Model for Multi-motif Scaffolding**
 
-Ke Liu, **Shuaike Shen**, Weian Mao, Xiaoran Jiao, Zheng Sun, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
+Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran Jiao, Zheng Sun, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
 
 [**\[Project Page\]**](https://bioai-nexus.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) 
 
