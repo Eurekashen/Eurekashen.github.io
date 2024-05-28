@@ -40,7 +40,7 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran Jiao, Zheng Sun, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
 
-[**\[Project Page\]**](https://bioai-nexus.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) 
+[**\[Project Page\]**](https://AI4Mol.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) 
 
 **Introduction**
 
