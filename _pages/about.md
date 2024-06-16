@@ -98,11 +98,24 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 </div>
 
 # 🏯 Research Experience
+
+## Computer Science & Biochemistry ,University of Illinois at Urbana-Champaign (UIUC)
+
+*Advisors*: Prof. [Ge Liu](https://www.mit.edu/~geliu/) & Prof. [Nicholas Ching Hai Wu](https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu) *(May.2024 - Present)*
+
+
+
 ## State Key Lab of CAD & CG, Zhejiang University
 
-*Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - Present)*
+*Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - May.2024)*
 
-* I contributed to a protein project by proposing a novel structure encoder, addressing the atom representation bottleneck observed in traditional IPA encoders. The introduced encoder exhibited superior designability (**67.04%** vs. 53.58%) and diversity (**66.54%** vs. 51.98%) compared to the previous model. In both Inverse Folding and Protein Design tasks, this innovative encoder consistently outperformed its predecessor.
+* I contributed to the [**VFN**](https://bioai-nexus.github.io/projects/VFN/) project, addressing the atom representation bottleneck observed in traditional IPA encoders. 
+
+* Fully participated in the [**FADiff**](https:/ai4mol.github.io/projects/FADiff/) project and solved the multi motif scaffolding problem.
+
+* Proposed a Pre-training framework and Period Injection Module that can enhance crystal modeling capabilities
+
+
 
 # 📖 Educations
 - *2021.09 - 2025.6 (now)*, Zhejiang University, Zhejiang
