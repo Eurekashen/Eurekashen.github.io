@@ -27,7 +27,8 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 # 🔥 News
 
-- *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024 
+- *2024.06*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024 AI for Science Workshop.
+- *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024.
 - *2024.01*: &nbsp;🎉🎉 The first paper I participated in was accepted by ICLR'2024. 
 
 # 📝 Publications 
@@ -40,11 +41,33 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran Jiao, Zheng Sun, Hao Chen<sup>†</sup>, Chunhua Shen<sup>†</sup>
 
-[**\[Project Page\]**](https://AI4Mol.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) 
+[**\[Project Page\]**](https://AI4Mol.github.io/projects/FADiff/) [**\[Code\]**](https://github.com/AI4MOL/FADiff) [**\[Paper\]**](https://arxiv.org/abs/2406.03141) 
 
 **Introduction**
 
 - A method to scaffold *multiple protein functional motifs without prior knowledge*. FADiff is based on a diffusion process which is modified to take into account the movement of the single motifs as **independent rigid bodies**.
+
+</div>
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR'2024 spotlight</div><img src='images/DPF.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Boost your crystal model with Denoising Pre-training**
+
+**Shuaike Shen**<sup>*</sup>, Ke Liu<sup>*</sup>, Muzhi Zhu, Hao Chen<sup>†</sup>
+
+[**\[Project Page\]**](https://AI4Mol.github.io/projects/DPF/)
+
+**Introduction**
+
+- A universal pre-training framework based on denoising can enhance the model's ability to model crystal structures and can be migrated to any specific crystal feature extraction network.
+
+</div>
+</div>
+</div>
 
 </div>
 </div>
