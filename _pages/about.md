@@ -33,6 +33,8 @@ I am keenly interested in research topics associated with Artificial Intelligenc
 
 # 📝 Publications 
 
+<!-- ################################################################################## -->
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'2024</div><img src='images/fadiff.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
@@ -50,6 +52,8 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 </div>
 </div>
 </div>
+
+<!-- ################################################################################## -->
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'2024 AI for Science Workshop</div><img src='images/DPF.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -69,9 +73,7 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 </div>
 </div>
 
-</div>
-</div>
-</div>
+<!-- ################################################################################## -->
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR'2024 spotlight</div><img src='images/vfn.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
