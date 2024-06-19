@@ -59,7 +59,7 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
-**Boost your crystal model with Denoising Pre-training**
+**Boost Your Crystal Model with Denoising Pre-training**
 
 **Shuaike Shen**<sup>*</sup>, Ke Liu<sup>*</sup>, Muzhi Zhu, Hao Chen<sup>†</sup>
 
