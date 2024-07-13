@@ -128,13 +128,16 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 *Advisors*: Prof. [Ge Liu](https://www.mit.edu/~geliu/) & Prof. [Nicholas Ching Hai Wu](https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu) *(May.2024 - Present)*
 
+* Protein sequence and structure co-design.
+
+* Antibody design and optimization.
 
 
 ## State Key Lab of CAD & CG, Zhejiang University
 
 *Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - May.2024)*
 
-* I contributed to the [**VFN**](https://bioai-nexus.github.io/projects/VFN/) project, addressing the atom representation bottleneck observed in traditional IPA encoders. 
+* Contributed to the [**VFN**](https://bioai-nexus.github.io/projects/VFN/) project, addressing the atom representation bottleneck observed in traditional IPA encoders. 
 
 * Fully participated in the [**FADiff**](https:/ai4mol.github.io/projects/FADiff/) project and solved the multi motif scaffolding problem.
 
