@@ -65,6 +65,8 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 
 [**\[Project Page\]**](https://AI4Mol.github.io/projects/DPF/)
 
+[**\[Paper\]**](https://openreview.net/forum?id=u2qYzRRg02)
+
 **Introduction**
 
 - A universal pre-training framework based on denoising can enhance the model's ability to model crystal structures and can be migrated to any specific crystal feature extraction network.
