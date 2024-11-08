@@ -19,9 +19,9 @@ redirect_from:
 
 # 🧑🏻‍💻 About me
 
-I am currently a junior undergraduate student from [Mixed Class, Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/) of [Zhejiang University](https://www.zju.edu.cn/english/), majoring in Computer Science and Technology. My advisors are professor [Chunhua Shen](https://cshen.github.io/) and [Hao Chen](https://stan-haochen.github.io/) who are affiliated to [State Key Lab of CAD & CG, Zhejiang University](http://www.cad.zju.edu.cn/english.html).
+I am currently a senior undergraduate student from [Mixed Class, Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/) of [Zhejiang University](https://www.zju.edu.cn/english/), majoring in Computer Science and Technology. My advisors are professor [Chunhua Shen](https://cshen.github.io/) and [Hao Chen](https://stan-haochen.github.io/) who are affiliated to [State Key Lab of CAD & CG, Zhejiang University](http://www.cad.zju.edu.cn/english.html). I had a wonderful research experience at [University of Illinois at Urbana-Champaign](https://illinois.edu/) this summer and was honored to work with [Prof. Ge Liu](https://www.mit.edu/~geliu/)
 
-I am keenly interested in research topics associated with Artificial Intelligence assisted Biomolecule Design, Materials&Drug Discovery, and Diffusion Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing diffusion models for the creation of innovative crystal structures, protein motif scaffolding, and the design of protein binders.
+I am keenly interested in research topics associated with AI for Science and various Generative Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing Reinforment Learning to guide Flow Matching models to design protein structures.
 
 <span style="color: red;">I am looking for PhD position for Fall 2025 intake, if you have any clues please feel free to contact me.</span>
 
@@ -118,7 +118,7 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 * Diffusion models
 
-* Flow-based models
+* Flow Matching
 
 * Equivariant Neural Networks
 
@@ -126,13 +126,13 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 # 🏯 Research Experience
 
-## Computer Science & Biochemistry ,University of Illinois at Urbana-Champaign (UIUC)
+## Computer Science & Biochemistry, University of Illinois at Urbana-Champaign (UIUC)
 
 *Advisors*: Prof. [Ge Liu](https://www.mit.edu/~geliu/) & Prof. [Nicholas Ching Hai Wu](https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu) *(May.2024 - Present)*
 
 * Protein sequence and structure co-design.
 
-* Antibody design and optimization.
+* Apply Reinforcement Learning to guide Flow Matching models to design protein structures.
 
 
 ## State Key Lab of CAD & CG, Zhejiang University
