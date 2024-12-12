@@ -35,7 +35,90 @@ I am keenly interested in research topics associated with AI for Science and var
 
 <!-- ################################################################################## -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'2024</div><img src='images/fadiff.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025 AISI</div><img src='images/aisi.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**A Denoising Pre-training Framework for Accelerating Novel Material Discovery**
+
+**Shuaike Shen**, Ke Liu, Hao Chen<sup>†</sup>
+
+[**AAAI 2025 AISI**]()
+
+</div>
+</div>
+</div>
+
+<!-- ################################################################################## -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review</div><img src='images/rl_2.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Training Text-to-Image Flow Models on Self-Generated Data**
+
+Jiajun Fan, **Shuaike Shen**, Chaoran Cheng, Chumeng Liang, Ge Liu<sup>†</sup>
+
+
+</div>
+</div>
+</div>
+
+<!-- ################################################################################## -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review</div><img src='images/rl_1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Online Reward-Weighted Fine-Tuning of Flow Matching with Wasserstein Regularization**
+
+Jiajun Fan, **Shuaike Shen**, Chaoran Cheng, Yuxin Chen, Chumeng Liang, Ge Liu<sup>†</sup>
+
+***Under review***
+
+
+</div>
+</div>
+</div>
+
+<!-- ################################################################################## -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review</div><img src='images/rifold.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Rethinking Biomolecule Inverse Folding via Evaluation Metrics and Decoding Paradigms**
+
+Ke Liu, Weian Mao, **Shuaike Shen**, Zheng Sun, Bin Xiao, Hao Chen, Lin Yuanbo Wu, Chunhua Shen<sup>†</sup>
+
+***Under review***
+
+
+</div>
+</div>
+</div>
+
+<!-- ################################################################################## -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review</div><img src='images/cebind.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+<div class='paper-intro' markdown="1">
+
+**Physics-Informed Neural Networks for Unsupervised Binding Energy Prediction**
+
+Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Hao Chen<sup>†</sup>
+
+***Under review***
+
+
+</div>
+</div>
+</div>
+
+<!-- FADiff -->
+<!-- ################################################################################## -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2024</div><img src='images/fadiff.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
@@ -53,9 +136,10 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 </div>
 </div>
 
+<!-- DPF -->
 <!-- ################################################################################## -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'2024 AI for Science Workshop</div><img src='images/DPF.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2024 AI for Science Workshop</div><img src='images/DPF.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
@@ -75,9 +159,10 @@ Ke Liu<sup>*</sup>, **Shuaike Shen**<sup>*</sup>, Weian Mao<sup>*</sup>, Xiaoran
 </div>
 </div>
 
+<!-- VFN -->
 <!-- ################################################################################## -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR'2024 spotlight</div><img src='images/vfn.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2024 spotlight</div><img src='images/vfn.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
@@ -87,7 +172,7 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 [**\[Code\]**](https://github.com/aim-uofa/VFN) [**\[Project Page\]**](https://bioai-nexus.github.io/projects/VFN/) [**\[Paper\]**](https://openreview.net/pdf?id=9UIGyJJpay)
 
-- The code will be released after being sorted out. 
+<!-- - The code will be released after being sorted out.  -->
 
 **Introduction**
 
@@ -132,7 +217,7 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 * Protein sequence and structure co-design.
 
-* Apply Reinforcement Learning to guide Flow Matching models to design protein structures.
+* Apply online Reinforcement Learning algorithm to guide Flow Matching models to design protein structures.
 
 
 ## State Key Lab of CAD & CG, Zhejiang University
@@ -144,6 +229,10 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 * Fully participated in the [**FADiff**](https:/ai4mol.github.io/projects/FADiff/) project and solved the multi motif scaffolding problem.
 
 * Proposed a Pre-training framework and Period Injection Module that can enhance crystal modeling capabilities
+
+* Purpose CEBind, an unsupervised binding energy prediction model.
+
+* Design RiFold, a RNA inverse folding model outperforms previous baseline models.
 
 
 
