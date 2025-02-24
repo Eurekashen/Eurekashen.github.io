@@ -213,6 +213,8 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 *(Mar.2025 - Jul.2025)*  *Advisors*: Dr. [Biqing Qi](https://biqing-qi.github.io/)
 
+**Research Intern**
+
 Working on Specialized Generalist driven AI4S and emboddied Applications
 
 
