@@ -23,13 +23,15 @@ I am currently a senior undergraduate student from [Mixed Class, Chu Kochen Hono
 
 I am keenly interested in research topics associated with AI for Science and various Generative Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing Reinforment Learning to guide Flow Matching models to design protein structures.
 
-<span style="color: red;">I am looking for PhD position for Fall 2025 intake, if you have any clues please feel free to contact me.</span>
+<!-- <span style="color: red;">I am looking for PhD position for Fall 2025 intake, if you have any clues please feel free to contact me.</span> -->
 
 # 🔥 News
 
-- *2024.06*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024 AI for Science Workshop.
-- *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML'2024.
-- *2024.01*: &nbsp;🎉🎉 The first paper I participated in was accepted by ICLR'2024. 
+- *2025.01*: &nbsp;🎉🎉 One paper has been accepted by ICLR 2025.
+- *2024.12*: &nbsp;🎉🎉 One paper has been accepted by AAAI 2025.
+- *2024.06*: &nbsp;🎉🎉 One paper has been accepted by ICML 2024 AI for Science Workshop.
+- *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML 2024.
+- *2024.01*: &nbsp;🎉🎉 The first paper I participated in was accepted by ICLR 2024. 
 
 # 📝 Publications 
 
@@ -66,7 +68,7 @@ Jiajun Fan, **Shuaike Shen**, Chaoran Cheng, Chumeng Liang, Ge Liu<sup>†</sup>
 
 <!-- ################################################################################## -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review</div><img src='images/rl_1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2025</div><img src='images/rl_1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 <div class='paper-intro' markdown="1">
 
@@ -189,11 +191,9 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
   
 ### AI for Science
 
-* Protein & Antibody Design
+* Biomolecules Design
 
-* AI for Drug Discovery
-
-* Materials discovery & properties prediction
+* Materials
 
 </div>
 
@@ -205,26 +205,41 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 * Flow Matching
 
-* Equivariant Neural Networks
-
 </div>
 
 # 🏯 Research Experience
 
-## Computer Science & Biochemistry, University of Illinois at Urbana-Champaign (UIUC)
+## AI for Science center, Shanghai AI Lab, Shanghai, China
 
-*Advisors*: Prof. [Ge Liu](https://www.mit.edu/~geliu/) & Prof. [Nicholas Ching Hai Wu](https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu) *(May.2024 - Present)*
+*(Mar.2025 - Jul.2025)*  *Advisors*: Dr. [Biqing Qi](https://biqing-qi.github.io/)
 
-* Protein sequence and structure co-design.
-
-* Apply online Reinforcement Learning algorithm to guide Flow Matching models to design protein structures.
+Working on Specialized Generalist driven AI4S and emboddied Applications
 
 
-## State Key Lab of CAD & CG, Zhejiang University
+## Computer Science & Biochemistry, University of Illinois at Urbana-Champaign, Urbana, U.S.
 
-*Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) *(Oct.2022 - May.2024)*
+*(May.2024 - Mar.2025)*, *Advisors*: Prof. [Ge Liu](https://www.mit.edu/~geliu/) & Prof. [Nicholas Ching Hai Wu](https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu) 
 
-* Contributed to the [**VFN**](https://bioai-nexus.github.io/projects/VFN/) project, addressing the atom representation bottleneck observed in traditional IPA encoders. 
+**Research Intern**
+
+Working on protein co-design and developing online Reinforcement Learning algorithm for Flow Matching models.
+
+
+<!-- * Protein sequence and structure co-design.
+
+* Develop online Reinforcement Learning algorithm for Flow Matching models. -->
+
+
+## State Key Lab of CAD & CG, Zhejiang University, Hangzhou, China
+
+**Undergraduate Research Assistant**
+
+*(Oct.2022 - May.2024)*, *Advisors*: Prof. [Chunhua Shen](https://cshen.github.io) & Prof. [Hao Chen](https://stan-haochen.github.io/) 
+
+Working on protein design, Biomolecules interaction and Material science.
+
+
+<!-- * Contributed to the [**VFN**](https://bioai-nexus.github.io/projects/VFN/) project, addressing the atom representation bottleneck observed in traditional IPA encoders. 
 
 * Fully participated in the [**FADiff**](https:/ai4mol.github.io/projects/FADiff/) project and solved the multi motif scaffolding problem.
 
@@ -232,10 +247,14 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 * Purpose CEBind, an unsupervised binding energy prediction model.
 
-* Design RiFold, a RNA inverse folding model outperforms previous baseline models.
+* Design RiFold, a RNA inverse folding model outperforms previous baseline models. -->
 
 
 
 # 📖 Educations
-- *2021.09 - 2025.6 (now)*, Zhejiang University, Zhejiang
-- *2018.09 - 2021.06*, Urumqi No.1 Senior High School, Xinjiang
+
+* ## Zhejiang University
+
+    Sep. 2021 - Jun. 2025(expected)
+
+    B.E. in Computer Science and Technology, Chu Kochen Honors College
