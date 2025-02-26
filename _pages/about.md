@@ -209,7 +209,7 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 # 🏯 Research Experience
 
-## AI for Science center, Shanghai AI Lab, Shanghai, China
+## AI for Science Center, Shanghai AI Lab, Shanghai, China
 
 *(Mar.2025 - Jul.2025)*  *Advisors*: Dr. [Biqing Qi](https://biqing-qi.github.io/)
 
