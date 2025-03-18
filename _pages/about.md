@@ -19,7 +19,9 @@ redirect_from:
 
 # 🧑🏻‍💻 About me
 
-I am currently a senior undergraduate student from [Mixed Class, Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/) of [Zhejiang University](https://www.zju.edu.cn/english/), majoring in Computer Science and Technology. My advisors are professor [Chunhua Shen](https://cshen.github.io/) and [Hao Chen](https://stan-haochen.github.io/) who are affiliated to [State Key Lab of CAD & CG, Zhejiang University](http://www.cad.zju.edu.cn/english.html). I had a wonderful research experience at [University of Illinois at Urbana-Champaign](https://illinois.edu/) this summer and was honored to work with [Prof. Ge Liu](https://www.mit.edu/~geliu/)
+I am currently a senior undergraduate student from [Mixed Class, Chu Kochen Honors College](http://ckc.zju.edu.cn/ckcen/) of [Zhejiang University](https://www.zju.edu.cn/english/), majoring in Computer Science and Technology. My advisors are professor [Chunhua Shen](https://cshen.github.io/) and [Hao Chen](https://stan-haochen.github.io/) who are affiliated to [State Key Lab of CAD & CG, Zhejiang University](http://www.cad.zju.edu.cn/english.html). I had a wonderful research experience at [University of Illinois at Urbana-Champaign](https://illinois.edu/) and was honored to work with [Prof. Ge Liu](https://www.mit.edu/~geliu/)
+
+I will join Carnegie Mellon University as a Ph.D. student in 2025 Fall.
 
 I am keenly interested in research topics associated with AI for Science and various Generative Models. My prior research experience encompasses protein design and the prediction of crystal structures and properties. Currently, I am engaged in exploring diverse areas, including co-designing protein structures and sequences, utilizing Reinforment Learning to guide Flow Matching models to design protein structures.
 
@@ -27,7 +29,7 @@ I am keenly interested in research topics associated with AI for Science and var
 
 # 🔥 News
 
-- *2025.01*: &nbsp;🎉🎉 One paper has been accepted by ICLR 2025.
+- *2025.01*: &nbsp;🎉🎉 One paper has been accepted by ICLR 2025, see you in Singapore.
 - *2024.12*: &nbsp;🎉🎉 One paper has been accepted by AAAI 2025.
 - *2024.06*: &nbsp;🎉🎉 One paper has been accepted by ICML 2024 AI for Science Workshop.
 - *2024.05*: &nbsp;🎉🎉 One paper has been accepted by ICML 2024.
@@ -217,7 +219,7 @@ Weian Mao<sup>\*</sup>, Zheng Sun<sup>\*</sup>, Muzhi Zhu<sup>\*</sup>, **Shuaik
 
 Working on Specialized Generalist driven AI4S and emboddied Applications -->
 
-<div style="display: flex; align-items: center;">
+<!-- <div style="display: flex; align-items: center;">
     <img src="images/pjlab_logo.jpeg" alt="Logo" style="width: 70px; height: 70px; margin-right: 30px;">
     <div>
         <h2>AI for Science Center, Shanghai AI Lab, Shanghai, China</h2>
@@ -226,7 +228,7 @@ Working on Specialized Generalist driven AI4S and emboddied Applications -->
         Working on Specialized Generalist driven AI4S and embodied Applications.
         <br>
     </div>
-</div>
+</div> -->
 
 
 
