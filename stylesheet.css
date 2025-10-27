@@ -153,3 +153,53 @@ span.highlight {
 .custom-font {
   font-family: 'MyCustomFont', sans-serif; /* 自定义字体 + 备选字体 */
 }
+
+.publication-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.publication-tab {
+  background-color: #f5f5f5;
+  border: 2px solid #1772d0;
+  border-radius: 18px;
+  color: #1772d0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 180px;
+  padding: 12px 24px;
+  text-align: center;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.publication-tab:hover,
+.publication-tab:focus {
+  background-color: #1772d0;
+  color: #fff;
+  outline: none;
+}
+
+.publication-tab.active {
+  background-color: #1772d0;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(23, 114, 208, 0.25);
+}
+
+.publication-content {
+  margin-top: 16px;
+}
+
+.publication-loading,
+.publication-error {
+  text-align: center;
+  padding: 24px 0;
+  color: #666;
+}
+
+.publication-error {
+  color: #c0392b;
+}
