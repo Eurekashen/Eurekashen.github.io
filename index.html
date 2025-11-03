@@ -14,6 +14,17 @@
       content="r_Ud8JHU_zHOJt7_anzoQ0NtqVUX3Bt3mmYugG9l6PM" />
   </head>
 
+  <!-- Google tag (gtag.js) -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-8ZKNGLG171"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8ZKNGLG171');
+</script>
+
   <body>
     <table
       style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -113,11 +124,18 @@
               </tbody></table>
 
             <div class="publication-tabs" role="tablist">
-              <button class="publication-tab active" data-category="biomolecule" type="button" role="tab" aria-selected="true">Biomolecule Design</button>
-              <button class="publication-tab" data-category="generative" type="button" role="tab" aria-selected="false">Generative Models</button>
-              <button class="publication-tab" data-category="scientific" type="button" role="tab" aria-selected="false">Scientific Discovery</button>
+              <button class="publication-tab active" data-category="biomolecule"
+                type="button" role="tab" aria-selected="true">Biomolecule
+                Design</button>
+              <button class="publication-tab" data-category="generative"
+                type="button" role="tab" aria-selected="false">Generative
+                Models</button>
+              <button class="publication-tab" data-category="scientific"
+                type="button" role="tab" aria-selected="false">Scientific
+                Discovery</button>
             </div>
-            <div id="publication-content" class="publication-content" aria-live="polite"></div>
+            <div id="publication-content" class="publication-content"
+              aria-live="polite"></div>
             <script>
               (function () {
                 const tabConfig = {
@@ -168,7 +186,6 @@
                 loadCategory('biomolecule');
               })();
             </script>
-
 
             <table
               style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
