@@ -124,15 +124,15 @@
               </tbody></table>
 
             <div class="publication-tabs" role="tablist">
-              <button class="publication-tab active" data-category="biomolecule"
-                type="button" role="tab" aria-selected="true">Biomolecule
+              <button class="publication-tab active" data-category="scientific"
+                type="button" role="tab" aria-selected="true">Scientific
+                Discovery</button>
+              <button class="publication-tab" data-category="biomolecule"
+                type="button" role="tab" aria-selected="false">Biomolecule
                 Design</button>
               <button class="publication-tab" data-category="generative"
                 type="button" role="tab" aria-selected="false">Generative
                 Models</button>
-              <button class="publication-tab" data-category="scientific"
-                type="button" role="tab" aria-selected="false">Scientific
-                Discovery</button>
             </div>
             <div id="publication-content" class="publication-content"
               aria-live="polite"></div>
@@ -183,7 +183,7 @@
                   tab.addEventListener('click', () => loadCategory(tab.dataset.category));
                 });
 
-                loadCategory('biomolecule');
+                loadCategory('scientific');
               })();
             </script>
 
