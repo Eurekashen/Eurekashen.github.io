@@ -339,6 +339,29 @@
                   style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
                     <tr>
                       <td>
+                        <h2>Academic Service</h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="academic-service-content" style="padding:0 16px;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <script>
+                  (function () {
+                    var el = document.getElementById('academic-service-content');
+                    if (!el) return;
+                    fetch('sections/academic-service.html')
+                      .then(function (r) { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
+                      .then(function (html) { el.innerHTML = html; })
+                      .catch(function () { el.innerHTML = '<p class="publication-error">Failed to load academic service. Please try again later.</p>'; });
+                  })();
+                </script>
+
+                <table
+                  style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+                    <tr>
+                      <td>
                         <h2>Education</h2>
                       </td>
                     </tr>
