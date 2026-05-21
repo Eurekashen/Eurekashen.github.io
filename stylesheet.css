@@ -157,8 +157,8 @@ span.highlight {
 .publication-tabs {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-wrap: nowrap;
+  gap: 10px;
   margin: 16px 0;
 }
 
@@ -168,11 +168,12 @@ span.highlight {
   border-radius: 18px;
   color: #1772d0;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  min-width: 180px;
-  padding: 12px 24px;
+  min-width: 0;
+  padding: 10px 16px;
   text-align: center;
+  white-space: nowrap;
   transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
 }
 

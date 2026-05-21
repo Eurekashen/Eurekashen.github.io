@@ -131,8 +131,10 @@
               </tbody></table>
 
             <div class="publication-tabs" role="tablist">
-              <button class="publication-tab active" data-category="scientific"
-                type="button" role="tab" aria-selected="true">Scientific
+              <button class="publication-tab active" data-category="all"
+                type="button" role="tab" aria-selected="true">All</button>
+              <button class="publication-tab" data-category="scientific"
+                type="button" role="tab" aria-selected="false">Scientific
                 Discovery</button>
               <button class="publication-tab" data-category="biomolecule"
                 type="button" role="tab" aria-selected="false">Biomolecule
@@ -146,13 +148,61 @@
             <script>
               (function () {
                 const tabConfig = {
+                  all: [
+                    'sections/publications-scientific-discovery.html',
+                    'sections/publications-biomolecule-design.html',
+                    'sections/publications-generative-models.html'
+                  ],
+                  scientific: 'sections/publications-scientific-discovery.html',
                   biomolecule: 'sections/publications-biomolecule-design.html',
-                  generative: 'sections/publications-generative-models.html',
-                  scientific: 'sections/publications-scientific-discovery.html'
+                  generative: 'sections/publications-generative-models.html'
                 };
                 const tabs = Array.from(document.querySelectorAll('.publication-tab'));
                 const contentEl = document.getElementById('publication-content');
                 const cache = {};
+
+                function extractYear(el) {
+                  const matches = el.textContent.match(/\b(20\d{2})\b/g);
+                  return matches ? Math.max.apply(null, matches.map(Number)) : 0;
+                }
+
+                function isHighlighted(el) {
+                  return !!el.querySelector('tr[bgcolor="#ffffd0"]');
+                }
+
+                async function fetchText(url) {
+                  const response = await fetch(url);
+                  if (!response.ok) {
+                    throw new Error('Failed to load ' + url);
+                  }
+                  return response.text();
+                }
+
+                async function buildAll(urls) {
+                  const texts = await Promise.all(urls.map(fetchText));
+                  const doc = new DOMParser().parseFromString(
+                    '<div id="__pubs">' + texts.join('\n') + '</div>',
+                    'text/html'
+                  );
+                  const tables = Array.from(doc.querySelectorAll('#__pubs > table'));
+                  // Decorate with original index for stable sort.
+                  const decorated = tables.map((el, idx) => ({
+                    el: el,
+                    idx: idx,
+                    highlighted: isHighlighted(el),
+                    year: extractYear(el)
+                  }));
+                  decorated.sort((a, b) => {
+                    if (a.highlighted !== b.highlighted) {
+                      return a.highlighted ? -1 : 1;
+                    }
+                    if (a.year !== b.year) {
+                      return b.year - a.year;
+                    }
+                    return a.idx - b.idx;
+                  });
+                  return decorated.map((d) => d.el.outerHTML).join('\n');
+                }
 
                 async function loadCategory(category) {
                   if (!tabConfig[category] || !contentEl) {
@@ -173,11 +223,10 @@
                   }
                   contentEl.innerHTML = '<p class="publication-loading">Loading publications...</p>';
                   try {
-                    const response = await fetch(tabConfig[category]);
-                    if (!response.ok) {
-                      throw new Error('Failed to load content');
-                    }
-                    const html = await response.text();
+                    const source = tabConfig[category];
+                    const html = Array.isArray(source)
+                      ? await buildAll(source)
+                      : await fetchText(source);
                     cache[category] = html;
                     contentEl.innerHTML = html;
                   } catch (error) {
@@ -190,7 +239,7 @@
                   tab.addEventListener('click', () => loadCategory(tab.dataset.category));
                 });
 
-                loadCategory('scientific');
+                loadCategory('all');
               })();
             </script>
 
