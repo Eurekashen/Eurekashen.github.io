@@ -145,103 +145,7 @@
             </div>
             <div id="publication-content" class="publication-content"
               aria-live="polite"></div>
-            <script>
-              (function () {
-                const tabConfig = {
-                  all: [
-                    'sections/publications-scientific-discovery.html',
-                    'sections/publications-biomolecule-design.html',
-                    'sections/publications-generative-models.html'
-                  ],
-                  scientific: 'sections/publications-scientific-discovery.html',
-                  biomolecule: 'sections/publications-biomolecule-design.html',
-                  generative: 'sections/publications-generative-models.html'
-                };
-                const tabs = Array.from(document.querySelectorAll('.publication-tab'));
-                const contentEl = document.getElementById('publication-content');
-                const cache = {};
-
-                function extractYear(el) {
-                  const matches = el.textContent.match(/\b(20\d{2})\b/g);
-                  return matches ? Math.max.apply(null, matches.map(Number)) : 0;
-                }
-
-                function isHighlighted(el) {
-                  return !!el.querySelector('tr[bgcolor="#ffffd0"]');
-                }
-
-                async function fetchText(url) {
-                  const response = await fetch(url);
-                  if (!response.ok) {
-                    throw new Error('Failed to load ' + url);
-                  }
-                  return response.text();
-                }
-
-                async function buildAll(urls) {
-                  const texts = await Promise.all(urls.map(fetchText));
-                  const doc = new DOMParser().parseFromString(
-                    '<div id="__pubs">' + texts.join('\n') + '</div>',
-                    'text/html'
-                  );
-                  const tables = Array.from(doc.querySelectorAll('#__pubs > table'));
-                  // Decorate with original index for stable sort.
-                  const decorated = tables.map((el, idx) => ({
-                    el: el,
-                    idx: idx,
-                    highlighted: isHighlighted(el),
-                    year: extractYear(el)
-                  }));
-                  decorated.sort((a, b) => {
-                    if (a.highlighted !== b.highlighted) {
-                      return a.highlighted ? -1 : 1;
-                    }
-                    if (a.year !== b.year) {
-                      return b.year - a.year;
-                    }
-                    return a.idx - b.idx;
-                  });
-                  return decorated.map((d) => d.el.outerHTML).join('\n');
-                }
-
-                async function loadCategory(category) {
-                  if (!tabConfig[category] || !contentEl) {
-                    return;
-                  }
-                  tabs.forEach((tab) => {
-                    const isActive = tab.dataset.category === category;
-                    tab.classList.toggle('active', isActive);
-                    tab.setAttribute('aria-selected', String(isActive));
-                  });
-                  if (contentEl.dataset.activeCategory === category && cache[category]) {
-                    return;
-                  }
-                  contentEl.dataset.activeCategory = category;
-                  if (cache[category]) {
-                    contentEl.innerHTML = cache[category];
-                    return;
-                  }
-                  contentEl.innerHTML = '<p class="publication-loading">Loading publications...</p>';
-                  try {
-                    const source = tabConfig[category];
-                    const html = Array.isArray(source)
-                      ? await buildAll(source)
-                      : await fetchText(source);
-                    cache[category] = html;
-                    contentEl.innerHTML = html;
-                  } catch (error) {
-                    console.error(error);
-                    contentEl.innerHTML = '<p class="publication-error">Failed to load publications. Please try again later.</p>';
-                  }
-                }
-
-                tabs.forEach((tab) => {
-                  tab.addEventListener('click', () => loadCategory(tab.dataset.category));
-                });
-
-                loadCategory('all');
-              })();
-            </script>
+            <script src="js/site.js"></script>
 
             <table
               style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
@@ -250,139 +154,8 @@
                     <h2>Research Experience</h2>
                   </td>
                 </tr>
-
-                <table
-                  style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="display: flex; align-items: center;">
-                          <!-- Logo -->
-                          <img src="images/cbd_3.png" alt="Logo"
-                            style="width: 190px; margin-right: 8px;">
-
-                          <!-- Text content -->
-                          <div>
-                            <h3 style="margin: 0 0 2px 0; line-height: 1.2;">
-                              Computational Biology Department
-                              , Carnegie Mellon University,
-                              Pittsburgh,
-                              U.S.
-                            </h3>
-                            <strong>Research
-                              Assistant</strong><br>
-                            <em>(Aug.2025 - Present)</em>, <em>Advisors</em>:
-                            Prof. <a
-                              href="https://www.cs.cmu.edu/~jianma/">Jian Ma
-                            </a><br>
-                            Working on AI/ML for scientific discovery and
-                            computational biology.
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br>
-
-                <table
-                  style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="display: flex; align-items: center;">
-                          <!-- Logo -->
-                          <img src="images/ailab_logo.png" alt="Logo"
-                            style="width: 125px; margin-right: 73px;">
-
-                          <!-- Text content -->
-                          <div>
-                            <h3 style="margin: 0 0 2px 0; line-height: 1.2;">
-                              AI for Science Center, Shanghai AI Lab,
-                              Shanghai,
-                              China
-                            </h3>
-                            <strong>Research
-                              Intern</strong><br>
-                            <em>(May.2025 - Aug.2025)</em>, <em>Advisors</em>:
-                            Dr. Biqing Qi & Dr. Yuqiang Li<br>
-                            Working on LLM for molecular spectra and molecular
-                            foundation model.
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br>
-                <table
-                  style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="display: flex; align-items: center;">
-                          <!-- Logo -->
-                          <img src="images/uiuc_logo2.png" alt="Logo"
-                            style="width: 160px; margin-left: 4px; margin-right: 34px;">
-
-                          <!-- Text content -->
-                          <div>
-                            <h3 style="margin: 0 0 2px 0; line-height: 1.2;">
-                              Computer Science &amp; Biochemistry, University
-                              of Illinois at Urbana-Champaign, Urbana, U.S.
-                            </h3>
-                            <strong>Research
-                              Intern</strong><br>
-                            <em>(May.2024 - Mar.2025)</em>, <em>Advisors</em>:
-                            Prof. <a href="https://www.mit.edu/~geliu/">Ge
-                              Liu</a> &
-                            Prof. <a
-                              href="https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu">Nicholas
-                              Ching Hai Wu</a><br>
-                            Working on protein co-design and developing online
-                            Reinforcement Learning algorithm for Flow Matching
-                            models.
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <br>
-                <table
-                  style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="display: flex; align-items: center;">
-                          <!-- Logo -->
-                          <img src="images/zju_logo2.png" alt="Logo"
-                            style="width: 190px; margin-left: -6px; margin-right: 14px;">
-
-                          <!-- Text content -->
-                          <div>
-                            <h3 style="margin: 0 0 2px 0; line-height: 1.2;">
-                              State Key Lab of CAD &amp; CG, Zhejiang
-                              University, Hangzhou, China
-                            </h3>
-                            <strong>Research
-                              Assistant</strong><br>
-                            <em>(Oct.2022 - May.2024)</em>, <em>Advisors</em>:
-                            Prof. <a href="https://cshen.github.io">Chunhua
-                              Shen</a> &
-                            Prof. <a
-                              href="https://stan-haochen.github.io/">Hao
-                              Chen</a><br>
-                            Working on protein design, biomolecules
-                            interaction
-                            and material science.
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              </tbody></table>
+            <div id="experience-content"></div>
 
                 <table
                   style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
@@ -397,16 +170,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <script>
-                  (function () {
-                    var el = document.getElementById('academic-service-content');
-                    if (!el) return;
-                    fetch('sections/academic-service.html')
-                      .then(function (r) { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
-                      .then(function (html) { el.innerHTML = html; })
-                      .catch(function () { el.innerHTML = '<p class="publication-error">Failed to load academic service. Please try again later.</p>'; });
-                  })();
-                </script>
 
                 <table
                   style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
@@ -415,63 +178,9 @@
                         <h2>Education</h2>
                       </td>
                     </tr>
-
-                    <table
-                      style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div style="display: flex; align-items: center;">
-                              <!-- Logo -->
-                              <img src="images/cmu_logo.png" alt="Logo"
-                                style="width: 70px; height: auto; margin-left: 5px;margin-right: 25px;">
-
-                              <!-- Text content -->
-                              <div>
-                                <h3
-                                  style="margin: 0 0 2px 0; line-height: 1.2;">
-                                  PhD Student, Carnegie Mellon University
-                                </h3>
-                                <em>(Aug.2025 - Present)</em><br>
-                                Computational Biology, Computational Biology
-                                Department, School of
-                                Computer Science
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <table
-                    style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div style="display: flex; align-items: center;">
-                            <!-- Logo -->
-                            <img src="images/zju_logo.png" alt="Logo"
-                              style="width: 70px; height: 70px; margin-right: 30px;">
-
-                            <!-- Text content -->
-                            <div>
-                              <h3
-                                style="margin: 0 0 2px 0; line-height: 1.2;">
-                                Bachelor of Engineering with Honors, Zhejiang
-                                University
-                              </h3>
-                              <em>(Sep.2021 - June.2025)</em><br>
-                              Computer Science and
-                              Technology, Mixed Class of Chu Kochen
-                              Honors College
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
+            <div id="education-content"></div>
 
                 <table
                   style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>

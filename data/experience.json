@@ -1,0 +1,49 @@
+[
+  {
+    "logo": "cbd_3.png",
+    "logoStyle": "width: 190px; margin-right: 8px;",
+    "org": "Computational Biology Department , Carnegie Mellon University, Pittsburgh, U.S.",
+    "role": "Research Assistant",
+    "dates": "Aug.2025 - Present",
+    "advisors": [
+      { "name": "Jian Ma", "url": "https://www.cs.cmu.edu/~jianma/", "prefix": "Prof." }
+    ],
+    "description": "Working on AI/ML for scientific discovery and computational biology."
+  },
+  {
+    "logo": "ailab_logo.png",
+    "logoStyle": "width: 125px; margin-right: 73px;",
+    "org": "AI for Science Center, Shanghai AI Lab, Shanghai, China",
+    "role": "Research Intern",
+    "dates": "May.2025 - Aug.2025",
+    "advisors": [
+      { "name": "Biqing Qi", "prefix": "Dr." },
+      { "name": "Yuqiang Li", "prefix": "Dr." }
+    ],
+    "description": "Working on LLM for molecular spectra and molecular foundation model."
+  },
+  {
+    "logo": "uiuc_logo2.png",
+    "logoStyle": "width: 160px; margin-left: 4px; margin-right: 34px;",
+    "org": "Computer Science & Biochemistry, University of Illinois at Urbana-Champaign, Urbana, U.S.",
+    "role": "Research Intern",
+    "dates": "May.2024 - Mar.2025",
+    "advisors": [
+      { "name": "Ge Liu", "url": "https://www.mit.edu/~geliu/", "prefix": "Prof." },
+      { "name": "Nicholas Ching Hai Wu", "url": "https://experts.illinois.edu/en/persons/nicholas-ching-hai-wu", "prefix": "Prof." }
+    ],
+    "description": "Working on protein co-design and developing online Reinforcement Learning algorithm for Flow Matching models."
+  },
+  {
+    "logo": "zju_logo2.png",
+    "logoStyle": "width: 190px; margin-left: -6px; margin-right: 14px;",
+    "org": "State Key Lab of CAD & CG, Zhejiang University, Hangzhou, China",
+    "role": "Research Assistant",
+    "dates": "Oct.2022 - May.2024",
+    "advisors": [
+      { "name": "Chunhua Shen", "url": "https://cshen.github.io", "prefix": "Prof." },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "prefix": "Prof." }
+    ],
+    "description": "Working on protein design, biomolecules interaction and material science."
+  }
+]

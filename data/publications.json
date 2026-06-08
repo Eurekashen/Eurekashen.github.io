@@ -1,0 +1,399 @@
+[
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "agentco-op.png",
+    "title": "AgentCo-Op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Wenduo Cheng", "url": "https://wenduocheng.github.io/", "eq": true },
+      { "name": "Shike Wang" },
+      { "name": "Mingqian Ma", "url": "https://mamingqian.github.io/" },
+      { "name": "Jian Ma", "url": "https://www.cs.cmu.edu/~jianma/", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2026,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/abs/2605.20425" },
+      { "label": "Github", "url": "https://github.com/ma-compbio-lab/AgentCo-Op" },
+      { "label": "Website", "url": "https://ma-compbio-lab.github.io/AgentCo-Op" }
+    ],
+    "abstract": "AgentCo-Op, a retrieval-based synthesis framework that composes reusable skills, tools, and external agents into executable workflows through typed artifact handoffs, then applies bounded self-guided local repair to implicated components when execution evidence indicates failure."
+  },
+  {
+    "category": "scientific",
+    "image": "chemcost.png",
+    "title": "Can Agents Price a Reaction? Evaluating LLMs on Chemical Cost Reasoning",
+    "authors": [
+      { "name": "Yuyang Wu", "url": "https://heinzvonhank.github.io/", "eq": true },
+      { "name": "Yue Huang", "url": "https://scholar.google.com/citations?user=HvzvvqQAAAAJ&hl=en", "eq": true },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Xujian Wang", "url": "https://scholar.google.com/citations?user=flSAhrEAAAAJ&hl=en" },
+      { "name": "Shuhao Zhang", "url": "https://scholar.google.com/citations?user=2wjO1LgAAAAJ&hl=en" },
+      { "name": "Qiyao Xue", "url": "https://xue-qi-yao.github.io/" },
+      { "name": "Weichen Liu", "url": "https://scholar.google.com/citations?user=56mqGSMAAAAJ&hl=en" },
+      { "name": "Runtian Gao", "url": "https://www.linkedin.com/in/runtian-gao-15b732151/" },
+      { "name": "Jian Ma", "url": "https://www.cs.cmu.edu/~jianma/", "corr": true },
+      { "name": "Xiangliang Zhang", "url": "https://sites.nd.edu/xiangliang-zhang/", "corr": true },
+      { "name": "Olexandr Isayev", "url": "https://olexandrisayev.com/", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2026,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/pdf/2605.07251" }
+    ],
+    "abstract": "We introduce CHEMCOST, a benchmark of 1,427 evaluable reactions grounded to a frozen pricing snapshot covering 2,261 chemicals and 230,775 supplier quotes."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "skillfoundry.png",
+    "title": "SkillFoundry: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Wenduo Cheng", "url": "https://wenduocheng.github.io/", "eq": true },
+      { "name": "Mingqian Ma", "url": "https://mamingqian.github.io/" },
+      { "name": "Alistair Turcan" },
+      { "name": "Martin Jinye Zhang", "url": "https://mzhanglab.github.io/" },
+      { "name": "Jian Ma", "url": "https://www.cs.cmu.edu/~jianma/", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2026,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/abs/2604.03964" },
+      { "label": "Github", "url": "https://github.com/ma-compbio-lab/SkillFoundry" },
+      { "label": "Website", "url": "https://ma-compbio-lab.github.io/SkillFoundry/#paper" }
+    ],
+    "abstract": "SkillFoundry, a self-evolving framework that converts such resources into validated agent skills — reusable packages that encode task scope, inputs and outputs, execution steps, environment assumptions, provenance, and tests."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "r2seg.png",
+    "title": "R<sup>2</sup>Seg: Training-Free OOD Medical Tumor Segmentation via Anatomical Reasoning and Statistical Rejection",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Ke Liu", "url": "https://zjukeliu.github.io/", "eq": true },
+      { "name": "Jiaqing Xie", "url": "https://jiaqingxie.github.io/" },
+      { "name": "Shangde Gao", "url": "https://sender666.github.io/" },
+      { "name": "Chunhua Shen", "url": "https://cshen.github.io/" },
+      { "name": "Ge Liu", "url": "https://www.mit.edu/~geliu/" },
+      { "name": "Mireia Crispin-Ortuzar", "url": "https://www.earlycancer.cam.ac.uk/dr-mireia-crispin" },
+      { "name": "Shangqi Gao", "url": "https://shangqigao.github.io/", "corr": true }
+    ],
+    "venue": "CVPR",
+    "year": 2026,
+    "published": true,
+    "badge": "Oral",
+    "award": "🏆 Best Paper Candidate (74 / 16,092, top 0.5%)",
+    "links": [
+      { "label": "Paper", "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Shen_R2-Seg_Training-Free_OOD_Medical_Tumor_Segmentation_via_Anatomical_Reasoning_and_CVPR_2026_paper.pdf" },
+      { "label": "Github", "url": "https://github.com/Eurekashen/R2Seg" },
+      { "label": "Youtube", "url": "https://youtu.be/rCS9Szgzdfk?si=SNdMZbiwq6bq3Y83" }
+    ],
+    "abstract": "Our framework operates on a reasonand-reject principle, first using an LLM-guided planner for anatomical reasoning to define localized regions of interest, and then applying a two-sample statistical test to rigorously reject false-positive candidates generated by a frozen segmentor."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "specmol.png",
+    "title": "SpecMol: A Spectroscopy-Grounded Foundation Model for Multi-Task Molecular Learning",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Jiaqing Xie", "eq": true },
+      { "name": "Zhuo Yang", "eq": true },
+      { "name": "Antong Zhang" },
+      { "name": "Shuzhou Sun" },
+      { "name": "Ben Gao" },
+      { "name": "Tianfan Fu", "corr": true },
+      { "name": "Biqing Qi", "corr": true },
+      { "name": "Yuqiang Li", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2025,
+    "links": [
+      { "label": "ArXiv", "url": "https://ArXiv.org/abs/2509.21861" },
+      { "label": "Github", "url": "https://github.com/Eurekashen/SpecMol" }
+    ],
+    "abstract": "The SpecMol foundation model integrates spectral interpretation, molecular representation learning, and three-dimensional structure generation within a single interface. Complementing this, we establish SpecMol-Bench as a systematic evaluation protocol encompassing cross-modal tasks."
+  },
+  {
+    "category": "scientific",
+    "image": "proseg.png",
+    "title": "Probabilistic Modeling of Multi-rater Medical Image Segmentation for Diversity and Personalization",
+    "authors": [
+      { "name": "Ke Liu", "url": "https://zjukeliu.github.io/", "eq": true },
+      { "name": "Shangde Gao", "url": "https://sender666.github.io/", "eq": true },
+      { "name": "Yichao Fu" },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Shangqi Gao", "url": "https://shangqigao.github.io/", "corr": true },
+      { "name": "Chunhua Shen", "url": "https://cshen.github.io/", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2026,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/abs/2512.00748v2" }
+    ],
+    "abstract": "We propose Probabilistic modeling of multi-rater lesion Segmentation (ProSeg) that simultaneously enables both diversification and personalization."
+  },
+  {
+    "category": "scientific",
+    "image": "spectraworld.png",
+    "title": "SpectrumWorld: Artificial Intelligence Foundation for Spectroscopy",
+    "authors": [
+      { "name": "Zhuo Yang", "eq": true },
+      { "name": "Jiaqing Xie", "eq": true },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Daolang Wang" },
+      { "name": "Yeyun Chen" },
+      { "name": "Ben Gao" },
+      { "name": "Shuzhou Sun" },
+      { "name": "Biqing Qi" },
+      { "name": "Dongzhan Zhou" },
+      { "name": "Lei Bai" },
+      { "name": "Linjiang Chen" },
+      { "name": "Shufei Zhang" },
+      { "name": "Jun Jiang", "corr": true },
+      { "name": "Tianfan Fu", "corr": true },
+      { "name": "Yuqiang Li", "corr": true }
+    ],
+    "venue": "KDD",
+    "year": 2026,
+    "published": true,
+    "links": [
+      { "label": "ArXiv", "url": "https://www.ArXiv.org/pdf/2508.01188" },
+      { "label": "Github", "url": "https://github.com/little1d/SpectrumLab" }
+    ],
+    "abstract": "SpectrumWorld, a pioneering unified platform designed to systematize and accelerate deep learning research in spectroscopy."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "interns1.png",
+    "title": "Intern-S1: A Scientific Multimodal Foundation Model",
+    "authors": [
+      { "name": "Intern-S1 Team" }
+    ],
+    "venue": "Technical Report",
+    "year": 2025,
+    "published": true,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/pdf/2508.15763" },
+      { "label": "Github", "url": "https://github.com/InternLM/Intern-S1" },
+      { "label": "Huggingface", "url": "https://huggingface.co/internlm/Intern-S1" }
+    ],
+    "abstract": "A specialized generalist equipped with general understanding and reasoning capabilities with expertise to analyze multiple science modal data."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "aisi.png",
+    "title": "A Denoising Pre-training Framework for Accelerating Novel Material Discovery",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Ke Liu", "url": "https://ai4mol.github.io//", "eq": true },
+      { "name": "Muzhi Zhu", "url": "https://z-mu-z.github.io/" },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true }
+    ],
+    "venue": "AAAI",
+    "year": 2025,
+    "published": true,
+    "links": [
+      { "label": "Paper", "url": "https://ojs.aaai.org/index.php/AAAI/article/view/35058" },
+      { "label": "Project page", "url": "https://ai4mol.github.io/projects/DPF/" },
+      { "label": "GitHub", "url": "https://github.com/zjuKeLiu/DPF" }
+    ],
+    "abstract": "Purpose Denoising Pre-training Framework to accelerate the novel material discovery."
+  },
+  {
+    "category": "scientific",
+    "featured": true,
+    "image": "DPF.png",
+    "title": "Boost Your Crystal Model with Denoising Pre-training",
+    "authors": [
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Ke Liu", "url": "https://ai4mol.github.io//", "eq": true },
+      { "name": "Muzhi Zhu", "url": "https://z-mu-z.github.io/" },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true }
+    ],
+    "venue": "ICML AI for Science Workshop",
+    "year": 2024,
+    "published": true,
+    "links": [
+      { "label": "Openreview", "url": "https://openreview.net/forum?id=u2qYzRRg02" }
+    ],
+    "abstract": "Using Denoising Pre-triaing Framework (DPF) to boost the performence of crystal model, which can be easily adapted to any invariant encoder."
+  },
+  {
+    "category": "biomolecule",
+    "featured": true,
+    "image": "evoab.png",
+    "title": "Structure-Guided Reinforcement Learning for High-Affinity Antibody Design",
+    "authors": [
+      { "name": "Hanqun Cao", "url": "https://chq1155.github.io/", "eq": true },
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Weihao Xuan", "url": "https://weihaoxuan.com/" },
+      { "name": "Jian Ma", "url": "https://www.cs.cmu.edu/~jianma/" },
+      { "name": "Pheng-Ann Heng", "url": "https://appsrv.cse.cuhk.edu.hk/~pheng/index.php" },
+      { "name": "Fang Wu", "url": "https://smiles724.github.io/" }
+    ],
+    "year": 2026,
+    "links": [
+      { "label": "ArXiv", "url": "https://openreview.net/pdf?id=SYJ4v1fdam" }
+    ],
+    "abstract": "We introduce Multi-round Mutation Policy Optimization (M2PO), an iterative algorithm that integrates affinity-weighted sequence learning with distribution anchoring, progressively enhancing binding affinity while preserving structural plausibility."
+  },
+  {
+    "category": "biomolecule",
+    "image": "molact.png",
+    "title": "MolAct: An Agentic RL Framework for Molecular Editing and Property Optimization",
+    "authors": [
+      { "name": "Zhuo Yang", "eq": true },
+      { "name": "Yeyun Chen", "eq": true },
+      { "name": "Jiaqing Xie" },
+      { "name": "Ben Gao" },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Wanhao Liu" },
+      { "name": "Liujia Yang" },
+      { "name": "Beilun Wang" },
+      { "name": "Tianfan Fu" },
+      { "name": "Yuqiang Li", "corr": true }
+    ],
+    "year": 2025,
+    "links": [
+      { "label": "ArXiv", "url": "https://arxiv.org/pdf/2512.20135" },
+      { "label": "Github", "url": "https://github.com/little1d/MolAct" },
+      { "label": "Huggingface", "url": "https://huggingface.co/collections/little1d/molact" }
+    ],
+    "abstract": "We frame both tasks as sequential, tool-guided decisions and introduce MolAct, an agentic reinforcement learning framework that employs a two-stage training paradigm: first building editing capability, then optimizing properties while reusing the learned editing behaviors."
+  },
+  {
+    "category": "biomolecule",
+    "featured": true,
+    "image": "rifold.png",
+    "title": "From Sentences to Sequences: Rethinking Languages in Biological System",
+    "authors": [
+      { "name": "Ke Liu", "url": "https://ai4mol.github.io//", "eq": true },
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true }
+    ],
+    "year": 2025,
+    "links": [
+      { "label": "ArXiv", "url": "https://ArXiv.org/abs/2507.00953" },
+      { "label": "Github", "url": "https://github.com/zjuKeLiu/RiFold" }
+    ],
+    "abstract": "By viewing biomolecules' 3D structures as sentence semantics and considering the strong correlations between their components, we emphasize structural evaluation and show the applicability of auto-regressive modeling in biological language."
+  },
+  {
+    "category": "biomolecule",
+    "image": "cebind.png",
+    "title": "Physics-Informed Neural Networks for Unsupervised Binding Energy Prediction",
+    "authors": [
+      { "name": "Ke Liu", "url": "https://ai4mol.github.io//", "eq": true },
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true }
+    ],
+    "year": 2024,
+    "abstract": "Efficient protein binding energy prediction model derived from energy conservation laws."
+  },
+  {
+    "category": "biomolecule",
+    "featured": true,
+    "image": "fadiff.png",
+    "title": "Floating Anchor Diffusion Model for Multi-motif Scaffolding",
+    "authors": [
+      { "name": "Ke Liu", "url": "https://ai4mol.github.io//", "eq": true },
+      { "name": "Shuaike Shen", "me": true, "eq": true },
+      { "name": "Weian Mao", "eq": true },
+      { "name": "Xiaoran Jiao" },
+      { "name": "Zheng Sun" },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true },
+      { "name": "Chunhua Shen", "url": "https://cshen.github.io/", "corr": true }
+    ],
+    "venue": "ICML",
+    "year": 2024,
+    "published": true,
+    "links": [
+      { "label": "ArXiv", "url": "https://ArXiv.org/abs/2406.03141" },
+      { "label": "Project page", "url": "https://ai4mol.github.io/projects/FADiff/" }
+    ],
+    "abstract": "Treat multiple motifs as independent rigid bodies, which can translate and rotate independently. FADiff solves multi motif scaffolding problem and achieve super high design ability, novelty and diversity."
+  },
+  {
+    "category": "biomolecule",
+    "image": "vfn.png",
+    "title": "De novo Protein Design Using Geometric Vector Field Networks",
+    "authors": [
+      { "name": "Weian Mao", "eq": true },
+      { "name": "Zheng Sun", "eq": true },
+      { "name": "Muzhi Zhu", "eq": true },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Lin Yuanbo Wu" },
+      { "name": "Hao Chen", "url": "https://stan-haochen.github.io/", "corr": true },
+      { "name": "Chunhua Shen", "url": "https://cshen.github.io/", "corr": true }
+    ],
+    "venue": "ICLR",
+    "year": 2024,
+    "published": true,
+    "badge": "Spotlight",
+    "links": [
+      { "label": "ArXiv", "url": "https://ArXiv.org/abs/2310.11802" },
+      { "label": "Project page", "url": "https://ai4mol.github.io/projects/VFN" }
+    ],
+    "abstract": "We propose a novel structure graph encoder, which can address the atom representation bottleneck observed in traditional IPA encoders."
+  },
+  {
+    "category": "generative",
+    "image": "acflow.png",
+    "title": "Fine-tuning Flow Matching Generative Models with Intermediate Feedback",
+    "authors": [
+      { "name": "Jiajun Fan", "url": "https://www.jiajunfan.com/" },
+      { "name": "Chaoran Cheng", "url": "https://ccr-cheng.github.io/" },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Xiangxin Zhou" },
+      { "name": "Ge Liu", "url": "https://www.mit.edu/~geliu/", "corr": true }
+    ],
+    "venue": "Under Review",
+    "year": 2025,
+    "links": [
+      { "label": "ArXiv", "url": "https://www.arxiv.org/abs/2510.18072" }
+    ],
+    "abstract": "We present AC-Flow, the first framework to successfully enable online RL finetuning of flow matching generative models with intermediate feedback by leveraging advantage functions."
+  },
+  {
+    "category": "generative",
+    "image": "rl_2.png",
+    "title": "Training Text-to-Image Flow Models on Self-Generated Data",
+    "authors": [
+      { "name": "Jiajun Fan", "url": "https://www.jiajunfan.com/" },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Chaoran Cheng", "url": "https://ccr-cheng.github.io/" },
+      { "name": "Chumeng Liang", "url": "https://caradryanl.github.io/" },
+      { "name": "Ge Liu", "url": "https://www.mit.edu/~geliu/", "corr": true }
+    ],
+    "year": 2025,
+    "abstract": ""
+  },
+  {
+    "category": "generative",
+    "featured": true,
+    "image": "rl_1.png",
+    "title": "Online Reward-Weighted Fine-Tuning of Flow Matching with Wasserstein Regularization",
+    "authors": [
+      { "name": "Jiajun Fan", "url": "https://www.jiajunfan.com/" },
+      { "name": "Shuaike Shen", "me": true },
+      { "name": "Chaoran Cheng", "url": "https://ccr-cheng.github.io/" },
+      { "name": "Yuxin Chen" },
+      { "name": "Chumeng Liang", "url": "https://caradryanl.github.io/" },
+      { "name": "Ge Liu", "url": "https://www.mit.edu/~geliu/", "corr": true }
+    ],
+    "venue": "ICLR",
+    "year": 2025,
+    "published": true,
+    "links": [
+      { "label": "Paper", "url": "https://openreview.net/forum?id=2IoFFexvuw" },
+      { "label": "Project page", "url": "https://gelab-uiuc.github.io/projects/orw/" }
+    ],
+    "abstract": "The Wasserstein-2 distance is used to approximate the KL divergence to implement the online RL algorithm to fine-tune the Flow Matching model, solving the model collapse problem."
+  }
+]
