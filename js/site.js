@@ -112,11 +112,16 @@
       .map(function (x) { return x.p; });
   }
 
+  // The OS-level "reduce motion" setting; when on, we swap content instantly.
+  var prefersReducedMotion = !!(window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
   function initPublications(pubs) {
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.publication-tab'));
     var contentEl = document.getElementById('publication-content');
     if (!contentEl) { return; }
     var cache = {};
+    var swapToken = 0; // guards against overlapping animations on rapid clicks
 
     function htmlFor(category) {
       if (cache[category] == null) {
@@ -128,18 +133,66 @@
       return cache[category];
     }
 
-    function loadCategory(category) {
+    function setTabState(category) {
       tabs.forEach(function (tab) {
         var active = tab.dataset.category === category;
         tab.classList.toggle('active', active);
         tab.setAttribute('aria-selected', String(active));
       });
+    }
+
+    function setContent(category) {
       contentEl.innerHTML = htmlFor(category);
       contentEl.dataset.activeCategory = category;
     }
 
+    // The new list fades in while rising a few px into place.
+    function animateIn() {
+      contentEl.animate(
+        [
+          { opacity: 0, transform: 'translateY(12px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ],
+        { duration: 190, easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)' }
+      );
+    }
+
+    // Switch tabs: fade the current list out, swap (while invisible, so the
+    // height change and any layout below never jump), then animate the new
+    // list in. Falls back to an instant swap without animation support.
+    function loadCategory(category) {
+      setTabState(category);
+
+      if (prefersReducedMotion || !contentEl.animate) {
+        setContent(category);
+        return;
+      }
+
+      var token = ++swapToken;
+
+      // First paint: nothing to fade out, just play the entrance.
+      if (contentEl.dataset.activeCategory == null) {
+        setContent(category);
+        animateIn();
+        return;
+      }
+
+      var out = contentEl.animate(
+        [{ opacity: 1 }, { opacity: 0 }],
+        { duration: 110, easing: 'ease-in' }
+      );
+      out.onfinish = function () {
+        if (token !== swapToken) { return; } // a newer click superseded this one
+        setContent(category);
+        animateIn();
+      };
+    }
+
     tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () { loadCategory(tab.dataset.category); });
+      tab.addEventListener('click', function () {
+        if (tab.dataset.category === contentEl.dataset.activeCategory) { return; }
+        loadCategory(tab.dataset.category);
+      });
     });
 
     var activeTab = tabs.filter(function (t) { return t.classList.contains('active'); })[0];
