@@ -1,6 +1,61 @@
 [
   {
     "category": "scientific",
+    "image": "perspective.png",
+    "featured": true,
+    "title": "Towards Human-Led, Agent-Driven Autonomous Laboratories for the Life Sciences",
+    "authors": [
+      {
+        "name": "Wenduo Cheng",
+        "url": "https://wenduocheng.github.io/"
+      },
+      {
+        "name": "Mingqian Ma",
+        "url": "https://mamingqian.github.io/"
+      },
+      {
+        "name": "Shuaike Shen",
+        "me": true
+      },
+      {
+        "name": "Anna Hupalowska"
+      },
+      {
+        "name": "Jennifer E Rood"
+      },
+      {
+        "name": "Yang Zhang"
+      },
+      {
+        "name": "Gaurav Agrawal"
+      },
+      {
+        "name": "Christine Bakan"
+      },
+      {
+        "name": "Michelle A Lee"
+      },
+      {
+        "name": "Aviv Regev",
+        "corr": true
+      },
+      {
+        "name": "Jian Ma",
+        "url": "https://www.cs.cmu.edu/~jianma/",
+        "corr": true
+      }
+    ],
+    "year": 2026,
+    "links": [
+      {
+        "label": "Preprints",
+        "url": "https://www.preprints.org/manuscript/202608.0273"
+      }
+    ],
+    "abstract": "We define laboratory autonomy in the context of a human-led scientific endeavor as a bounded control loop in which scientists set goals and constraints, agents help plan and coordinate experiments, instruments execute experiments and report machine-checkable evidence, and humans verify and interpret results and govern high-consequence decisions."
+  },
+  {
+    "category": "scientific",
     "featured": true,
     "image": "agentco-op.png",
     "title": "AgentCo-Op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
